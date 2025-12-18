@@ -403,3 +403,17 @@
 - [x] Show current innings, runs, wickets, and overs for live matches
 - [x] Update match cards to prominently display score information
 - [x] Test real-time score updates every 30 seconds
+
+## Match Detail Page - Dec 19, 2024
+- [x] Create MatchDetail.tsx page component
+- [x] Add route for /matches/:id in App.tsx
+- [x] Fetch match data, squads, and commentary from API
+- [x] Display match overview with live scores
+- [x] Show player squads for both teams with roles and credits
+- [x] Implement team creation interface with player selection
+- [x] Add 100-credit budget tracker
+- [x] Implement captain/vice-captain selection
+- [x] Add role-based filtering (batsman/bowler/all-rounder/wicket-keeper)
+- [x] Display live commentary feed with real-time updates
+- [x] Add team submission functionality
+- [x] Test complete user flow from match list to team creation

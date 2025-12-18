@@ -20,6 +20,7 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import FAQ from "./pages/FAQ";
 import Matches from "./pages/Matches";
+import MatchDetail from "./pages/MatchDetail";
 import Leaderboard from "./pages/Leaderboard";
 import Profile from "./pages/Profile";
 
@@ -48,6 +49,7 @@ function Router() {
         <Route path="/fair-play" component={FairPlay} />
         <Route path="/responsible-gaming" component={ResponsibleGaming} />
         <Route path={"/matches"} component={Matches} />
+        <Route path={"/matches/:id"} component={MatchDetail} />
         <Route path={"/leaderboard"} component={Leaderboard} />
         <Route path={"/profile"} component={Profile} />
         <Route path={"/404"} component={NotFound} />

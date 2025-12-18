@@ -29,6 +29,13 @@
       "when": 1766084187669,
       "tag": "0003_narrow_fixer",
       "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "5",
+      "when": 1766087137662,
+      "tag": "0004_public_warlock",
+      "breakpoints": true
     }
   ]
 }

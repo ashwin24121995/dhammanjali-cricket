@@ -18,6 +18,9 @@ import Dashboard from "./pages/Dashboard";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import FAQ from "./pages/FAQ";
+import Matches from "./pages/Matches";
+import Leaderboard from "./pages/Leaderboard";
+import Profile from "./pages/Profile";
 
 function Router() {
   return (
@@ -34,8 +37,11 @@ function Router() {
         <Route path={"/faq"} component={FAQ} />
         <Route path={"/terms"} component={Terms} />
         <Route path={"/privacy"} component={Privacy} />
-         <Route path="/fair-play" component={FairPlay} />
-      <Route path="/responsible-gaming" component={ResponsibleGaming} />
+        <Route path="/fair-play" component={FairPlay} />
+        <Route path="/responsible-gaming" component={ResponsibleGaming} />
+        <Route path={"/matches"} component={Matches} />
+        <Route path={"/leaderboard"} component={Leaderboard} />
+        <Route path={"/profile"} component={Profile} />
         <Route path={"/404"} component={NotFound} />
         {/* Final fallback route */}
         <Route component={NotFound} />

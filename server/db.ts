@@ -1,6 +1,14 @@
-import { eq } from "drizzle-orm";
+import { eq, desc } from "drizzle-orm";
 import { drizzle } from "drizzle-orm/mysql2";
-import { InsertUser, User, users, passwordResetTokens, InsertPasswordResetToken, PasswordResetToken } from "../drizzle/schema";
+import { 
+  InsertUser, User, users, 
+  passwordResetTokens, InsertPasswordResetToken, PasswordResetToken,
+  matches, Match, InsertMatch,
+  players, Player, InsertPlayer,
+  userTeams, UserTeam, InsertUserTeam,
+  teamPlayers, TeamPlayer, InsertTeamPlayer,
+  userStats, UserStats, InsertUserStats
+} from "../drizzle/schema";
 
 let _db: ReturnType<typeof drizzle> | null = null;
 
@@ -137,5 +145,114 @@ export async function markTokenAsUsed(token: string): Promise<void> {
   } catch (error) {
     console.error("[Database] Failed to mark token as used:", error);
     throw error;
+  }
+}
+
+// Fantasy Cricket Functions
+
+// Matches
+export async function getAllMatches(): Promise<Match[]> {
+  const db = await getDb();
+  if (!db) return [];
+  return await db.select().from(matches).where(eq(matches.status, "upcoming"));
+}
+
+export async function getMatchById(id: number): Promise<Match | undefined> {
+  const db = await getDb();
+  if (!db) return undefined;
+  const result = await db.select().from(matches).where(eq(matches.id, id)).limit(1);
+  return result.length > 0 ? result[0] : undefined;
+}
+
+export async function createMatch(match: InsertMatch): Promise<void> {
+  const db = await getDb();
+  if (!db) return;
+  await db.insert(matches).values(match);
+}
+
+// Players
+export async function getAllPlayers(): Promise<Player[]> {
+  const db = await getDb();
+  if (!db) return [];
+  return await db.select().from(players);
+}
+
+export async function getPlayersByTeam(team: string): Promise<Player[]> {
+  const db = await getDb();
+  if (!db) return [];
+  return await db.select().from(players).where(eq(players.team, team));
+}
+
+export async function createPlayer(player: InsertPlayer): Promise<void> {
+  const db = await getDb();
+  if (!db) return;
+  await db.insert(players).values(player);
+}
+
+// User Teams
+export async function createUserTeam(team: InsertUserTeam): Promise<number> {
+  const db = await getDb();
+  if (!db) throw new Error("Database not available");
+  const result = await db.insert(userTeams).values(team);
+  return result[0].insertId;
+}
+
+export async function getUserTeamsByUserId(userId: number): Promise<UserTeam[]> {
+  const db = await getDb();
+  if (!db) return [];
+  return await db.select().from(userTeams).where(eq(userTeams.userId, userId));
+}
+
+// Team Players
+export async function addPlayerToTeam(teamPlayer: InsertTeamPlayer): Promise<void> {
+  const db = await getDb();
+  if (!db) return;
+  await db.insert(teamPlayers).values(teamPlayer);
+}
+
+// User Stats
+export async function getLeaderboard(limit: number = 10): Promise<(UserStats & { username: string })[]> {
+  const db = await getDb();
+  if (!db) return [];
+  
+  const result = await db
+    .select({
+      id: userStats.id,
+      userId: userStats.userId,
+      totalPoints: userStats.totalPoints,
+      teamsCreated: userStats.teamsCreated,
+      contestsWon: userStats.contestsWon,
+      contestsJoined: userStats.contestsJoined,
+      bestRank: userStats.bestRank,
+      updatedAt: userStats.updatedAt,
+      username: users.name,
+    })
+    .from(userStats)
+    .leftJoin(users, eq(userStats.userId, users.id))
+    .orderBy(desc(userStats.totalPoints))
+    .limit(limit);
+
+  return result.map(row => ({
+    ...row,
+    username: row.username || "Unknown",
+  }));
+}
+
+export async function getUserStats(userId: number): Promise<UserStats | undefined> {
+  const db = await getDb();
+  if (!db) return undefined;
+  const result = await db.select().from(userStats).where(eq(userStats.userId, userId)).limit(1);
+  return result.length > 0 ? result[0] : undefined;
+}
+
+export async function createOrUpdateUserStats(userId: number, stats: Partial<InsertUserStats>): Promise<void> {
+  const db = await getDb();
+  if (!db) return;
+  
+  const existing = await getUserStats(userId);
+  if (existing) {
+    await db.update(userStats).set(stats).where(eq(userStats.userId, userId));
+  } else {
+    await db.insert(userStats).values({ userId, ...stats });
   }
 }

@@ -288,3 +288,26 @@
 - [ ] Check tRPC response handling for Set-Cookie headers
 - [ ] Consider alternative session management (localStorage tokens, different cookie config)
 - [ ] Test if Express cookie-parser middleware is configured correctly
+
+## Header Navigation Update for Logged-in Users
+- [x] Update Header component to show Leaderboard, Matches, Profile, Logout when authenticated
+- [x] Remove HOME, ABOUT US, HOW TO PLAY, FAQ, BLOG, CONTACT from authenticated header
+- [ ] Test header navigation switches based on auth state
+
+## Core Fantasy Cricket Features - Real API Implementation
+- [x] Create database schema for matches table
+- [x] Create database schema for players table
+- [x] Create database schema for user_teams table
+- [x] Create database schema for team_players table
+- [x] Create database schema for user_stats table (for leaderboard)
+- [x] Push database schema changes
+- [x] Create backend tRPC procedure to fetch matches
+- [x] Create backend tRPC procedure to fetch players
+- [x] Create backend tRPC procedure to create teams
+- [x] Create backend tRPC procedure to fetch leaderboard
+- [x] Create backend tRPC procedure to fetch user profile stats
+- [x] Rebuild Matches page with real API data
+- [x] Rebuild Leaderboard page with real API data
+- [x] Create Profile page with real user data
+- [x] Add seed data for matches and players
+- [x] Test complete fantasy cricket workflow

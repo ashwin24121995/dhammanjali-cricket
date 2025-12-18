@@ -53,4 +53,87 @@ export const passwordResetTokens = mysqlTable("password_reset_tokens", {
 export type PasswordResetToken = typeof passwordResetTokens.$inferSelect;
 export type InsertPasswordResetToken = typeof passwordResetTokens.$inferInsert;
 
-// TODO: Add your tables here
+/**
+ * Cricket matches table
+ */
+export const matches = mysqlTable("matches", {
+  id: int("id").autoincrement().primaryKey(),
+  team1: varchar("team1", { length: 100 }).notNull(),
+  team2: varchar("team2", { length: 100 }).notNull(),
+  venue: varchar("venue", { length: 255 }).notNull(),
+  matchDate: timestamp("matchDate").notNull(),
+  matchTime: varchar("matchTime", { length: 50 }).notNull(),
+  matchType: varchar("matchType", { length: 50 }).notNull(), // IPL, T20, ODI, Test
+  status: mysqlEnum("status", ["upcoming", "live", "completed"]).default("upcoming").notNull(),
+  createdAt: timestamp("createdAt").defaultNow().notNull(),
+});
+
+export type Match = typeof matches.$inferSelect;
+export type InsertMatch = typeof matches.$inferInsert;
+
+/**
+ * Cricket players table
+ */
+export const players = mysqlTable("players", {
+  id: int("id").autoincrement().primaryKey(),
+  name: varchar("name", { length: 255 }).notNull(),
+  team: varchar("team", { length: 100 }).notNull(),
+  role: mysqlEnum("role", ["batsman", "bowler", "all-rounder", "wicket-keeper"]).notNull(),
+  credits: int("credits").notNull(), // 7-12 credits
+  points: int("points").default(0).notNull(),
+  matchesPlayed: int("matchesPlayed").default(0).notNull(),
+  createdAt: timestamp("createdAt").defaultNow().notNull(),
+});
+
+export type Player = typeof players.$inferSelect;
+export type InsertPlayer = typeof players.$inferInsert;
+
+/**
+ * User teams table
+ */
+export const userTeams = mysqlTable("user_teams", {
+  id: int("id").autoincrement().primaryKey(),
+  userId: int("userId").notNull(),
+  matchId: int("matchId").notNull(),
+  teamName: varchar("teamName", { length: 255 }).notNull(),
+  totalCredits: int("totalCredits").default(100).notNull(),
+  creditsUsed: int("creditsUsed").notNull(),
+  points: int("points").default(0).notNull(),
+  rank: int("rank"),
+  createdAt: timestamp("createdAt").defaultNow().notNull(),
+});
+
+export type UserTeam = typeof userTeams.$inferSelect;
+export type InsertUserTeam = typeof userTeams.$inferInsert;
+
+/**
+ * Team players junction table
+ */
+export const teamPlayers = mysqlTable("team_players", {
+  id: int("id").autoincrement().primaryKey(),
+  teamId: int("teamId").notNull(),
+  playerId: int("playerId").notNull(),
+  isCaptain: int("isCaptain").default(0).notNull(),
+  isViceCaptain: int("isViceCaptain").default(0).notNull(),
+  createdAt: timestamp("createdAt").defaultNow().notNull(),
+});
+
+export type TeamPlayer = typeof teamPlayers.$inferSelect;
+export type InsertTeamPlayer = typeof teamPlayers.$inferInsert;
+
+/**
+ * User statistics for leaderboard
+ */
+export const userStats = mysqlTable("user_stats", {
+  id: int("id").autoincrement().primaryKey(),
+  userId: int("userId").notNull().unique(),
+  totalPoints: int("totalPoints").default(0).notNull(),
+  teamsCreated: int("teamsCreated").default(0).notNull(),
+  contestsWon: int("contestsWon").default(0).notNull(),
+  contestsJoined: int("contestsJoined").default(0).notNull(),
+  bestRank: int("bestRank"),
+  updatedAt: timestamp("updatedAt").defaultNow().onUpdateNow().notNull(),
+});
+
+export type UserStats = typeof userStats.$inferSelect;
+export type InsertUserStats = typeof userStats.$inferInsert;

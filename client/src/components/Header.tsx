@@ -24,7 +24,8 @@ export default function Header() {
     }
   };
 
-  const navLinks = [
+  // Different navigation links based on auth state
+  const publicNavLinks = [
     { href: "/", label: "HOME" },
     { href: "/about", label: "ABOUT US" },
     { href: "/how-to-play", label: "HOW TO PLAY" },
@@ -32,6 +33,14 @@ export default function Header() {
     { href: "/blog", label: "BLOG" },
     { href: "/contact", label: "CONTACT" },
   ];
+
+  const authenticatedNavLinks = [
+    { href: "/matches", label: "MATCHES" },
+    { href: "/leaderboard", label: "LEADERBOARD" },
+    { href: "/profile", label: "PROFILE" },
+  ];
+
+  const navLinks = isAuthenticated ? authenticatedNavLinks : publicNavLinks;
 
   return (
     <header className="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-white shadow-lg sticky top-0 z-50">
@@ -62,15 +71,10 @@ export default function Header() {
           <div className="hidden md:flex items-center space-x-3">
             {isAuthenticated ? (
               <>
-                <Link href="/dashboard">
-                  <Button className="bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-none">
-                    DASHBOARD
-                  </Button>
-                </Link>
                 <Button 
                   onClick={handleLogout}
                   variant="outline" 
-                  className="border-2 border-white text-white hover:bg-white hover:text-gray-900 font-bold rounded-none"
+                  className="border-2 border-red-500 text-red-500 hover:bg-red-500 hover:text-white font-bold rounded-none"
                 >
                   LOGOUT
                 </Button>
@@ -117,15 +121,10 @@ export default function Header() {
               <div className="border-t border-white/20 pt-3 px-4 space-y-2">
                 {isAuthenticated ? (
                   <>
-                    <Link href="/dashboard">
-                      <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-none">
-                        DASHBOARD
-                      </Button>
-                    </Link>
                     <Button 
                       onClick={handleLogout}
                       variant="outline" 
-                      className="w-full border-2 border-white text-white hover:bg-white hover:text-gray-900 font-bold rounded-none"
+                      className="w-full border-2 border-red-500 text-red-500 hover:bg-red-500 hover:text-white font-bold rounded-none"
                     >
                       LOGOUT
                     </Button>

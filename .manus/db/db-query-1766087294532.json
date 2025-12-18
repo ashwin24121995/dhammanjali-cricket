@@ -1,0 +1,9 @@
+{
+  "query": "INSERT INTO matches (team1, team2, venue, matchDate, matchTime, matchType, status) VALUES\n('Mumbai Indians', 'Chennai Super Kings', 'Wankhede Stadium, Mumbai', '2024-03-25 19:30:00', '7:30 PM IST', 'IPL 2024', 'upcoming'),\n('Royal Challengers Bangalore', 'Kolkata Knight Riders', 'M. Chinnaswamy Stadium, Bengaluru', '2024-03-26 15:30:00', '3:30 PM IST', 'IPL 2024', 'upcoming'),\n('Delhi Capitals', 'Punjab Kings', 'Arun Jaitley Stadium, Delhi', '2024-03-27 19:30:00', '7:30 PM IST', 'IPL 2024', 'upcoming'),\n('Sunrisers Hyderabad', 'Rajasthan Royals', 'Rajiv Gandhi International Stadium, Hyderabad', '2024-03-28 15:30:00', '3:30 PM IST', 'IPL 2024', 'upcoming'),\n('Gujarat Titans', 'Lucknow Super Giants', 'Narendra Modi Stadium, Ahmedabad', '2024-03-29 19:30:00', '7:30 PM IST', 'IPL 2024', 'upcoming');",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 2EKhjpwgmHfHvW4.77bd979a2294 --database 8xMuqhEENCZY8hGr8r4g4r --execute INSERT INTO matches (team1, team2, venue, matchDate, matchTime, matchType, status) VALUES\n('Mumbai Indians', 'Chennai Super Kings', 'Wankhede Stadium, Mumbai', '2024-03-25 19:30:00', '7:30 PM IST', 'IPL 2024', 'upcoming'),\n('Royal Challengers Bangalore', 'Kolkata Knight Riders', 'M. Chinnaswamy Stadium, Bengaluru', '2024-03-26 15:30:00', '3:30 PM IST', 'IPL 2024', 'upcoming'),\n('Delhi Capitals', 'Punjab Kings', 'Arun Jaitley Stadium, Delhi', '2024-03-27 19:30:00', '7:30 PM IST', 'IPL 2024', 'upcoming'),\n('Sunrisers Hyderabad', 'Rajasthan Royals', 'Rajiv Gandhi International Stadium, Hyderabad', '2024-03-28 15:30:00', '3:30 PM IST', 'IPL 2024', 'upcoming'),\n('Gujarat Titans', 'Lucknow Super Giants', 'Narendra Modi Stadium, Ahmedabad', '2024-03-29 19:30:00', '7:30 PM IST', 'IPL 2024', 'upcoming');",
+  "rows": [],
+  "messages": [],
+  "stdout": "",
+  "stderr": "",
+  "execution_time_ms": 1552
+}

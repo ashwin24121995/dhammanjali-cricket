@@ -97,3 +97,6 @@
 
 ## Visual Enhancement
 - [x] Add shadow effect behind hero section cricket player image
+
+## UI Enhancement
+- [x] Change "START PLAYING FREE" button to yellow color

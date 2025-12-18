@@ -36,7 +36,7 @@ export default function Home() {
 
               <div className="flex flex-wrap gap-4 pt-4">
                 <Link href={isAuthenticated ? "/dashboard" : "/register"}>
-                  <div className="inline-flex items-center justify-center bg-red-600 hover:bg-red-700 text-white font-bold px-8 py-6 text-lg rounded-none transform hover:scale-105 transition-transform cursor-pointer">
+                  <div className="inline-flex items-center justify-center bg-yellow-400 hover:bg-yellow-500 text-black font-bold px-8 py-6 text-lg rounded-none transform hover:scale-105 transition-transform cursor-pointer shadow-lg">
                     {isAuthenticated ? "GO TO DASHBOARD" : "START PLAYING FREE"}
                   </div>
                 </Link>

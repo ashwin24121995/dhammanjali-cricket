@@ -33,13 +33,14 @@ export default function Header() {
   return (
     <header className="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-white shadow-lg sticky top-0 z-50">
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-center justify-between h-28">
           {/* Logo */}
           <Link href="/">
             <img 
               src="/dhammanjali-logo.png" 
               alt="Dhammanjali Cricket" 
-              className="h-14 w-auto cursor-pointer hover:opacity-90 transition-opacity"
+              style={{ height: '100px' }}
+              className="w-auto cursor-pointer hover:opacity-90 transition-opacity"
             />
           </Link>
 

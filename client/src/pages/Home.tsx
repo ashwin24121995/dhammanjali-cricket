@@ -70,7 +70,7 @@ export default function Home() {
             <div className="relative">
               <div className="relative overflow-hidden" style={{ clipPath: "polygon(10% 0, 100% 0, 100% 100%, 0 100%)" }}>
                 <img 
-                  src="/cricket-player.jpg" 
+                  src="/cricket-hero-1.jpg" 
                   alt="Cricket Player Batting" 
                   className="w-full h-auto object-cover rounded-lg shadow-2xl"
                 />

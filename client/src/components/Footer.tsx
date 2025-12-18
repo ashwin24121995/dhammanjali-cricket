@@ -103,9 +103,17 @@ export default function Footer() {
                 <MapPin className="w-5 h-5 text-yellow-400 flex-shrink-0 mt-1" />
                 <div>
                   <p className="text-white/80 leading-relaxed">
+                    <strong className="text-yellow-400">Registered Office:</strong><br />
                     1ST FLOOR, 154 KATKA JHUNSI,<br />
                     THANA- JHUNSI DISTRICT PRAYAGRAJ,<br />
                     Allahabad- 211019, Uttar Pradesh, India
+                  </p>
+                  <p className="text-white/80 leading-relaxed mt-3">
+                    <strong className="text-yellow-400">Regional Office:</strong><br />
+                    BTM 2nd Stage - No 46, 1st Floor,<br />
+                    1st Main Road, 7th Cross Rd,<br />
+                    BTM Layout, Bengaluru,<br />
+                    Karnataka 560076, India
                   </p>
                 </div>
               </div>

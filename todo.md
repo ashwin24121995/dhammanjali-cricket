@@ -199,3 +199,7 @@
 - [x] Add commitment to player wellbeing statement
 - [x] Include parental guidance section
 - [x] Add contact information for concerns
+
+## Regional Office Address Update
+- [x] Update Footer with Regional Office address (BTM 2nd Stage, Bengaluru)
+- [x] Update About page with Regional Office address

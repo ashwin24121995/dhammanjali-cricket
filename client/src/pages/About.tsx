@@ -203,6 +203,21 @@ export default function About() {
                   </div>
                 </div>
 
+                <div className="bg-blue-700/50 p-6 rounded-lg">
+                  <div className="flex items-start gap-4">
+                    <MapPin className="w-6 h-6 text-yellow-400 flex-shrink-0" />
+                    <div>
+                      <h4 className="text-lg font-bold text-yellow-400 mb-2">Regional Office</h4>
+                      <p className="text-gray-300 leading-relaxed">
+                        BTM 2nd Stage - No 46, 1st Floor<br />
+                        1st Main Road, 7th Cross Rd<br />
+                        BTM Layout, Bengaluru<br />
+                        Karnataka 560076, India
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
                 <div className="flex items-start">
                   <Building2 className="w-6 h-6 text-yellow-400 mr-3 mt-1 flex-shrink-0" />
                   <div>

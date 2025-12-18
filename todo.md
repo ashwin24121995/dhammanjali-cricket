@@ -247,3 +247,15 @@
 - [x] Update backend to accept email-based password reset
 - [x] Remove token-based reset flow
 - [x] Test complete simplified reset flow
+
+## FAQ Page Implementation
+- [x] Create FAQ page with accordion-style layout
+- [x] Add basic questions (registration, login, password reset)
+- [x] Add gameplay questions (team building, match selection, scoring)
+- [x] Add complex questions (scoring calculations, strategy, player selection)
+- [x] Add legal/compliance questions (state restrictions, age verification, free-to-play)
+- [x] Add technical questions (browser compatibility, troubleshooting)
+- [x] Organize questions into categories with Cricket Clash design
+- [x] Add FAQ route to App.tsx
+- [x] Link FAQ page from header navigation
+- [x] Test all accordion interactions

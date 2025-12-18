@@ -17,6 +17,7 @@ import ForgotPassword from "./pages/ForgotPassword";
 import Dashboard from "./pages/Dashboard";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
+import FAQ from "./pages/FAQ";
 
 function Router() {
   return (
@@ -30,6 +31,7 @@ function Router() {
         <Route path={"/dashboard"} component={Dashboard} />
         <Route path={"/about"} component={About} />
         <Route path={"/contact"} component={Contact} />
+        <Route path={"/faq"} component={FAQ} />
         <Route path={"/terms"} component={Terms} />
         <Route path={"/privacy"} component={Privacy} />
          <Route path="/fair-play" component={FairPlay} />

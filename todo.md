@@ -113,3 +113,6 @@
 ## Logo Size Adjustment
 - [x] Verify logo height increase from 56px to 100px via visual editor
 - [x] Increase header height to accommodate larger logo
+
+## Header Height Adjustment
+- [x] Reduce header height back to original (h-20) while keeping large logo

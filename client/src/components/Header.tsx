@@ -33,7 +33,7 @@ export default function Header() {
   return (
     <header className="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-white shadow-lg sticky top-0 z-50">
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-28">
+        <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link href="/">
             <img 

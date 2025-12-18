@@ -140,3 +140,18 @@
 - [x] Include leaderboard and ranking system explanation
 - [x] Add visual sections with Cricket Clash design
 - [x] Create common mistakes section
+
+## Terms & Conditions Page
+- [x] Create comprehensive legal terms page
+- [x] Add user agreement and acceptance section
+- [x] Include age verification requirements (18+)
+- [x] Add state restrictions details
+- [x] Include platform usage rules
+- [x] Add account registration terms
+- [x] Include intellectual property rights
+- [x] Add liability disclaimers
+- [x] Include termination and suspension policies
+- [x] Add dispute resolution procedures
+- [x] Include governing law and jurisdiction
+- [x] Add modification of terms policy
+- [x] Include contact information for legal queries

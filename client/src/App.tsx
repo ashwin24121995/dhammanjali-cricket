@@ -7,6 +7,7 @@ import { ThemeProvider } from "./contexts/ThemeContext";
 import MainLayout from "./components/MainLayout";
 import Home from "./pages/Home";
 import HowToPlay from "./pages/HowToPlay";
+import Terms from "./pages/Terms";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Dashboard from "./pages/Dashboard";
@@ -24,6 +25,7 @@ function Router() {
         <Route path={"/dashboard"} component={Dashboard} />
         <Route path={"/about"} component={About} />
         <Route path={"/contact"} component={Contact} />
+        <Route path={"/terms"} component={Terms} />
         <Route path={"/404"} component={NotFound} />
         {/* Final fallback route */}
         <Route component={NotFound} />

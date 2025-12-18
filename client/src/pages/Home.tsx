@@ -37,14 +37,14 @@ export default function Home() {
 
               <div className="flex flex-wrap gap-4 pt-4">
                 <Link href={isAuthenticated ? "/dashboard" : "/register"}>
-                  <Button size="lg" className="bg-red-600 hover:bg-red-700 text-white font-bold px-8 py-6 text-lg rounded-none transform hover:scale-105 transition-transform">
+                  <div className="inline-flex items-center justify-center bg-red-600 hover:bg-red-700 text-white font-bold px-8 py-6 text-lg rounded-none transform hover:scale-105 transition-transform cursor-pointer">
                     {isAuthenticated ? "GO TO DASHBOARD" : "REGISTER NOW"}
-                  </Button>
+                  </div>
                 </Link>
                 <Link href="/login">
-                  <Button size="lg" variant="outline" className="bg-blue-600 hover:bg-blue-700 text-white border-2 border-white font-bold px-8 py-6 text-lg rounded-none transform hover:scale-105 transition-transform">
+                  <div className="inline-flex items-center justify-center bg-blue-600 hover:bg-blue-700 text-white border-2 border-white font-bold px-8 py-6 text-lg rounded-none transform hover:scale-105 transition-transform cursor-pointer">
                     LOGIN
-                  </Button>
+                  </div>
                 </Link>
               </div>
 
@@ -294,9 +294,9 @@ export default function Home() {
             Join thousands of cricket enthusiasts learning and competing for free
           </p>
           <Link href="/register">
-            <Button size="lg" className="bg-white text-red-600 hover:bg-gray-100 font-black px-12 py-8 text-2xl rounded-none transform hover:scale-105 transition-transform">
+            <div className="inline-flex items-center justify-center bg-white text-red-600 hover:bg-gray-100 font-black px-12 py-8 text-2xl rounded-none transform hover:scale-105 transition-transform cursor-pointer">
               REGISTER NOW - IT'S FREE!
-            </Button>
+            </div>
           </Link>
         </div>
       </section>

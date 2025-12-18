@@ -77,3 +77,6 @@
 
 ## Footer Update
 - [x] Redesign footer with Cricket Clash style (diagonal cuts, bold colors)
+
+## Bug Fixes (New)
+- [x] Fix nested anchor tags in Home page buttons

@@ -36,6 +36,13 @@
       "when": 1766087137662,
       "tag": "0004_public_warlock",
       "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "5",
+      "when": 1766088015270,
+      "tag": "0005_high_wrecking_crew",
+      "breakpoints": true
     }
   ]
 }

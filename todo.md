@@ -311,3 +311,20 @@
 - [x] Create Profile page with real user data
 - [x] Add seed data for matches and players
 - [x] Test complete fantasy cricket workflow
+
+## Cricket API Integration with Smart Caching
+- [x] Create API service layer for CricketData.org API
+- [x] Add API key configuration and rate limiting logic
+- [x] Update database schema to add lastUpdated timestamp to matches and players tables
+- [x] Create API cache tracking table to monitor API usage
+- [x] Implement fetchCurrentMatches function to get live matches from API
+- [x] Implement fetchMatchInfo function to get detailed match data
+- [x] Implement fetchPlayers function to get player data
+- [x] Create caching logic: serve from DB if data < 30 minutes old
+- [x] Create background job to auto-update data every 30 minutes
+- [x] Add API call counter to stay within 100 calls/24hr limit (48 calls if updating every 30 min)
+- [ ] Update backend tRPC procedures to use cached data from database
+- [ ] Test API integration with real API key
+- [ ] Verify caching system works correctly
+- [ ] Verify auto-update job runs every 30 minutes
+- [ ] Monitor API usage to ensure it stays under limit

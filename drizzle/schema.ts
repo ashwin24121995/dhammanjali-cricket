@@ -58,6 +58,7 @@ export type InsertPasswordResetToken = typeof passwordResetTokens.$inferInsert;
  */
 export const matches = mysqlTable("matches", {
   id: int("id").autoincrement().primaryKey(),
+  externalId: varchar("externalId", { length: 255 }).unique(), // Cricket API match ID
   team1: varchar("team1", { length: 100 }).notNull(),
   team2: varchar("team2", { length: 100 }).notNull(),
   venue: varchar("venue", { length: 255 }).notNull(),
@@ -65,6 +66,8 @@ export const matches = mysqlTable("matches", {
   matchTime: varchar("matchTime", { length: 50 }).notNull(),
   matchType: varchar("matchType", { length: 50 }).notNull(), // IPL, T20, ODI, Test
   status: mysqlEnum("status", ["upcoming", "live", "completed"]).default("upcoming").notNull(),
+  score: text("score"), // JSON string of score data from API
+  lastUpdated: timestamp("lastUpdated"), // Last time data was fetched from API
   createdAt: timestamp("createdAt").defaultNow().notNull(),
 });
 
@@ -76,12 +79,14 @@ export type InsertMatch = typeof matches.$inferInsert;
  */
 export const players = mysqlTable("players", {
   id: int("id").autoincrement().primaryKey(),
+  externalId: varchar("externalId", { length: 255 }).unique(), // Cricket API player ID
   name: varchar("name", { length: 255 }).notNull(),
   team: varchar("team", { length: 100 }).notNull(),
   role: mysqlEnum("role", ["batsman", "bowler", "all-rounder", "wicket-keeper"]).notNull(),
   credits: int("credits").notNull(), // 7-12 credits
   points: int("points").default(0).notNull(),
   matchesPlayed: int("matchesPlayed").default(0).notNull(),
+  lastUpdated: timestamp("lastUpdated"), // Last time data was fetched from API
   createdAt: timestamp("createdAt").defaultNow().notNull(),
 });
 
@@ -137,3 +142,20 @@ export const userStats = mysqlTable("user_stats", {
 
 export type UserStats = typeof userStats.$inferSelect;
 export type InsertUserStats = typeof userStats.$inferInsert;
+
+/**
+ * API cache tracking table
+ * Monitors Cricket API usage to stay within rate limits
+ */
+export const apiCache = mysqlTable("api_cache", {
+  id: int("id").autoincrement().primaryKey(),
+  endpoint: varchar("endpoint", { length: 255 }).notNull(), // e.g., "currentMatches", "match_info"
+  lastFetched: timestamp("lastFetched").notNull(),
+  hitsToday: int("hitsToday").default(0).notNull(),
+  hitsLimit: int("hitsLimit").default(100).notNull(),
+  status: varchar("status", { length: 50 }).notNull(), // "success" or "failure"
+  createdAt: timestamp("createdAt").defaultNow().notNull(),
+});
+
+export type ApiCache = typeof apiCache.$inferSelect;
+export type InsertApiCache = typeof apiCache.$inferInsert;

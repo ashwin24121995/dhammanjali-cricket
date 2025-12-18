@@ -1,12 +1,18 @@
 import { trpc } from "@/lib/trpc";
 
 export function useAuth() {
-  const { data: user, isLoading, error } = trpc.auth.me.useQuery();
+  // Check if token exists in localStorage
+  const hasToken = typeof window !== "undefined" && !!localStorage.getItem("auth_token");
+  
+  // Only query if token exists
+  const { data, isLoading, error } = trpc.auth.me.useQuery(undefined, {
+    enabled: hasToken,
+  });
 
   return {
-    user: user || null,
+    user: data?.user || null,
     loading: isLoading,
     error,
-    isAuthenticated: !!user,
+    isAuthenticated: !!data?.user,
   };
 }

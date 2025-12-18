@@ -328,3 +328,23 @@
 - [ ] Verify caching system works correctly
 - [ ] Verify auto-update job runs every 30 minutes
 - [ ] Monitor API usage to ensure it stays under limit
+
+## Replace Manus Auth with Custom Authentication
+- [x] Remove Manus OAuth dependencies from backend
+- [x] Update database schema to add OTP verification fields (otpCode, otpExpiry)
+- [x] Install bcrypt and jsonwebtoken packages
+- [x] Create JWT authentication service (generateToken, verifyToken)
+- [x] Create OTP generation and verification service
+- [x] Update register endpoint to use custom JWT auth
+- [x] Update login endpoint to return JWT token instead of setting cookie
+- [x] Remove cookie-based session management
+- [x] Update authRouter to use JWT verification middleware
+- [x] Update frontend useAuth hook to use localStorage tokens
+- [x] Update frontend login page to store JWT in localStorage
+- [x] Update frontend register page to store JWT in localStorage
+- [x] Add Authorization header to all tRPC requests
+- [x] Update logout to clear localStorage instead of cookie
+- [x] Test complete registration flow with JWT
+- [x] Test complete login flow with JWT
+- [x] Test protected routes with JWT authentication
+- [x] Verify dashboard access works with new auth system

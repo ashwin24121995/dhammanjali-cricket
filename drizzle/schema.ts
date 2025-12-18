@@ -15,6 +15,8 @@ export const users = mysqlTable("users", {
   phone: varchar("phone", { length: 20 }),
   role: mysqlEnum("role", ["user", "admin"]).default("user").notNull(),
   isVerified: int("isVerified").default(0).notNull(),
+  otpCode: varchar("otpCode", { length: 10 }), // OTP for email verification
+  otpExpiry: timestamp("otpExpiry"), // OTP expiration time
   createdAt: timestamp("createdAt").defaultNow().notNull(),
   updatedAt: timestamp("updatedAt").defaultNow().onUpdateNow().notNull(),
   lastSignedIn: timestamp("lastSignedIn"),

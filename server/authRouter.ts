@@ -2,12 +2,13 @@ import { TRPCError } from "@trpc/server";
 import { z } from "zod";
 import { publicProcedure, router } from "./_core/trpc";
 import { createUser, getUserByEmail, updateLastSignIn, updateUserPassword } from "./db";
-import bcrypt from "bcryptjs";
-import { SignJWT, jwtVerify } from "jose";
-import { COOKIE_NAME } from "@shared/const";
-import { getSessionCookieOptions } from "./_core/cookies";
-
-const JWT_SECRET = new TextEncoder().encode(process.env.JWT_SECRET || "fallback-secret-key");
+import { 
+  hashPassword, 
+  comparePassword, 
+  generateToken, 
+  verifyToken, 
+  extractTokenFromHeader 
+} from "./jwtAuth";
 
 const RESTRICTED_STATES = [
   "Andhra Pradesh",
@@ -28,14 +29,11 @@ function calculateAge(dateOfBirth: Date): number {
   return age;
 }
 
-async function createSessionToken(userId: number): Promise<string> {
-  return await new SignJWT({ userId })
-    .setProtectedHeader({ alg: "HS256" })
-    .setExpirationTime("7d")
-    .sign(JWT_SECRET);
-}
-
 export const authRouter = router({
+  /**
+   * Register new user with email/password
+   * Returns JWT token on success
+   */
   register: publicProcedure
     .input(
       z.object({
@@ -47,7 +45,9 @@ export const authRouter = router({
         phone: z.string().optional(),
       })
     )
-    .mutation(async ({ input, ctx }) => {
+    .mutation(async ({ input }) => {
+      console.log("[REGISTER] Starting registration for:", input.email);
+
       // Check if user already exists
       const existingUser = await getUserByEmail(input.email);
       if (existingUser) {
@@ -76,7 +76,7 @@ export const authRouter = router({
       }
 
       // Hash password
-      const hashedPassword = await bcrypt.hash(input.password, 10);
+      const hashedPassword = await hashPassword(input.password);
 
       // Create user
       await createUser({
@@ -85,55 +85,31 @@ export const authRouter = router({
         name: input.name,
         dateOfBirth: dob,
         state: input.state,
-        phone: input.phone || null,
+        phone: input.phone,
+        isVerified: 1, // Auto-verify for now (can add OTP later)
       });
 
-      return { success: true, message: "Registration successful! Please login." };
-    }),
-
-  login: publicProcedure
-    .input(
-      z.object({
-        email: z.string().email(),
-        password: z.string(),
-      })
-    )
-    .mutation(async ({ input, ctx }) => {
-      // Find user
+      // Get created user
       const user = await getUserByEmail(input.email);
       if (!user) {
         throw new TRPCError({
-          code: "UNAUTHORIZED",
-          message: "Invalid email or password",
+          code: "INTERNAL_SERVER_ERROR",
+          message: "Failed to create user",
         });
       }
 
-      // Verify password
-      const isValidPassword = await bcrypt.compare(input.password, user.password);
-      if (!isValidPassword) {
-        throw new TRPCError({
-          code: "UNAUTHORIZED",
-          message: "Invalid email or password",
-        });
-      }
-
-      // Update last sign in
-      await updateLastSignIn(user.id);
-
-      // Create session token
-      const token = await createSessionToken(user.id);
-
-      // Set cookie
-      const cookieOptions = getSessionCookieOptions(ctx.req);
-      console.log("[LOGIN] Setting cookie with options:", { COOKIE_NAME, cookieOptions, tokenLength: token.length });
-      ctx.res.cookie(COOKIE_NAME, token, {
-        ...cookieOptions,
-        maxAge: 7 * 24 * 60 * 60 * 1000, // 7 days
+      // Generate JWT token
+      const token = generateToken({
+        userId: user.id,
+        email: user.email,
+        role: user.role,
       });
-      console.log("[LOGIN] Cookie set successfully");
+
+      console.log("[REGISTER] Registration successful for:", input.email);
 
       return {
         success: true,
+        token,
         user: {
           id: user.id,
           email: user.email,
@@ -143,20 +119,133 @@ export const authRouter = router({
       };
     }),
 
-  logout: publicProcedure.mutation(({ ctx }) => {
-    const cookieOptions = getSessionCookieOptions(ctx.req);
-    ctx.res.clearCookie(COOKIE_NAME, { ...cookieOptions, maxAge: -1 });
-    return { success: true };
-  }),
-
-  me: publicProcedure.query(({ ctx }) => {
-    return ctx.user || null;
-  }),
-
-  validateEmailForReset: publicProcedure
+  /**
+   * Login with email/password
+   * Returns JWT token on success
+   */
+  login: publicProcedure
     .input(
       z.object({
         email: z.string().email(),
+        password: z.string(),
+      })
+    )
+    .mutation(async ({ input }) => {
+      console.log("[LOGIN] Login attempt for:", input.email);
+
+      // Get user by email
+      const user = await getUserByEmail(input.email);
+      if (!user) {
+        throw new TRPCError({
+          code: "UNAUTHORIZED",
+          message: "Invalid email or password",
+        });
+      }
+
+      // Verify password
+      const isValidPassword = await comparePassword(input.password, user.password);
+      if (!isValidPassword) {
+        throw new TRPCError({
+          code: "UNAUTHORIZED",
+          message: "Invalid email or password",
+        });
+      }
+
+      // Update last signed in
+      await updateLastSignIn(user.id);
+
+      // Generate JWT token
+      const token = generateToken({
+        userId: user.id,
+        email: user.email,
+        role: user.role,
+      });
+
+      console.log("[LOGIN] Login successful for:", input.email);
+
+      return {
+        success: true,
+        token,
+        user: {
+          id: user.id,
+          email: user.email,
+          name: user.name,
+          role: user.role,
+        },
+      };
+    }),
+
+  /**
+   * Get current user from JWT token
+   * Token should be in Authorization header: "Bearer <token>"
+   */
+  me: publicProcedure.query(async ({ ctx }) => {
+    // Extract token from Authorization header
+    const authHeader = ctx.req.headers.authorization;
+    const token = extractTokenFromHeader(authHeader);
+
+    if (!token) {
+      return { user: null };
+    }
+
+    // Verify token
+    const payload = verifyToken(token);
+    if (!payload) {
+      return { user: null };
+    }
+
+    // Get user from database
+    const user = await getUserByEmail(payload.email);
+    if (!user) {
+      return { user: null };
+    }
+
+    return {
+      user: {
+        id: user.id,
+        email: user.email,
+        name: user.name,
+        role: user.role,
+        state: user.state,
+        phone: user.phone,
+        dateOfBirth: user.dateOfBirth,
+        isVerified: user.isVerified,
+      },
+    };
+  }),
+
+  /**
+   * Logout (client-side only - just clear localStorage)
+   * This endpoint exists for consistency but doesn't do anything server-side
+   */
+  logout: publicProcedure.mutation(async () => {
+    return { success: true };
+  }),
+
+  /**
+   * Validate email exists (for forgot password flow)
+   */
+  validateEmail: publicProcedure
+    .input(z.object({ email: z.string().email() }))
+    .mutation(async ({ input }) => {
+      const user = await getUserByEmail(input.email);
+      if (!user) {
+        throw new TRPCError({
+          code: "NOT_FOUND",
+          message: "No account found with this email address",
+        });
+      }
+      return { success: true, email: input.email };
+    }),
+
+  /**
+   * Reset password (simplified - no OTP for now)
+   */
+  resetPassword: publicProcedure
+    .input(
+      z.object({
+        email: z.string().email(),
+        newPassword: z.string().min(8),
       })
     )
     .mutation(async ({ input }) => {
@@ -168,30 +257,14 @@ export const authRouter = router({
         });
       }
 
-      return { success: true, message: "Email verified" };
-    }),
-
-  resetPasswordDirect: publicProcedure
-    .input(
-      z.object({
-        email: z.string().email(),
-        newPassword: z.string().min(8),
-      })
-    )
-    .mutation(async ({ input }) => {
-      // Get user
-      const user = await getUserByEmail(input.email);
-      if (!user) {
-        throw new TRPCError({
-          code: "NOT_FOUND",
-          message: "User not found",
-        });
-      }
-
       // Hash new password
-      const hashedPassword = await bcrypt.hash(input.newPassword, 10);
-      await updateUserPassword(user.email, hashedPassword);
+      const hashedPassword = await hashPassword(input.newPassword);
 
-      return { success: true, message: "Password reset successful! You can now login with your new password." };
+      // Update password
+      await updateUserPassword(user.id, hashedPassword);
+
+      console.log("[PASSWORD RESET] Password reset successful for:", input.email);
+
+      return { success: true };
     }),
 });

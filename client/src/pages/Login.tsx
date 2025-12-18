@@ -18,8 +18,19 @@ export default function Login() {
   const loginMutation = trpc.auth.login.useMutation({
     onSuccess: async (data) => {
       console.log("✅ Login SUCCESS!", data);
+      
+      // Store JWT token in localStorage
+      if (data.token) {
+        localStorage.setItem("auth_token", data.token);
+        console.log("✅ Token stored in localStorage");
+      }
+      
+      // Invalidate auth query to refetch user data
+      await utils.auth.me.invalidate();
+      
       toast.success("Login successful! Welcome back!");
-      // Use window.location.href to force full page reload with new cookie
+      
+      // Redirect to dashboard
       setTimeout(() => {
         window.location.href = "/dashboard";
       }, 500);

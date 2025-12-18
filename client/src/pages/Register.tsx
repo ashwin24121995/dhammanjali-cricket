@@ -72,9 +72,19 @@ export default function Register() {
   });
 
   const registerMutation = trpc.auth.register.useMutation({
-    onSuccess: () => {
-      toast.success("Registration successful! Please login to continue.");
-      setLocation("/login");
+    onSuccess: (data) => {
+      // Store JWT token in localStorage
+      if (data.token) {
+        localStorage.setItem("auth_token", data.token);
+        console.log("✅ Token stored in localStorage");
+      }
+      
+      toast.success("Registration successful! Redirecting to dashboard...");
+      
+      // Redirect to dashboard
+      setTimeout(() => {
+        window.location.href = "/dashboard";
+      }, 500);
     },
     onError: (error) => {
       toast.error(error.message || "Registration failed. Please try again.");

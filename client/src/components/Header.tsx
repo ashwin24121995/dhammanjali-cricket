@@ -14,13 +14,23 @@ export default function Header() {
 
   const handleLogout = async () => {
     try {
+      // Clear JWT token from localStorage
+      localStorage.removeItem("auth_token");
+      console.log("✅ Token removed from localStorage");
+      
+      // Call logout mutation (for consistency, even though it doesn't do anything server-side)
       await logoutMutation.mutateAsync();
+      
       // Invalidate auth query to refresh user state
       await utils.auth.me.invalidate();
+      
       toast.success("Logged out successfully");
       window.location.href = "/";
     } catch (error) {
-      toast.error("Failed to logout");
+      // Even if mutation fails, we've cleared the token
+      localStorage.removeItem("auth_token");
+      toast.success("Logged out successfully");
+      window.location.href = "/";
     }
   };
 

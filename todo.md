@@ -239,3 +239,11 @@
 - [ ] Add email notification for password reset
 - [x] Link forgot password page from login page
 - [ ] Test complete password reset flow
+
+## Simplified Password Reset Flow
+- [x] Update forgot password page to validate email first
+- [x] Store validated email in localStorage
+- [x] Show new password form immediately after email validation
+- [x] Update backend to accept email-based password reset
+- [x] Remove token-based reset flow
+- [x] Test complete simplified reset flow

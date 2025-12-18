@@ -1,7 +1,7 @@
 import { TRPCError } from "@trpc/server";
 import { z } from "zod";
 import { publicProcedure, router } from "./_core/trpc";
-import { createUser, getUserByEmail, updateLastSignIn, updateUserPassword, createPasswordResetToken, getPasswordResetToken, markTokenAsUsed } from "./db";
+import { createUser, getUserByEmail, updateLastSignIn, updateUserPassword } from "./db";
 import bcrypt from "bcryptjs";
 import { SignJWT, jwtVerify } from "jose";
 import { COOKIE_NAME } from "@shared/const";
@@ -151,7 +151,7 @@ export const authRouter = router({
     return ctx.user || null;
   }),
 
-  forgotPassword: publicProcedure
+  validateEmailForReset: publicProcedure
     .input(
       z.object({
         email: z.string().email(),
@@ -160,64 +160,25 @@ export const authRouter = router({
     .mutation(async ({ input }) => {
       const user = await getUserByEmail(input.email);
       if (!user) {
-        // Don't reveal if email exists - security best practice
-        return { success: true, message: "If the email exists, a reset link has been sent" };
+        throw new TRPCError({
+          code: "NOT_FOUND",
+          message: "No account found with this email address",
+        });
       }
 
-      // Generate secure random token
-      const token = crypto.randomUUID();
-      const expiresAt = new Date(Date.now() + 60 * 60 * 1000); // 1 hour from now
-
-      // Store token in database
-      await createPasswordResetToken({
-        userId: user.id,
-        token,
-        expiresAt,
-      });
-
-      // TODO: In production, send email with reset link
-      // For now, log the token (in production, this would be sent via email)
-      console.log(`Password reset token for ${input.email}: ${token}`);
-      console.log(`Reset link: http://localhost:3000/reset-password?token=${token}`);
-
-      return { success: true, message: "If the email exists, a reset link has been sent" };
+      return { success: true, message: "Email verified" };
     }),
 
-  resetPassword: publicProcedure
+  resetPasswordDirect: publicProcedure
     .input(
       z.object({
-        token: z.string(),
+        email: z.string().email(),
         newPassword: z.string().min(8),
       })
     )
     .mutation(async ({ input }) => {
-      // Verify token
-      const resetToken = await getPasswordResetToken(input.token);
-      if (!resetToken) {
-        throw new TRPCError({
-          code: "BAD_REQUEST",
-          message: "Invalid or expired reset token",
-        });
-      }
-
-      // Check if token is expired
-      if (new Date() > resetToken.expiresAt) {
-        throw new TRPCError({
-          code: "BAD_REQUEST",
-          message: "Reset token has expired. Please request a new one.",
-        });
-      }
-
-      // Check if token was already used
-      if (resetToken.used) {
-        throw new TRPCError({
-          code: "BAD_REQUEST",
-          message: "This reset token has already been used",
-        });
-      }
-
       // Get user
-      const user = await getUserByEmail(resetToken.userId.toString());
+      const user = await getUserByEmail(input.email);
       if (!user) {
         throw new TRPCError({
           code: "NOT_FOUND",
@@ -228,9 +189,6 @@ export const authRouter = router({
       // Hash new password
       const hashedPassword = await bcrypt.hash(input.newPassword, 10);
       await updateUserPassword(user.email, hashedPassword);
-
-      // Mark token as used
-      await markTokenAsUsed(input.token);
 
       return { success: true, message: "Password reset successful! You can now login with your new password." };
     }),

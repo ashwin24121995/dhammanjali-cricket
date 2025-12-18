@@ -12,11 +12,11 @@ export default function Footer() {
           {/* Company Info */}
           <div>
             <div className="mb-6">
-              <div className="bg-gradient-to-r from-yellow-400 to-yellow-500 px-4 py-2 transform -skew-x-6 inline-block">
-                <span className="block transform skew-x-6 text-xl font-black text-black">
-                  DHAMMANJALI
-                </span>
-              </div>
+              <img 
+                src="/dhammanjali-logo.png" 
+                alt="Dhammanjali" 
+                className="h-16 w-auto"
+              />
             </div>
             <p className="text-white/80 text-sm mb-4 leading-relaxed">
               India's first completely free fantasy cricket platform dedicated to education, entertainment, and responsible gaming.

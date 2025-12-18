@@ -126,3 +126,6 @@
 - [x] Add company registration details (CIN, PAN, addresses)
 - [x] Include investor backing information
 - [x] Add Cricket Clash design elements
+
+## Footer Enhancement
+- [x] Add Dhammanjali logo to footer

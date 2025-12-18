@@ -100,3 +100,9 @@
 
 ## UI Enhancement
 - [x] Change "START PLAYING FREE" button to yellow color
+
+## Logo Design
+- [x] Create custom Dhammanjali logo matching Cricket Clash design style
+- [x] Incorporate cricket elements (ball, bat, wickets)
+- [x] Use red/yellow/blue color scheme
+- [x] Replace current logo in header

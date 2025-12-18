@@ -34,24 +34,13 @@ export default function Header() {
     <header className="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-white shadow-lg sticky top-0 z-50">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
-          {/* Logo with Angular Design */}
+          {/* Logo */}
           <Link href="/">
-            <div className="flex items-center hover:opacity-90 transition-opacity cursor-pointer">
-              <div className="relative">
-                {/* Yellow Angular Background */}
-                <div className="bg-gradient-to-r from-yellow-400 to-yellow-500 px-6 py-3 transform -skew-x-12">
-                  <span className="block transform skew-x-12 text-2xl font-black text-black tracking-tight">
-                    DHAMMAN<span className="text-red-600">JALI</span>
-                  </span>
-                </div>
-                {/* Cricket Ball Accent */}
-                <div className="absolute -left-3 top-1/2 -translate-y-1/2 w-12 h-12 bg-red-600 rounded-full border-4 border-white shadow-lg">
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="w-1 h-8 bg-white rounded-full"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <img 
+              src="/dhammanjali-logo.png" 
+              alt="Dhammanjali Cricket" 
+              className="h-14 w-auto cursor-pointer hover:opacity-90 transition-opacity"
+            />
           </Link>
 
           {/* Desktop Navigation */}

@@ -1,7 +1,10 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "wouter";
-import { Trophy, Users, TrendingUp, Shield, Heart, Award, Target, BookOpen, Zap, CheckCircle, Star, Brain } from "lucide-react";
+import { Trophy, Users, TrendingUp, Shield, Heart, Award, Target, BookOpen, Zap, CheckCircle, Star, Brain, Calendar, MapPin, Clock } from "lucide-react";
 import { useAuth } from "@/hooks/useAuth";
+import { trpc } from "@/lib/trpc";
+import { useEffect } from "react";
+import { useQueryClient } from "@tanstack/react-query";
 
 export default function Home() {
   const { isAuthenticated } = useAuth();
@@ -87,68 +90,8 @@ export default function Home() {
         <div className="absolute bottom-0 left-0 w-full h-20 bg-white transform skew-y-2 origin-bottom-left"></div>
       </section>
 
-      {/* Statistics Dashboard Preview */}
-      <section className="bg-gradient-to-br from-blue-600 to-blue-700 py-16 relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-yellow-400/20 to-transparent"></div>
-        
-        <div className="container relative z-10">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-            {/* Left: Stats Card */}
-            <div className="bg-white rounded-lg p-8 shadow-2xl">
-              <h3 className="text-2xl font-black mb-6 text-gray-900">TOP PLAYERS TODAY</h3>
-              <div className="space-y-4">
-                {[
-                  { rank: 1, name: "Rohit Sharma Fan", points: 3856, trend: "+245" },
-                  { rank: 2, name: "Virat Kohli Admirer", points: 3642, trend: "+198" },
-                  { rank: 3, name: "MS Dhoni Follower", points: 3528, trend: "+176" },
-                  { rank: 4, name: "Bumrah Believer", points: 3289, trend: "+154" },
-                  { rank: 5, name: "Hardik Pandya Supporter", points: 2964, trend: "+132" },
-                ].map((player) => (
-                  <div key={player.rank} className="flex items-center justify-between p-3 bg-gray-50 rounded border-l-4 border-blue-600">
-                    <div className="flex items-center gap-4">
-                      <div className="w-10 h-10 bg-gradient-to-br from-yellow-400 to-yellow-500 rounded-full flex items-center justify-center">
-                        <span className="font-black text-black">{player.rank}</span>
-                      </div>
-                      <div>
-                        <p className="font-bold text-gray-900">{player.name}</p>
-                        <p className="text-sm text-green-600 font-semibold">{player.trend} pts today</p>
-                      </div>
-                    </div>
-                    <div className="text-right">
-                      <p className="text-2xl font-black text-blue-600">{player.points}</p>
-                      <p className="text-xs text-gray-500">TOTAL POINTS</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Right: Description */}
-            <div className="text-white">
-              <h2 className="text-4xl font-black mb-6">
-                COMPETE WITH<br />REAL CRICKET FANS
-              </h2>
-              <p className="text-xl leading-relaxed mb-6">
-                Join a vibrant community of cricket enthusiasts who share your passion. Track your performance in real-time, analyze your decisions, and learn from the best strategists in the game.
-              </p>
-              <div className="space-y-4">
-                <div className="flex items-start gap-3">
-                  <CheckCircle className="w-6 h-6 text-yellow-400 flex-shrink-0 mt-1" />
-                  <p className="text-lg">Live leaderboards updated after every match</p>
-                </div>
-                <div className="flex items-start gap-3">
-                  <CheckCircle className="w-6 h-6 text-yellow-400 flex-shrink-0 mt-1" />
-                  <p className="text-lg">Detailed performance analytics and insights</p>
-                </div>
-                <div className="flex items-start gap-3">
-                  <CheckCircle className="w-6 h-6 text-yellow-400 flex-shrink-0 mt-1" />
-                  <p className="text-lg">Learn from top performers' strategies</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* Upcoming Matches Section */}
+      <UpcomingMatchesSection />
 
       {/* Feature Highlights */}
       <section className="py-20 bg-gray-50 relative overflow-hidden">
@@ -397,5 +340,178 @@ export default function Home() {
         </div>
       </section>
     </div>
+  );
+}
+
+/**
+ * Upcoming Matches Section Component
+ * Displays live cricket matches with automatic refresh
+ */
+function UpcomingMatchesSection() {
+  const queryClient = useQueryClient();
+  const { data, isLoading, error } = trpc.cricket.getCurrentMatches.useQuery(
+    { status: "all", limit: 6 },
+    { refetchInterval: 30000 } // Refresh every 30 seconds
+  );
+
+  // Manual refresh every 30 seconds for live matches
+  useEffect(() => {
+    const interval = setInterval(() => {
+      queryClient.invalidateQueries({ queryKey: [['cricket', 'getCurrentMatches']] });
+    }, 30000);
+
+    return () => clearInterval(interval);
+  }, [queryClient]);
+
+  const formatMatchDate = (dateString: string) => {
+    const date = new Date(dateString);
+    return date.toLocaleDateString('en-IN', { 
+      month: 'short', 
+      day: 'numeric',
+      year: 'numeric'
+    });
+  };
+
+  const formatMatchTime = (dateString: string) => {
+    const date = new Date(dateString);
+    return date.toLocaleTimeString('en-IN', { 
+      hour: '2-digit', 
+      minute: '2-digit',
+      hour12: true
+    });
+  };
+
+  const getStatusColor = (status: string) => {
+    switch (status) {
+      case 'live':
+        return 'bg-red-600 text-white';
+      case 'upcoming':
+        return 'bg-blue-600 text-white';
+      case 'completed':
+        return 'bg-gray-600 text-white';
+      default:
+        return 'bg-gray-600 text-white';
+    }
+  };
+
+  const getStatusText = (status: string) => {
+    switch (status) {
+      case 'live':
+        return '🔴 LIVE';
+      case 'upcoming':
+        return 'UPCOMING';
+      case 'completed':
+        return 'COMPLETED';
+      default:
+        return status.toUpperCase();
+    }
+  };
+
+  return (
+    <section className="bg-gradient-to-br from-blue-600 to-blue-700 py-16 relative overflow-hidden">
+      <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-yellow-400/20 to-transparent"></div>
+      
+      <div className="container relative z-10">
+        <div className="text-center mb-12">
+          <h2 className="text-5xl font-black text-white mb-4">
+            UPCOMING <span className="text-yellow-400">MATCHES</span>
+          </h2>
+          <p className="text-xl text-white/90 max-w-2xl mx-auto">
+            Join live matches and build your dream team to compete with thousands of cricket fans
+          </p>
+        </div>
+
+        {isLoading && (
+          <div className="text-center text-white text-xl">
+            <div className="inline-block animate-spin rounded-full h-12 w-12 border-b-2 border-white"></div>
+            <p className="mt-4">Loading matches...</p>
+          </div>
+        )}
+
+        {error && (
+          <div className="text-center text-white bg-red-600/50 p-6 rounded-lg">
+            <p className="text-xl font-bold">Failed to load matches</p>
+            <p className="mt-2">Please try again later</p>
+          </div>
+        )}
+
+        {data && data.matches && data.matches.length > 0 && (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {data.matches.map((match) => (
+              <Card key={match.id} className="bg-white hover:shadow-2xl transition-shadow duration-300 overflow-hidden">
+                <CardContent className="p-0">
+                  {/* Match Status Badge */}
+                  <div className={`${getStatusColor(match.status)} px-4 py-2 text-sm font-bold text-center`}>
+                    {getStatusText(match.status)}
+                  </div>
+
+                  <div className="p-6">
+                    {/* Match Type */}
+                    <div className="inline-block bg-yellow-400 text-black px-3 py-1 text-xs font-bold mb-4">
+                      {match.matchType}
+                    </div>
+
+                    {/* Teams */}
+                    <div className="space-y-3 mb-4">
+                      <div className="flex items-center justify-between">
+                        <span className="text-lg font-bold text-gray-900">{match.team1}</span>
+                        {match.score && (
+                          <span className="text-sm font-semibold text-blue-600">VS</span>
+                        )}
+                      </div>
+                      <div className="flex items-center justify-between">
+                        <span className="text-lg font-bold text-gray-900">{match.team2}</span>
+                      </div>
+                    </div>
+
+                    {/* Match Details */}
+                    <div className="space-y-2 text-sm text-gray-600 border-t pt-4">
+                      <div className="flex items-center gap-2">
+                        <MapPin className="w-4 h-4 text-red-600" />
+                        <span className="truncate">{match.venue}</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <Calendar className="w-4 h-4 text-red-600" />
+                        <span>{formatMatchDate(match.matchDate)}</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <Clock className="w-4 h-4 text-red-600" />
+                        <span>{match.matchTime}</span>
+                      </div>
+                    </div>
+
+                    {/* Action Button */}
+                    <Link href={`/matches/${match.id}`}>
+                      <div className="mt-4 w-full bg-gradient-to-r from-red-600 to-orange-500 hover:from-red-700 hover:to-orange-600 text-white font-bold py-3 px-4 text-center cursor-pointer transition-all">
+                        {match.status === 'live' ? 'VIEW LIVE MATCH' : 'CREATE TEAM'}
+                      </div>
+                    </Link>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        )}
+
+        {data && data.matches && data.matches.length === 0 && (
+          <div className="text-center text-white bg-white/10 p-12 rounded-lg">
+            <Trophy className="w-16 h-16 mx-auto mb-4 text-yellow-400" />
+            <p className="text-2xl font-bold mb-2">No Matches Available</p>
+            <p className="text-lg">Check back soon for upcoming cricket matches!</p>
+          </div>
+        )}
+
+        {/* View All Matches Link */}
+        {data && data.matches && data.matches.length > 0 && (
+          <div className="text-center mt-12">
+            <Link href="/matches">
+              <div className="inline-flex items-center justify-center bg-yellow-400 hover:bg-yellow-500 text-black font-bold px-8 py-4 text-lg cursor-pointer transition-colors">
+                VIEW ALL MATCHES
+              </div>
+            </Link>
+          </div>
+        )}
+      </div>
+    </section>
   );
 }

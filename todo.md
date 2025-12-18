@@ -387,3 +387,12 @@
 - [x] Enable background sync on server startup
 - [x] Test complete API integration flow
 - [x] Handle API rate limits and error scenarios
+
+## Homepage Updates - Dec 19, 2024
+- [x] Remove "COMPETE WITH REAL CRICKET FANS" section from homepage
+- [x] Add "Upcoming Matches" section with live data from Cricket API
+- [x] Display match cards with team names, venue, date/time, and match type
+- [x] Implement automatic refresh for live match updates (every 30 seconds)
+- [x] Add loading states and error handling for match data
+- [x] Style match cards to match website design
+- [x] Test live updates during ongoing matches

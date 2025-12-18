@@ -60,3 +60,7 @@
 - [ ] Mobile responsiveness check
 - [ ] Cross-browser testing
 - [ ] Create final checkpoint
+
+
+## Bug Fixes
+- [x] Fix nested <a> tag error in Header component

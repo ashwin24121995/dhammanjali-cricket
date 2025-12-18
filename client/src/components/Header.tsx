@@ -30,20 +30,20 @@ export default function Header() {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link href="/">
-            <a className="flex items-center space-x-3 hover:opacity-90 transition-opacity">
+            <div className="flex items-center space-x-3 hover:opacity-90 transition-opacity cursor-pointer">
               <div className="text-3xl font-bold tracking-tight">
                 <span className="text-accent">DHAMMANJALI</span>
               </div>
-            </a>
+            </div>
           </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-6">
             {navLinks.map((link) => (
               <Link key={link.href} href={link.href}>
-                <a className="text-white hover:text-accent transition-colors font-medium">
+                <span className="text-white hover:text-accent transition-colors font-medium cursor-pointer">
                   {link.label}
-                </a>
+                </span>
               </Link>
             ))}
           </nav>
@@ -98,12 +98,12 @@ export default function Header() {
             <nav className="flex flex-col space-y-3">
               {navLinks.map((link) => (
                 <Link key={link.href} href={link.href}>
-                  <a
-                    className="text-white hover:text-accent transition-colors font-medium py-2 px-4"
+                  <span
+                    className="text-white hover:text-accent transition-colors font-medium py-2 px-4 cursor-pointer block"
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     {link.label}
-                  </a>
+                  </span>
                 </Link>
               ))}
               <div className="border-t border-white/20 pt-3 px-4 space-y-2">

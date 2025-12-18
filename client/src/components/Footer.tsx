@@ -31,22 +31,22 @@ export default function Footer() {
             <ul className="space-y-2 text-sm">
               <li>
                 <Link href="/about">
-                  <a className="text-white/80 hover:text-accent transition-colors">About Us</a>
+                  <span className="text-white/80 hover:text-accent transition-colors cursor-pointer">About Us</span>
                 </Link>
               </li>
               <li>
                 <Link href="/how-to-play">
-                  <a className="text-white/80 hover:text-accent transition-colors">How To Play</a>
+                  <span className="text-white/80 hover:text-accent transition-colors cursor-pointer">How To Play</span>
                 </Link>
               </li>
               <li>
                 <Link href="/faq">
-                  <a className="text-white/80 hover:text-accent transition-colors">FAQ</a>
+                  <span className="text-white/80 hover:text-accent transition-colors cursor-pointer">FAQ</span>
                 </Link>
               </li>
               <li>
                 <Link href="/contact">
-                  <a className="text-white/80 hover:text-accent transition-colors">Contact Us</a>
+                  <span className="text-white/80 hover:text-accent transition-colors cursor-pointer">Contact Us</span>
                 </Link>
               </li>
             </ul>
@@ -58,22 +58,22 @@ export default function Footer() {
             <ul className="space-y-2 text-sm">
               <li>
                 <Link href="/terms">
-                  <a className="text-white/80 hover:text-accent transition-colors">Terms & Conditions</a>
+                  <span className="text-white/80 hover:text-accent transition-colors cursor-pointer">Terms & Conditions</span>
                 </Link>
               </li>
               <li>
                 <Link href="/privacy">
-                  <a className="text-white/80 hover:text-accent transition-colors">Privacy Policy</a>
+                  <span className="text-white/80 hover:text-accent transition-colors cursor-pointer">Privacy Policy</span>
                 </Link>
               </li>
               <li>
                 <Link href="/fair-play">
-                  <a className="text-white/80 hover:text-accent transition-colors">Fair Play Policy</a>
+                  <span className="text-white/80 hover:text-accent transition-colors cursor-pointer">Fair Play Policy</span>
                 </Link>
               </li>
               <li>
                 <Link href="/responsible-gaming">
-                  <a className="text-white/80 hover:text-accent transition-colors">Responsible Gaming</a>
+                  <span className="text-white/80 hover:text-accent transition-colors cursor-pointer">Responsible Gaming</span>
                 </Link>
               </li>
             </ul>

@@ -13,6 +13,7 @@ import FairPlay from "./pages/FairPlay";
 import ResponsibleGaming from "./pages/ResponsibleGaming";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
+import ForgotPassword from "./pages/ForgotPassword";
 import Dashboard from "./pages/Dashboard";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
@@ -25,6 +26,7 @@ function Router() {
         <Route path={"/how-to-play"} component={HowToPlay} />
         <Route path={"/login"} component={Login} />
         <Route path={"/register"} component={Register} />
+        <Route path={"/forgot-password"} component={ForgotPassword} />
         <Route path={"/dashboard"} component={Dashboard} />
         <Route path={"/about"} component={About} />
         <Route path={"/contact"} component={Contact} />

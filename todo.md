@@ -230,3 +230,12 @@
 - [x] Add visual elements (cricket imagery, diagonal cuts, colorful sections)
 - [x] Include benefits and features information on auth pages
 - [x] Add proper validation messages and user guidance
+
+## Forgot Password Feature
+- [x] Create Forgot Password page with Cricket Clash design
+- [x] Implement password reset request backend endpoint
+- [x] Add password reset token generation and storage
+- [ ] Create reset password confirmation page
+- [ ] Add email notification for password reset
+- [x] Link forgot password page from login page
+- [ ] Test complete password reset flow

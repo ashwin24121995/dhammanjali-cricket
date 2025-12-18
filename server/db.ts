@@ -1,6 +1,6 @@
 import { eq } from "drizzle-orm";
 import { drizzle } from "drizzle-orm/mysql2";
-import { InsertUser, User, users } from "../drizzle/schema";
+import { InsertUser, User, users, passwordResetTokens, InsertPasswordResetToken, PasswordResetToken } from "../drizzle/schema";
 
 let _db: ReturnType<typeof drizzle> | null = null;
 
@@ -95,4 +95,47 @@ export async function getUserByOpenId(openId: string): Promise<(User & { openId?
 export async function upsertUser(user: Partial<InsertUser> & { openId?: string; name?: string | null; email?: string | null; loginMethod?: string | null; lastSignedIn?: Date }): Promise<void> {
   console.warn("[Database] upsertUser called but Manus OAuth is disabled");
   return;
+}
+
+// Password reset token functions
+export async function createPasswordResetToken(token: { userId: number; token: string; expiresAt: Date }): Promise<void> {
+  const db = await getDb();
+  if (!db) {
+    console.warn("[Database] Cannot create password reset token: database not available");
+    return;
+  }
+
+  try {
+    await db.insert(passwordResetTokens).values(token);
+  } catch (error) {
+    console.error("[Database] Failed to create password reset token:", error);
+    throw error;
+  }
+}
+
+export async function getPasswordResetToken(token: string): Promise<PasswordResetToken | undefined> {
+  const db = await getDb();
+  if (!db) {
+    console.warn("[Database] Cannot get password reset token: database not available");
+    return undefined;
+  }
+
+  const result = await db.select().from(passwordResetTokens).where(eq(passwordResetTokens.token, token)).limit(1);
+
+  return result.length > 0 ? result[0] : undefined;
+}
+
+export async function markTokenAsUsed(token: string): Promise<void> {
+  const db = await getDb();
+  if (!db) {
+    console.warn("[Database] Cannot mark token as used: database not available");
+    return;
+  }
+
+  try {
+    await db.update(passwordResetTokens).set({ used: 1 }).where(eq(passwordResetTokens.token, token));
+  } catch (error) {
+    console.error("[Database] Failed to mark token as used:", error);
+    throw error;
+  }
 }

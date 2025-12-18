@@ -129,3 +129,14 @@
 
 ## Footer Enhancement
 - [x] Add Dhammanjali logo to footer
+
+## How To Play Page
+- [x] Create comprehensive tutorial page with step-by-step instructions
+- [x] Add detailed gameplay rules and mechanics
+- [x] Include scoring system explanation
+- [x] Add player selection strategy tips
+- [x] Explain team building with budget constraints
+- [x] Add match selection guide
+- [x] Include leaderboard and ranking system explanation
+- [x] Add visual sections with Cricket Clash design
+- [x] Create common mistakes section

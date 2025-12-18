@@ -68,12 +68,16 @@ export default function Home() {
 
             {/* Right: Cricket Player Image with Diagonal Cut */}
             <div className="relative">
-              <div className="relative overflow-hidden" style={{ clipPath: "polygon(10% 0, 100% 0, 100% 100%, 0 100%)" }}>
+              {/* Shadow layers for depth */}
+              <div className="absolute inset-0 bg-black/40 blur-3xl transform translate-x-8 translate-y-8"></div>
+              <div className="relative overflow-hidden shadow-2xl" style={{ clipPath: "polygon(10% 0, 100% 0, 100% 100%, 0 100%)" }}>
                 <img 
                   src="/cricket-hero-1.jpg" 
                   alt="Cricket Player Batting" 
-                  className="w-full h-auto object-cover rounded-lg shadow-2xl"
+                  className="w-full h-auto object-cover"
                 />
+                {/* Gradient overlay for better text contrast */}
+                <div className="absolute inset-0 bg-gradient-to-l from-transparent via-transparent to-red-600/20"></div>
               </div>
             </div>
           </div>

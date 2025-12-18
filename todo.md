@@ -94,3 +94,6 @@
 
 ## Bug Fixes (Image)
 - [x] Fix hero section cricket player image not displaying
+
+## Visual Enhancement
+- [x] Add shadow effect behind hero section cricket player image

@@ -1,5 +1,7 @@
 import { Shield, Trophy, Users, Heart, Target, Award, Building2, User } from "lucide-react";
 
+import { MapPin } from 'lucide-react';
+
 export default function About() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">

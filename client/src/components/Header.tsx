@@ -41,7 +41,7 @@ export default function Header() {
                 {/* Yellow Angular Background */}
                 <div className="bg-gradient-to-r from-yellow-400 to-yellow-500 px-6 py-3 transform -skew-x-12">
                   <span className="block transform skew-x-12 text-2xl font-black text-black tracking-tight">
-                    CRICKET<span className="text-red-600">CLASH</span>
+                    DHAMMAN<span className="text-red-600">JALI</span>
                   </span>
                 </div>
                 {/* Cricket Ball Accent */}

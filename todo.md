@@ -80,3 +80,7 @@
 
 ## Bug Fixes (New)
 - [x] Fix nested anchor tags in Home page buttons
+
+## Branding Update
+- [x] Change header logo from "CRICKETCLASH" to "DHAMMANJALI"
+- [x] Update homepage branding from "CRICKET CLASH" to "DHAMMANJALI"

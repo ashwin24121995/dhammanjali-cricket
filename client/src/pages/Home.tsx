@@ -21,7 +21,7 @@ export default function Home() {
             <div className="text-white space-y-6">
               <div className="inline-block">
                 <div className="bg-yellow-400 text-black px-6 py-2 font-bold text-lg transform -skew-x-6 inline-block">
-                  <span className="block transform skew-x-6">CRICKET CLASH</span>
+                  <span className="block transform skew-x-6">DHAMMANJALI</span>
                 </div>
               </div>
               

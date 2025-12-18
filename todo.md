@@ -106,3 +106,6 @@
 - [x] Incorporate cricket elements (ball, bat, wickets)
 - [x] Use red/yellow/blue color scheme
 - [x] Replace current logo in header
+
+## Logo Update
+- [x] Replace AI-generated logo with user-provided custom logo

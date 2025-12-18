@@ -9,11 +9,14 @@ import { toast } from "sonner";
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const { user, isAuthenticated } = useAuth();
+  const utils = trpc.useUtils();
   const logoutMutation = trpc.auth.logout.useMutation();
 
   const handleLogout = async () => {
     try {
       await logoutMutation.mutateAsync();
+      // Invalidate auth query to refresh user state
+      await utils.auth.me.invalidate();
       toast.success("Logged out successfully");
       window.location.href = "/";
     } catch (error) {

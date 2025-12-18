@@ -259,3 +259,11 @@
 - [x] Add FAQ route to App.tsx
 - [x] Link FAQ page from header navigation
 - [x] Test all accordion interactions
+
+## Authentication Flow Fixes
+- [x] Fix login page to redirect to dashboard after successful login
+- [x] Update header navigation to show Dashboard and Logout when logged in
+- [x] Hide Login and Register buttons when user is authenticated
+- [x] Show user name/profile in header when logged in
+- [x] Test complete login flow (login -> dashboard -> logout -> home)
+- [x] Ensure auth state persists across page refreshes

@@ -13,9 +13,12 @@ export default function Login() {
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+  const utils = trpc.useUtils();
 
   const loginMutation = trpc.auth.login.useMutation({
-    onSuccess: () => {
+    onSuccess: async () => {
+      // Invalidate auth query to refresh user state
+      await utils.auth.me.invalidate();
       toast.success("Login successful! Welcome back!");
       setLocation("/dashboard");
     },

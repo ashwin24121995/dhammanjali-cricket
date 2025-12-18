@@ -350,9 +350,12 @@ export default function Home() {
 function UpcomingMatchesSection() {
   const queryClient = useQueryClient();
   const { data, isLoading, error } = trpc.cricket.getCurrentMatches.useQuery(
-    { status: "all", limit: 6 },
+    { status: "all", limit: 20 }, // Fetch more to ensure we have enough after filtering
     { refetchInterval: 30000 } // Refresh every 30 seconds
   );
+
+  // Filter out completed matches, only show live and upcoming
+  const activeMatches = data?.matches?.filter(match => match.status !== 'completed').slice(0, 6) || [];
 
   // Manual refresh every 30 seconds for live matches
   useEffect(() => {
@@ -435,9 +438,9 @@ function UpcomingMatchesSection() {
           </div>
         )}
 
-        {data && data.matches && data.matches.length > 0 && (
+        {activeMatches.length > 0 && (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {data.matches.map((match) => (
+            {activeMatches.map((match) => (
               <Card key={match.id} className="bg-white hover:shadow-2xl transition-shadow duration-300 overflow-hidden">
                 <CardContent className="p-0">
                   {/* Match Status Badge */}
@@ -451,17 +454,38 @@ function UpcomingMatchesSection() {
                       {match.matchType}
                     </div>
 
-                    {/* Teams */}
+                    {/* Teams with Live Scores */}
                     <div className="space-y-3 mb-4">
-                      <div className="flex items-center justify-between">
-                        <span className="text-lg font-bold text-gray-900">{match.team1}</span>
-                        {match.score && (
-                          <span className="text-sm font-semibold text-blue-600">VS</span>
-                        )}
-                      </div>
-                      <div className="flex items-center justify-between">
-                        <span className="text-lg font-bold text-gray-900">{match.team2}</span>
-                      </div>
+                      {match.status === 'live' && match.score ? (
+                        <>
+                          {/* Live Score Display */}
+                          <div className="bg-red-50 border-2 border-red-600 rounded p-3 mb-2">
+                            <div className="flex items-center justify-between mb-2">
+                              <span className="text-base font-bold text-gray-900">{match.team1}</span>
+                              <span className="text-lg font-black text-red-600">
+                                {match.score[0]?.r}/{match.score[0]?.w} ({match.score[0]?.o})
+                              </span>
+                            </div>
+                            <div className="flex items-center justify-between">
+                              <span className="text-base font-bold text-gray-900">{match.team2}</span>
+                              <span className="text-lg font-black text-red-600">
+                                {match.score[1]?.r}/{match.score[1]?.w} ({match.score[1]?.o})
+                              </span>
+                            </div>
+                          </div>
+                        </>
+                      ) : (
+                        <>
+                          {/* Upcoming Match - No Scores */}
+                          <div className="flex items-center justify-between">
+                            <span className="text-lg font-bold text-gray-900">{match.team1}</span>
+                            <span className="text-sm font-semibold text-blue-600">VS</span>
+                          </div>
+                          <div className="flex items-center justify-between">
+                            <span className="text-lg font-bold text-gray-900">{match.team2}</span>
+                          </div>
+                        </>
+                      )}
                     </div>
 
                     {/* Match Details */}
@@ -493,7 +517,7 @@ function UpcomingMatchesSection() {
           </div>
         )}
 
-        {data && data.matches && data.matches.length === 0 && (
+        {activeMatches.length === 0 && !isLoading && (
           <div className="text-center text-white bg-white/10 p-12 rounded-lg">
             <Trophy className="w-16 h-16 mx-auto mb-4 text-yellow-400" />
             <p className="text-2xl font-bold mb-2">No Matches Available</p>
@@ -502,7 +526,7 @@ function UpcomingMatchesSection() {
         )}
 
         {/* View All Matches Link */}
-        {data && data.matches && data.matches.length > 0 && (
+        {activeMatches.length > 0 && (
           <div className="text-center mt-12">
             <Link href="/matches">
               <div className="inline-flex items-center justify-center bg-yellow-400 hover:bg-yellow-500 text-black font-bold px-8 py-4 text-lg cursor-pointer transition-colors">

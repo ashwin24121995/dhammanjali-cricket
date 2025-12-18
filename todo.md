@@ -396,3 +396,10 @@
 - [x] Add loading states and error handling for match data
 - [x] Style match cards to match website design
 - [x] Test live updates during ongoing matches
+
+## Real-time Updates Enhancement - Dec 19, 2024
+- [x] Filter out completed matches from upcoming matches section
+- [x] Display live scores for ongoing matches
+- [x] Show current innings, runs, wickets, and overs for live matches
+- [x] Update match cards to prominently display score information
+- [x] Test real-time score updates every 30 seconds

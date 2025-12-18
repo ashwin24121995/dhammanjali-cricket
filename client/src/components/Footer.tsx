@@ -15,7 +15,8 @@ export default function Footer() {
               <img 
                 src="/dhammanjali-logo.png" 
                 alt="Dhammanjali" 
-                className="h-16 w-auto"
+                style={{ height: '81px' }}
+                className="w-auto"
               />
             </div>
             <p className="text-white/80 text-sm mb-4 leading-relaxed">

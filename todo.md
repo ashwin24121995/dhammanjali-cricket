@@ -217,3 +217,6 @@
 - [x] Update Footer with new Regional Office address (Vidyaranyapura, Bengaluru)
 - [x] Update About page with new Regional Office address
 - [x] Update Contact page with new Regional Office address
+
+## Footer Logo Size Update
+- [x] Verify footer logo height increase from 64px to 81px via visual editor

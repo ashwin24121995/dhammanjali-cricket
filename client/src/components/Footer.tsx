@@ -110,10 +110,10 @@ export default function Footer() {
                   </p>
                   <p className="text-white/80 leading-relaxed mt-3">
                     <strong className="text-yellow-400">Regional Office:</strong><br />
-                    BTM 2nd Stage - No 46, 1st Floor,<br />
-                    1st Main Road, 7th Cross Rd,<br />
-                    BTM Layout, Bengaluru,<br />
-                    Karnataka 560076, India
+                    18th Cross Rd, 5 Block,<br />
+                    Vidyaranyapura,<br />
+                    Bengaluru, Karnataka 560097,<br />
+                    India
                   </p>
                 </div>
               </div>

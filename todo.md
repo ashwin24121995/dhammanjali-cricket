@@ -212,3 +212,8 @@
 - [x] Create database schema for contact form submissions
 - [x] Add backend tRPC procedure to handle form submissions
 - [x] Include success/error messages for form submission
+
+## Regional Office Address Change
+- [x] Update Footer with new Regional Office address (Vidyaranyapura, Bengaluru)
+- [x] Update About page with new Regional Office address
+- [x] Update Contact page with new Regional Office address

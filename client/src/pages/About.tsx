@@ -209,10 +209,10 @@ export default function About() {
                     <div>
                       <h4 className="text-lg font-bold text-yellow-400 mb-2">Regional Office</h4>
                       <p className="text-gray-300 leading-relaxed">
-                        BTM 2nd Stage - No 46, 1st Floor<br />
-                        1st Main Road, 7th Cross Rd<br />
-                        BTM Layout, Bengaluru<br />
-                        Karnataka 560076, India
+                        18th Cross Rd, 5 Block<br />
+                        Vidyaranyapura<br />
+                        Bengaluru, Karnataka 560097<br />
+                        India
                       </p>
                     </div>
                   </div>

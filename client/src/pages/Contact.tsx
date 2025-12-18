@@ -262,11 +262,11 @@ export default function Contact() {
                 </div>
               </div>
               <div className="space-y-2 text-white">
-                <p className="font-semibold">BTM Layout Branch</p>
-                <p>BTM 2nd Stage - No 46, 1st Floor</p>
-                <p>1st Main Road, 7th Cross Rd</p>
-                <p>BTM Layout, Bengaluru</p>
-                <p>Karnataka 560076, India</p>
+                <p className="font-semibold">Vidyaranyapura Branch</p>
+                <p>18th Cross Rd, 5 Block</p>
+                <p>Vidyaranyapura</p>
+                <p>Bengaluru, Karnataka 560097</p>
+                <p>India</p>
               </div>
             </div>
           </div>

@@ -74,7 +74,7 @@ export default function Contact() {
             <div className="bg-white rounded-lg shadow-xl p-8 border-t-4 border-red-600">
               <h2 className="text-3xl font-black text-gray-900 mb-6">Send Us a Message</h2>
               <p className="text-gray-600 mb-8">
-                Fill out the form below and our team will get back to you within 24-48 hours. For urgent matters, please use our email or phone contact information.
+                Fill out the form below and our team will get back to you within 24-48 hours. For urgent matters, please use our email contact information.
               </p>
 
               <form onSubmit={handleSubmit} className="space-y-6">

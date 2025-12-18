@@ -12,7 +12,6 @@ export const users = mysqlTable("users", {
   name: text("name").notNull(),
   dateOfBirth: timestamp("dateOfBirth").notNull(),
   state: varchar("state", { length: 100 }).notNull(),
-  phone: varchar("phone", { length: 20 }),
   role: mysqlEnum("role", ["user", "admin"]).default("user").notNull(),
   isVerified: int("isVerified").default(0).notNull(),
   otpCode: varchar("otpCode", { length: 10 }), // OTP for email verification

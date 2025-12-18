@@ -42,7 +42,6 @@ export const authRouter = router({
         name: z.string().min(2),
         dateOfBirth: z.string(),
         state: z.string(),
-        phone: z.string().optional(),
       })
     )
     .mutation(async ({ input }) => {
@@ -85,7 +84,6 @@ export const authRouter = router({
         name: input.name,
         dateOfBirth: dob,
         state: input.state,
-        phone: input.phone,
         isVerified: 1, // Auto-verify for now (can add OTP later)
       });
 

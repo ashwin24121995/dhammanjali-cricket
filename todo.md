@@ -365,3 +365,11 @@
 - [x] Include detailed roadmap and future plans
 - [x] Add embedded FAQ section within About page
 - [x] Test About page with all new detailed content
+
+## UX Improvements - Dec 19, 2024
+- [x] Add scroll-to-top behavior when navigating between pages
+- [x] Remove phone number field from registration form
+- [x] Remove phone number from database schema (users table)
+- [x] Remove phone number from backend validation
+- [x] Remove phone number from Contact page
+- [x] Test all pages for scroll-to-top functionality

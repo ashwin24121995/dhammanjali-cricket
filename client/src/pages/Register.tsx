@@ -68,7 +68,6 @@ export default function Register() {
     name: "",
     dateOfBirth: "",
     state: "",
-    phone: "",
   });
 
   const registerMutation = trpc.auth.register.useMutation({
@@ -122,7 +121,6 @@ export default function Register() {
       name: formData.name,
       dateOfBirth: formData.dateOfBirth,
       state: formData.state,
-      phone: formData.phone || undefined,
     });
   };
 
@@ -265,36 +263,20 @@ export default function Register() {
                 />
               </div>
 
-              {/* Date of Birth & Phone */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div>
-                  <Label htmlFor="dateOfBirth" className="text-gray-900 font-bold mb-2">
-                    Date of Birth * (18+)
-                  </Label>
-                  <Input
-                    id="dateOfBirth"
-                    type="date"
-                    value={formData.dateOfBirth}
-                    onChange={(e) => setFormData({ ...formData, dateOfBirth: e.target.value })}
-                    max={new Date(new Date().setFullYear(new Date().getFullYear() - 18)).toISOString().split('T')[0]}
-                    className="h-12 border-2 border-gray-300 focus:border-blue-600"
-                    required
-                  />
-                </div>
-
-                <div>
-                  <Label htmlFor="phone" className="text-gray-900 font-bold mb-2">
-                    Phone Number (Optional)
-                  </Label>
-                  <Input
-                    id="phone"
-                    type="tel"
-                    placeholder="+91 9876543210"
-                    value={formData.phone}
-                    onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                    className="h-12 border-2 border-gray-300 focus:border-blue-600"
-                  />
-                </div>
+              {/* Date of Birth */}
+              <div>
+                <Label htmlFor="dateOfBirth" className="text-gray-900 font-bold mb-2">
+                  Date of Birth * (Must be 18 or older)
+                </Label>
+                <Input
+                  id="dateOfBirth"
+                  type="date"
+                  value={formData.dateOfBirth}
+                  onChange={(e) => setFormData({ ...formData, dateOfBirth: e.target.value })}
+                  max={new Date(new Date().setFullYear(new Date().getFullYear() - 18)).toISOString().split('T')[0]}
+                  className="h-12 border-2 border-gray-300 focus:border-blue-600"
+                  required
+                />
               </div>
 
               {/* State */}

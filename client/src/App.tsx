@@ -1,7 +1,8 @@
 import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/NotFound";
-import { Route, Switch } from "wouter";
+import { Route, Switch, useLocation } from "wouter";
+import { useEffect } from "react";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import MainLayout from "./components/MainLayout";
@@ -23,6 +24,13 @@ import Leaderboard from "./pages/Leaderboard";
 import Profile from "./pages/Profile";
 
 function Router() {
+  const [location] = useLocation();
+
+  // Scroll to top whenever the route changes
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
+
   return (
     <MainLayout>
       <Switch>

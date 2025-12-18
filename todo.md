@@ -203,3 +203,12 @@
 ## Regional Office Address Update
 - [x] Update Footer with Regional Office address (BTM 2nd Stage, Bengaluru)
 - [x] Update About page with Regional Office address
+
+## Contact Page Redesign
+- [x] Create comprehensive Contact Us page with Cricket Clash design
+- [x] Add functional contact form with validation
+- [x] Include company contact information (email, phone)
+- [x] Add both office addresses (Registered and Regional)
+- [x] Create database schema for contact form submissions
+- [x] Add backend tRPC procedure to handle form submissions
+- [x] Include success/error messages for form submission

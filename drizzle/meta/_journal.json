@@ -15,6 +15,13 @@
       "when": 1766054624087,
       "tag": "0001_flaky_rocket_racer",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "5",
+      "when": 1766072843581,
+      "tag": "0002_daily_sinister_six",
+      "breakpoints": true
     }
   ]
 }

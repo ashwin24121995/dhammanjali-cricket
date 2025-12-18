@@ -276,3 +276,15 @@
 - [x] Test if setLocation is working properly
 - [x] Add better error handling and logging to login flow
 - [x] Ensure redirect happens after query invalidation completes
+
+## Login Form Submission Bug Fix
+- [x] Investigate why login button click doesn't trigger mutation (FOUND: Mutation IS triggering)
+- [x] Check if form onSubmit handler is properly attached (YES - working correctly)
+- [x] Verify tRPC client configuration and mutation setup (YES - mutation succeeds)
+- [x] Test if button type="submit" is correct (YES - form submission works)
+- [x] Check for any JavaScript errors preventing mutation (NO errors - mutation completes)
+- [ ] **CRITICAL ISSUE**: Cookie is not being set despite successful login
+- [ ] Investigate why res.cookie() doesn't persist session cookie
+- [ ] Check tRPC response handling for Set-Cookie headers
+- [ ] Consider alternative session management (localStorage tokens, different cookie config)
+- [ ] Test if Express cookie-parser middleware is configured correctly

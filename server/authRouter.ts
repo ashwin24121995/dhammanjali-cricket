@@ -125,10 +125,12 @@ export const authRouter = router({
 
       // Set cookie
       const cookieOptions = getSessionCookieOptions(ctx.req);
+      console.log("[LOGIN] Setting cookie with options:", { COOKIE_NAME, cookieOptions, tokenLength: token.length });
       ctx.res.cookie(COOKIE_NAME, token, {
         ...cookieOptions,
         maxAge: 7 * 24 * 60 * 60 * 1000, // 7 days
       });
+      console.log("[LOGIN] Cookie set successfully");
 
       return {
         success: true,

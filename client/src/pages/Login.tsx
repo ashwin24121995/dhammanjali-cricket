@@ -16,38 +16,41 @@ export default function Login() {
   const utils = trpc.useUtils();
 
   const loginMutation = trpc.auth.login.useMutation({
-    onSuccess: async () => {
-      try {
-        // Invalidate auth query to refresh user state
-        await utils.auth.me.invalidate();
-        toast.success("Login successful! Welcome back!");
-        // Small delay to ensure state updates
-        setTimeout(() => {
-          setIsLoading(false);
-          setLocation("/dashboard");
-        }, 100);
-      } catch (error) {
-        console.error("Error during login success:", error);
-        setIsLoading(false);
-      }
+    onSuccess: async (data) => {
+      console.log("✅ Login SUCCESS!", data);
+      toast.success("Login successful! Welcome back!");
+      // Use window.location.href to force full page reload with new cookie
+      setTimeout(() => {
+        window.location.href = "/dashboard";
+      }, 500);
     },
     onError: (error) => {
-      console.error("Login error:", error);
+      console.error("❌ Login mutation error:", error);
       toast.error(error.message || "Login failed. Please check your credentials.");
       setIsLoading(false);
+    },
+    onMutate: () => {
+      console.log("🔄 Login mutation started...");
+    },
+    onSettled: (data, error) => {
+      console.log("🏁 Login mutation settled", { data, error });
     },
   });
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    console.log("Form submitted!", { email, password: "***" });
     
     if (!email || !password) {
+      console.log("Validation failed: missing fields");
       toast.error("Please fill in all fields");
       return;
     }
 
+    console.log("Starting login mutation...");
     setIsLoading(true);
     loginMutation.mutate({ email, password });
+    console.log("Mutation called");
   };
 
   return (

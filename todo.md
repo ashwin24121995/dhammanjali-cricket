@@ -64,3 +64,13 @@
 
 ## Bug Fixes
 - [x] Fix nested <a> tag error in Header component
+
+## Design Update - Cricket Clash Style
+- [x] Redesign homepage with diagonal cuts and angular shapes
+- [x] Add cricket player action photos to hero section
+- [x] Create feature highlight boxes (Daily Contests, Create Team, Live Scoring)
+- [x] Add "Top Players Today" leaderboard widget
+- [x] Implement diagonal red/yellow accent stripes
+- [x] Update header with angular logo design
+- [x] Add cricket ball and bat graphics
+- [x] Create statistics dashboard preview section

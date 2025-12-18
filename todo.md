@@ -220,3 +220,6 @@
 
 ## Footer Logo Size Update
 - [x] Verify footer logo height increase from 64px to 81px via visual editor
+
+## Contact Page Update
+- [x] Remove "Call Us" box from Contact page

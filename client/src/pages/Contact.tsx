@@ -182,21 +182,6 @@ export default function Contact() {
               </div>
             </div>
 
-            {/* Phone */}
-            <div className="bg-gradient-to-br from-yellow-400 to-yellow-500 text-gray-900 rounded-lg p-6 shadow-lg">
-              <div className="flex items-start gap-4">
-                <div className="bg-white/30 p-3 rounded-lg">
-                  <Phone className="w-6 h-6" />
-                </div>
-                <div>
-                  <h3 className="font-bold text-lg mb-2">Call Us</h3>
-                  <p className="text-gray-800 text-sm mb-2">Customer Support:</p>
-                  <p className="font-bold text-lg">+91 XXX-XXX-XXXX</p>
-                  <p className="text-gray-700 text-sm mt-2">Mon-Sat: 10 AM - 7 PM IST</p>
-                </div>
-              </div>
-            </div>
-
             {/* Office Hours */}
             <div className="bg-gradient-to-br from-green-600 to-green-700 text-white rounded-lg p-6 shadow-lg">
               <div className="flex items-start gap-4">

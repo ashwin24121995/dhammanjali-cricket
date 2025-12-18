@@ -17,12 +17,22 @@ export default function Login() {
 
   const loginMutation = trpc.auth.login.useMutation({
     onSuccess: async () => {
-      // Invalidate auth query to refresh user state
-      await utils.auth.me.invalidate();
-      toast.success("Login successful! Welcome back!");
-      setLocation("/dashboard");
+      try {
+        // Invalidate auth query to refresh user state
+        await utils.auth.me.invalidate();
+        toast.success("Login successful! Welcome back!");
+        // Small delay to ensure state updates
+        setTimeout(() => {
+          setIsLoading(false);
+          setLocation("/dashboard");
+        }, 100);
+      } catch (error) {
+        console.error("Error during login success:", error);
+        setIsLoading(false);
+      }
     },
     onError: (error) => {
+      console.error("Login error:", error);
       toast.error(error.message || "Login failed. Please check your credentials.");
       setIsLoading(false);
     },

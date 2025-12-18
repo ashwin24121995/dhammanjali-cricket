@@ -267,3 +267,12 @@
 - [x] Show user name/profile in header when logged in
 - [x] Test complete login flow (login -> dashboard -> logout -> home)
 - [x] Ensure auth state persists across page refreshes
+
+## Login Redirect Issue Debugging
+- [x] Test actual login flow with real credentials
+- [x] Check if login mutation is completing successfully
+- [x] Verify dashboard route exists and is accessible
+- [x] Check browser console for any errors during login
+- [x] Test if setLocation is working properly
+- [x] Add better error handling and logging to login flow
+- [x] Ensure redirect happens after query invalidation completes

@@ -205,7 +205,6 @@ export const authRouter = router({
         name: user.name,
         role: user.role,
         state: user.state,
-        phone: user.phone,
         dateOfBirth: user.dateOfBirth,
         isVerified: user.isVerified,
       },
@@ -259,7 +258,7 @@ export const authRouter = router({
       const hashedPassword = await hashPassword(input.newPassword);
 
       // Update password
-      await updateUserPassword(user.id, hashedPassword);
+      await updateUserPassword(user.email, hashedPassword);
 
       console.log("[PASSWORD RESET] Password reset successful for:", input.email);
 

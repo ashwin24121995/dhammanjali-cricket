@@ -38,9 +38,10 @@ export async function syncCurrentMatches(): Promise<void> {
     console.log("[Cricket Sync] Starting match data sync...");
 
     // Check if we need to fetch from API
-    const cacheEntry = await db.query.apiCache.findFirst({
-      where: eq(apiCache.endpoint, "currentMatches"),
-    });
+    const cacheEntries = await db.select().from(apiCache)
+      .where(eq(apiCache.endpoint, "currentMatches"))
+      .limit(1);
+    const cacheEntry = cacheEntries.length > 0 ? cacheEntries[0] : null;
 
     const needsUpdate = !cacheEntry || !isCacheValid(cacheEntry.lastFetched);
 
@@ -58,9 +59,10 @@ export async function syncCurrentMatches(): Promise<void> {
       const matchData = formatMatchForDatabase(apiMatch);
 
       // Check if match already exists
-      const existingMatch = await db.query.matches.findFirst({
-        where: eq(matches.externalId, apiMatch.id),
-      });
+      const existingMatches = await db.select().from(matches)
+        .where(eq(matches.externalId, apiMatch.id))
+        .limit(1);
+      const existingMatch = existingMatches.length > 0 ? existingMatches[0] : null;
 
       if (existingMatch) {
         // Update existing match
@@ -70,7 +72,7 @@ export async function syncCurrentMatches(): Promise<void> {
         console.log(`[Cricket Sync] Updated match: ${apiMatch.name}`);
       } else {
         // Insert new match
-        await db.insert(matches).values(matchData);
+        await db.insert(matches).values([matchData]);
         console.log(`[Cricket Sync] Inserted new match: ${apiMatch.name}`);
       }
     }
@@ -139,9 +141,8 @@ export async function getApiUsageStats() {
     };
   }
 
-  const recentCalls = await db.query.apiCache.findMany({
-    limit: 100,
-  });
+  const recentCalls = await db.select().from(apiCache)
+    .limit(100);
 
   const last24Hours = recentCalls.filter((call: any) => {
     const timeDiff = new Date().getTime() - new Date(call.lastFetched).getTime();

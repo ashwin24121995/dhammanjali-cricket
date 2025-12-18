@@ -4,8 +4,10 @@
  * Implements smart caching and rate limiting to stay within 100 API calls/24hr
  */
 
+import { ENV } from "./_core/env";
+
 const CRICKET_API_BASE_URL = "https://api.cricapi.com/v1";
-const CRICKET_API_KEY = "897e2c4c-67d7-42e2-ae37-ad5e0f3c5f38";
+const CRICKET_API_KEY = ENV.cricketApiKey;
 
 // Cache duration: 30 minutes (in milliseconds)
 export const CACHE_DURATION_MS = 30 * 60 * 1000;
@@ -169,6 +171,12 @@ export function isCacheValid(lastUpdated: Date | null): boolean {
  * Format Cricket API match data to our database schema
  */
 export function formatMatchForDatabase(apiMatch: CurrentMatch) {
+  const status: "completed" | "live" | "upcoming" = apiMatch.matchEnded 
+    ? "completed" 
+    : apiMatch.matchStarted 
+    ? "live" 
+    : "upcoming";
+
   return {
     externalId: apiMatch.id,
     team1: apiMatch.teams[0] || "TBD",
@@ -181,7 +189,7 @@ export function formatMatchForDatabase(apiMatch: CurrentMatch) {
       timeZone: 'Asia/Kolkata'
     }),
     matchType: apiMatch.matchType.toUpperCase(),
-    status: apiMatch.matchEnded ? "completed" : apiMatch.matchStarted ? "live" : "upcoming",
+    status,
     score: apiMatch.score ? JSON.stringify(apiMatch.score) : null,
     lastUpdated: new Date(),
   };

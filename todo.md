@@ -185,3 +185,17 @@
 - [x] Include penalties and consequences for violations
 - [x] Add appeals process
 - [x] Include commitment to fair play statement
+
+## Responsible Gaming Page
+- [x] Create comprehensive Responsible Gaming page
+- [x] Add healthy gaming habits and guidelines
+- [x] Include time management tips and tools
+- [x] Add signs of problem gaming behavior
+- [x] Include self-assessment tools
+- [x] Add setting personal limits guidance
+- [x] Include break reminders and healthy practices
+- [x] Add support resources and helplines
+- [x] Include educational content about balance
+- [x] Add commitment to player wellbeing statement
+- [x] Include parental guidance section
+- [x] Add contact information for concerns

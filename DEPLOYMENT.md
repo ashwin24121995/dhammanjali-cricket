@@ -23,7 +23,7 @@ JWT_SECRET=your-secure-random-string-min-32-chars-generate-one
 
 #### Cricket API
 ```
-CRICKET_API_KEY=your-cricketdata-org-api-key
+CRICKET_API_KEY=1a822521-d7e0-46ff-98d3-3e51020863f3
 ```
 
 

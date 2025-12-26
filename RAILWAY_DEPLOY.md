@@ -26,7 +26,7 @@ DATABASE_URL=mysql://root:CtDmKewJYTyWzpwZqaWXdwsemVJVWTRZ@tramway.proxy.rlwy.ne
 
 JWT_SECRET=dhammanjali-super-secret-key-2024-fantasy-cricket-platform
 
-CRICKET_API_KEY=4d0e8b9e-1c2a-4f3b-9d6e-7a8c5b4e3f2a
+CRICKET_API_KEY=1a822521-d7e0-46ff-98d3-3e51020863f3
 ```
 
 ### Step 3: Deploy!

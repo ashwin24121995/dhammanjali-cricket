@@ -444,4 +444,4 @@
 - [x] Update CRICKET_API_KEY to new paid API key (1a822521-d7e0-46ff-98d3-3e51020863f3)
 - [x] Update documentation with new API key
 - [x] Test API endpoints with new key
-- [ ] Push changes to GitHub
+- [x] Push changes to GitHub

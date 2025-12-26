@@ -366,8 +366,8 @@ function UpcomingMatchesSection() {
     return () => clearInterval(interval);
   }, [queryClient]);
 
-  const formatMatchDate = (dateString: string) => {
-    const date = new Date(dateString);
+  const formatMatchDate = (dateString: string | Date) => {
+    const date = typeof dateString === 'string' ? new Date(dateString) : dateString;
     return date.toLocaleDateString('en-IN', { 
       month: 'short', 
       day: 'numeric',

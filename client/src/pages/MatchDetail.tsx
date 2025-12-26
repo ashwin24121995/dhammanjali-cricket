@@ -526,8 +526,8 @@ export default function MatchDetail() {
                   </div>
                 ) : (
                   <div className="space-y-4 max-h-[600px] overflow-y-auto">
-                    {commentaryData?.commentary && commentaryData.commentary.length > 0 ? (
-                      commentaryData.commentary.map((comment: any, index: number) => (
+                    {commentaryData?.scorecard?.commentary && commentaryData.scorecard.commentary.length > 0 ? (
+                      commentaryData.scorecard.commentary.map((comment: any, index: number) => (
                         <div key={index} className="p-4 bg-gray-50 rounded border-l-4 border-blue-600">
                           <div className="flex items-center gap-2 mb-2">
                             <Badge variant="outline">{comment.over}</Badge>

@@ -16,19 +16,7 @@ export default function ForgotPassword() {
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
 
-  const validateEmailMutation = trpc.auth.validateEmailForReset.useMutation({
-    onSuccess: () => {
-      // Store email in localStorage for the reset process
-      localStorage.setItem("resetEmail", email);
-      setStep("password");
-      toast.success("Email verified! Now create your new password.");
-    },
-    onError: (error) => {
-      toast.error(error.message || "Email not found. Please check and try again.");
-    },
-  });
-
-  const resetPasswordMutation = trpc.auth.resetPasswordDirect.useMutation({
+  const resetPasswordMutation = trpc.auth.resetPassword.useMutation({
     onSuccess: () => {
       // Clear localStorage
       localStorage.removeItem("resetEmail");
@@ -42,13 +30,14 @@ export default function ForgotPassword() {
 
   const handleEmailSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    
+    // Skip email validation, go directly to password step
     if (!email) {
       toast.error("Please enter your email address");
       return;
     }
-
-    validateEmailMutation.mutate({ email });
+    
+    localStorage.setItem("resetEmail", email);
+    setStep("password");
   };
 
   const handlePasswordSubmit = (e: React.FormEvent) => {
@@ -323,7 +312,7 @@ export default function ForgotPassword() {
                     onChange={(e) => setEmail(e.target.value)}
                     className="h-14 pl-12 border-2 border-gray-300 focus:border-blue-600 text-lg"
                     required
-                    disabled={validateEmailMutation.isPending}
+                    disabled={false}
                   />
                 </div>
                 <p className="text-sm text-gray-500 mt-2">
@@ -333,10 +322,10 @@ export default function ForgotPassword() {
 
               <Button
                 type="submit"
-                disabled={validateEmailMutation.isPending}
+                disabled={false}
                 className="w-full h-14 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-black text-lg rounded-lg shadow-lg transform hover:scale-105 transition-all"
               >
-                {validateEmailMutation.isPending ? "VERIFYING..." : "VERIFY EMAIL"}
+                CONTINUE
               </Button>
 
               <div className="text-center pt-4 space-y-3">

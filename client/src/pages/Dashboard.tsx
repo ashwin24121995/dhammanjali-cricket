@@ -154,12 +154,7 @@ export default function Dashboard() {
                   <span className="text-sm text-muted-foreground">State</span>
                   <span className="font-medium">{user.state}</span>
                 </div>
-                <div className="flex justify-between items-center py-2">
-                  <span className="text-sm text-muted-foreground">Member Since</span>
-                  <span className="font-medium">
-                    {new Date(user.createdAt).toLocaleDateString()}
-                  </span>
-                </div>
+
               </div>
             </CardContent>
           </Card>

@@ -45,7 +45,7 @@ export default function Profile() {
               {user.name}
             </h1>
             <p className="text-xl text-white/90">
-              Member since {new Date(user.createdAt).toLocaleDateString('en-IN', { month: 'long', year: 'numeric' })}
+              Fantasy Cricket Enthusiast
             </p>
           </div>
         </div>
@@ -70,12 +70,7 @@ export default function Profile() {
                   <Mail className="w-5 h-5 text-blue-400" />
                   <span className="text-sm">{user.email}</span>
                 </div>
-                {user.phone && (
-                  <div className="flex items-center gap-3 text-gray-300">
-                    <Phone className="w-5 h-5 text-green-400" />
-                    <span className="text-sm">{user.phone}</span>
-                  </div>
-                )}
+
                 <div className="flex items-center gap-3 text-gray-300">
                   <MapPin className="w-5 h-5 text-red-400" />
                   <span className="text-sm">{user.state}</span>

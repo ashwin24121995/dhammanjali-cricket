@@ -419,23 +419,23 @@
 - [x] Test complete user flow from match list to team creation
 
 ## GitHub & Railway Deployment - Dec 19, 2024
-- [ ] Create GitHub repository
-- [ ] Push code to GitHub
-- [ ] Create .gitignore file for sensitive data
-- [ ] Create Railway configuration files (railway.json, Procfile)
-- [ ] Document all required environment variables
-- [ ] Create deployment guide with step-by-step instructions
+- [x] Create GitHub repository
+- [x] Push code to GitHub
+- [x] Create .gitignore file for sensitive data
+- [x] Create Railway configuration files (railway.json, Procfile)
+- [x] Document all required environment variables
+- [x] Create deployment guide with step-by-step instructions
 - [ ] Test Railway deployment
 - [ ] Verify database connection on Railway
 - [ ] Verify Cricket API integration on Railway
 
 ## Remove Manus Dependencies - Dec 19, 2024
-- [ ] Replace Manus OAuth with email/password authentication
-- [ ] Remove OAuth callback routes and middleware
-- [ ] Update login/register pages to use email/password
-- [ ] Remove Manus API dependencies (LLM, storage, notifications)
-- [ ] Clean up environment variables (remove OAUTH_*, FORGE_*, MANUS_*)
-- [ ] Update authentication context and hooks
-- [ ] Test authentication flow without Manus
-- [ ] Update deployment documentation
-- [ ] Push changes to GitHub
+- [x] Replace Manus OAuth with email/password authentication
+- [x] Remove OAuth callback routes and middleware
+- [x] Update login/register pages to use email/password
+- [x] Remove Manus API dependencies (LLM, storage, notifications)
+- [x] Clean up environment variables (remove OAUTH_*, FORGE_*, MANUS_*)
+- [x] Update authentication context and hooks
+- [x] Test authentication flow without Manus
+- [x] Update deployment documentation
+- [x] Push changes to GitHub

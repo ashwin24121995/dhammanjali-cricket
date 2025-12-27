@@ -354,8 +354,19 @@ function UpcomingMatchesSection() {
     { refetchInterval: 30000 } // Refresh every 30 seconds
   );
 
-  // Filter out completed matches, only show live and upcoming
-  const activeMatches = data?.matches?.filter(match => match.status !== 'completed').slice(0, 6) || [];
+  // Show live and upcoming matches first, but if none available, show recent completed matches
+  const liveAndUpcoming = data?.matches?.filter(match => match.status !== 'completed') || [];
+  
+  // If no live/upcoming matches, show recent completed matches (last 48 hours)
+  const recentCompleted = data?.matches?.filter((match) => {
+    if (match.status !== 'completed') return false;
+    const matchDate = new Date(match.matchDate);
+    const now = new Date();
+    const hoursDiff = (now.getTime() - matchDate.getTime()) / (1000 * 60 * 60);
+    return hoursDiff <= 48; // Show matches from last 48 hours
+  }) || [];
+  
+  const activeMatches = (liveAndUpcoming.length > 0 ? liveAndUpcoming : recentCompleted).slice(0, 6);
 
   // Manual refresh every 30 seconds for live matches
   useEffect(() => {

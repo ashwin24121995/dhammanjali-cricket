@@ -470,4 +470,12 @@
 - [x] Check API key configuration
 - [x] Verify API response format
 - [x] Fix any issues found - Show recent completed matches when no live/upcoming available
+- [x] Push to GitHub (no checkpoint)
+
+## Fix Upcoming Matches Section - Dec 27, 2024
+- [x] Change section title to be dynamic based on match status
+- [x] Show "UPCOMING MATCHES" only when there are live/upcoming matches
+- [x] Show "LIVE & RECENT MATCHES" when showing completed matches
+- [x] Improve match card alignment and styling
+- [x] Make status badges more prominent
 - [ ] Push to GitHub (no checkpoint)

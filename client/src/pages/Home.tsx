@@ -421,6 +421,12 @@ function UpcomingMatchesSection() {
     }
   };
 
+  // Determine section title based on what we're showing
+  const sectionTitle = liveAndUpcoming.length > 0 ? "UPCOMING" : "LIVE & RECENT";
+  const sectionSubtitle = liveAndUpcoming.length > 0 
+    ? "Join live matches and build your dream team to compete with thousands of cricket fans"
+    : "Recent matches from the last 48 hours - New matches coming soon!";
+
   return (
     <section className="bg-gradient-to-br from-blue-600 to-blue-700 py-16 relative overflow-hidden">
       <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-yellow-400/20 to-transparent"></div>
@@ -428,10 +434,10 @@ function UpcomingMatchesSection() {
       <div className="container relative z-10">
         <div className="text-center mb-12">
           <h2 className="text-5xl font-black text-white mb-4">
-            UPCOMING <span className="text-yellow-400">MATCHES</span>
+            {sectionTitle} <span className="text-yellow-400">MATCHES</span>
           </h2>
           <p className="text-xl text-white/90 max-w-2xl mx-auto">
-            Join live matches and build your dream team to compete with thousands of cricket fans
+            {sectionSubtitle}
           </p>
         </div>
 
@@ -455,7 +461,7 @@ function UpcomingMatchesSection() {
               <Card key={match.id} className="bg-white hover:shadow-2xl transition-shadow duration-300 overflow-hidden">
                 <CardContent className="p-0">
                   {/* Match Status Badge */}
-                  <div className={`${getStatusColor(match.status)} px-4 py-2 text-sm font-bold text-center`}>
+                  <div className={`${getStatusColor(match.status)} px-6 py-3 text-base font-black text-center tracking-wide`}>
                     {getStatusText(match.status)}
                   </div>
 
@@ -487,13 +493,11 @@ function UpcomingMatchesSection() {
                         </>
                       ) : (
                         <>
-                          {/* Upcoming Match - No Scores */}
-                          <div className="flex items-center justify-between">
-                            <span className="text-lg font-bold text-gray-900">{match.team1}</span>
-                            <span className="text-sm font-semibold text-blue-600">VS</span>
-                          </div>
-                          <div className="flex items-center justify-between">
-                            <span className="text-lg font-bold text-gray-900">{match.team2}</span>
+                          {/* Upcoming/Completed Match - No Scores */}
+                          <div className="text-center space-y-2">
+                            <div className="text-xl font-black text-gray-900">{match.team1}</div>
+                            <div className="text-lg font-bold text-blue-600">VS</div>
+                            <div className="text-xl font-black text-gray-900">{match.team2}</div>
                           </div>
                         </>
                       )}

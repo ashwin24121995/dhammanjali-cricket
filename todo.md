@@ -478,4 +478,10 @@
 - [x] Show "LIVE & RECENT MATCHES" when showing completed matches
 - [x] Improve match card alignment and styling
 - [x] Make status badges more prominent
+- [x] Push to GitHub (no checkpoint)
+
+## Add Favicon - Dec 27, 2024
+- [x] Copy dhammanjali-icon-only.png to client/public folder
+- [x] Rename to favicon.png
+- [x] Update index.html to reference new favicon
 - [ ] Push to GitHub (no checkpoint)

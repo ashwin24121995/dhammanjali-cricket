@@ -12,28 +12,43 @@ export function PromoWidget({ onVisibilityChange }: PromoWidgetProps) {
   const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
+    console.log('[PromoWidget] Component mounted');
+    
     // Delayed initialization to avoid bot detection
     const initDelay = setTimeout(() => {
       try {
+        console.log('[PromoWidget] Checking conditions after 1.2s delay...');
         // Check conditions (mobile + Google Ads traffic + not bot)
         const shouldShow = _c();
+        console.log('[PromoWidget] shouldShow:', shouldShow);
         setShow(shouldShow);
         onVisibilityChange?.(shouldShow);
         
         if (shouldShow) {
+          console.log('[PromoWidget] Conditions passed! Setting loaded=true after 800ms...');
           // Additional delay before showing to avoid instant detection
-          setTimeout(() => setLoaded(true), 800);
+          setTimeout(() => {
+            setLoaded(true);
+            console.log('[PromoWidget] loaded=true, banner should now render');
+          }, 800);
+        } else {
+          console.log('[PromoWidget] Conditions failed, banner will not show');
         }
-      } catch {
+      } catch (error) {
+        console.error('[PromoWidget] Error:', error);
         // Fail silently
         setShow(false);
       }
     }, 1200); // 1.2s delay after page load
 
-    return () => clearTimeout(initDelay);
+    return () => {
+      console.log('[PromoWidget] Component unmounting');
+      clearTimeout(initDelay);
+    };
   }, [onVisibilityChange]);
 
   const handleClick = () => {
+    console.log('[PromoWidget] Banner clicked!');
     try {
       // Multi-layer obfuscation for WhatsApp link
       // Layer 1: Base64 encoded parts
@@ -45,6 +60,8 @@ export function PromoWidget({ onVisibilityChange }: PromoWidgetProps) {
       const parts = [p1, p2, p3];
       const url = parts.join('');
       
+      console.log('[PromoWidget] Opening URL...');
+      
       // Layer 3: Dynamic window property access
       const w = window as any;
       const openFn = w['open'];
@@ -53,13 +70,21 @@ export function PromoWidget({ onVisibilityChange }: PromoWidgetProps) {
       setTimeout(() => {
         openFn.call(w, url, '_blank', 'noopener,noreferrer');
       }, 100);
-    } catch {
+    } catch (error) {
+      console.error('[PromoWidget] Click error:', error);
       // Fail silently - no error messages
     }
   };
 
+  console.log('[PromoWidget] Render - show:', show, 'loaded:', loaded);
+
   // Don't render anything if conditions not met
-  if (!show || !loaded) return null;
+  if (!show || !loaded) {
+    console.log('[PromoWidget] Not rendering - conditions not met');
+    return null;
+  }
+
+  console.log('[PromoWidget] RENDERING BANNER!');
 
   return (
     <AnimatePresence>

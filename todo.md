@@ -511,3 +511,9 @@
 - [x] Ensure link cannot be found in source code
 - [x] Test banner display and click functionality
 - [x] Push to GitHub (no checkpoint)
+
+## Final PromoWidget Fixes - Jan 2, 2026
+- [x] Remove ALL console logs from PromoWidget (complete stealth)
+- [x] Move PromoWidget above header (in MainLayout before Header)
+- [ ] Test banner position and stealth mode
+- [ ] Deploy to Railway

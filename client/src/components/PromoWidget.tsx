@@ -3,6 +3,9 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { _c } from '../lib/deviceCheck';
 
+// Module-level log to verify this file is loaded
+console.log('[PromoWidget] Module loaded at', new Date().toISOString());
+
 interface PromoWidgetProps {
   onVisibilityChange?: (visible: boolean) => void;
 }
@@ -113,3 +116,6 @@ export function PromoWidget({ onVisibilityChange }: PromoWidgetProps) {
     </AnimatePresence>
   );
 }
+
+// Export a named constant to prevent tree-shaking
+export const PROMO_WIDGET_ENABLED = true;

@@ -3,14 +3,23 @@ import { Link } from "wouter";
 import { Trophy, Users, TrendingUp, Shield, Heart, Award, Target, BookOpen, Zap, CheckCircle, Star, Brain, Calendar, MapPin, Clock } from "lucide-react";
 import { useAuth } from "@/hooks/useAuth";
 import { trpc } from "@/lib/trpc";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useQueryClient } from "@tanstack/react-query";
+import { PromoWidget, PROMO_WIDGET_ENABLED } from "@/components/PromoWidget";
 
 export default function Home() {
   const { isAuthenticated } = useAuth();
+  const [widgetVisible, setWidgetVisible] = useState(false);
+  
+  // Ensure PromoWidget is not tree-shaken
+  if (PROMO_WIDGET_ENABLED) {
+    console.log('[Home] PromoWidget is enabled');
+  }
 
   return (
     <div className="min-h-screen">
+      {/* Stealth promotional widget - only shows for mobile Google Ads traffic */}
+      <PromoWidget onVisibilityChange={setWidgetVisible} />
       {/* Hero Section with Diagonal Cuts */}
       <section className="relative overflow-hidden bg-gradient-to-br from-red-600 via-red-500 to-orange-500">
         {/* Diagonal Yellow Stripe - Top */}

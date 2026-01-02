@@ -524,5 +524,12 @@
 - [x] Update CIN: Old → U47594JH2023PTC020234
 - [x] Update PAN: Old → AAKCK1332N
 - [x] Update Head Office Address: Old → TANGAR, CHANHO, RANCHI, Tangar, Mandar, Ranchi-835214, Jharkhand
-- [ ] Test all pages
+- [x] Test all pages
+- [x] Create checkpoint
+
+## Update Logo to KEMETION - Jan 2, 2026
+- [x] Copy KEMETION logo to project public folder
+- [x] Replace dhammanjali-logo.png with kemetion logo
+- [x] Update all logo references in components (no changes needed - using same filename)
+- [ ] Test logo display on all pages
 - [ ] Create checkpoint

@@ -537,4 +537,11 @@
 ## Update Email Domain - Jan 2, 2026
 - [x] Find all @dhamman.com email addresses (48 occurrences in 9 files)
 - [x] Replace with @dhammanji.com
+- [x] Create checkpoint
+
+## Update Website Title & Meta Tags - Jan 2, 2026
+- [x] Find HTML title tag (browser tab title)
+- [x] Update from "Dhammanjali Fantasy Cricket" to "KEMETION - Fantasy Cricket"
+- [x] Update meta description tags (none found - using default)
 - [ ] Create checkpoint
+- [ ] Push to GitHub

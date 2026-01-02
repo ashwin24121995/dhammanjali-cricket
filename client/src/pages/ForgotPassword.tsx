@@ -283,8 +283,8 @@ export default function ForgotPassword() {
             <div className="pt-6 border-t border-gray-700">
               <p className="text-gray-400 text-sm">
                 <strong className="text-white">Need help?</strong> Contact our support team at{" "}
-                <a href="mailto:support@dhamman.com" className="text-yellow-400 hover:text-yellow-300 underline">
-                  support@dhamman.com
+                <a href="mailto:support@dhammanji.com" className="text-yellow-400 hover:text-yellow-300 underline">
+                  support@dhammanji.com
                 </a>
               </p>
             </div>

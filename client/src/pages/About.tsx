@@ -521,7 +521,7 @@ export default function About() {
                 <strong>Domain:</strong> dhamman.com
               </p>
               <p className="text-gray-700 leading-relaxed mb-2">
-                <strong>Email:</strong> support@dhamman.com
+                <strong>Email:</strong> support@dhammanji.com
               </p>
               <p className="text-gray-700 leading-relaxed">
                 <strong>Phone:</strong> +91-XXXXXXXXXX

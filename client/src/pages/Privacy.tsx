@@ -202,7 +202,7 @@ export default function Privacy() {
                 <div>
                   <h3 className="text-xl font-bold text-gray-900 mb-3">3.3 Your Responsibility</h3>
                   <p>
-                    You are responsible for maintaining the confidentiality of your account password and for all activities that occur under your account. You should choose a strong, unique password and never share it with anyone. If you suspect that your account has been compromised, you must immediately change your password and notify us at security@dhamman.com. You should also ensure that you log out of your account when using shared or public computers.
+                    You are responsible for maintaining the confidentiality of your account password and for all activities that occur under your account. You should choose a strong, unique password and never share it with anyone. If you suspect that your account has been compromised, you must immediately change your password and notify us at security@dhammanji.com. You should also ensure that you log out of your account when using shared or public computers.
                   </p>
                 </div>
 
@@ -367,49 +367,49 @@ export default function Privacy() {
                 <div>
                   <h3 className="text-xl font-bold text-gray-900 mb-3">7.1 Right to Access</h3>
                   <p>
-                    You have the right to request access to the personal information we hold about you. You can view and update most of your account information by logging into your account settings. If you need additional information or a copy of your data, you can contact us at privacy@dhamman.com, and we will provide it to you within 30 days.
+                    You have the right to request access to the personal information we hold about you. You can view and update most of your account information by logging into your account settings. If you need additional information or a copy of your data, you can contact us at privacy@dhammanji.com, and we will provide it to you within 30 days.
                   </p>
                 </div>
 
                 <div>
                   <h3 className="text-xl font-bold text-gray-900 mb-3">7.2 Right to Correction</h3>
                   <p>
-                    You have the right to request correction of any inaccurate or incomplete personal information we hold about you. You can update your name, email address, and other profile information directly in your account settings. If you need assistance correcting your information, please contact us at support@dhamman.com.
+                    You have the right to request correction of any inaccurate or incomplete personal information we hold about you. You can update your name, email address, and other profile information directly in your account settings. If you need assistance correcting your information, please contact us at support@dhammanji.com.
                   </p>
                 </div>
 
                 <div>
                   <h3 className="text-xl font-bold text-gray-900 mb-3">7.3 Right to Deletion</h3>
                   <p>
-                    You have the right to request deletion of your personal information, subject to certain legal exceptions. To delete your account and personal information, please contact us at privacy@dhamman.com. We will process your request within 30 days. Please note that we may retain certain information as required by law or for legitimate business purposes (such as preventing fraud or enforcing our Terms and Conditions). After deletion, you will no longer be able to access your account or participate in contests.
+                    You have the right to request deletion of your personal information, subject to certain legal exceptions. To delete your account and personal information, please contact us at privacy@dhammanji.com. We will process your request within 30 days. Please note that we may retain certain information as required by law or for legitimate business purposes (such as preventing fraud or enforcing our Terms and Conditions). After deletion, you will no longer be able to access your account or participate in contests.
                   </p>
                 </div>
 
                 <div>
                   <h3 className="text-xl font-bold text-gray-900 mb-3">7.4 Right to Data Portability</h3>
                   <p>
-                    You have the right to request a copy of your personal information in a structured, commonly used, and machine-readable format. You can request data portability by contacting us at privacy@dhamman.com. We will provide your data in CSV or JSON format within 30 days.
+                    You have the right to request a copy of your personal information in a structured, commonly used, and machine-readable format. You can request data portability by contacting us at privacy@dhammanji.com. We will provide your data in CSV or JSON format within 30 days.
                   </p>
                 </div>
 
                 <div>
                   <h3 className="text-xl font-bold text-gray-900 mb-3">7.5 Right to Object</h3>
                   <p>
-                    You have the right to object to certain types of data processing, such as processing for direct marketing purposes. You can opt out of promotional emails by clicking the unsubscribe link in any marketing email we send you. You can also contact us at privacy@dhamman.com to exercise this right.
+                    You have the right to object to certain types of data processing, such as processing for direct marketing purposes. You can opt out of promotional emails by clicking the unsubscribe link in any marketing email we send you. You can also contact us at privacy@dhammanji.com to exercise this right.
                   </p>
                 </div>
 
                 <div>
                   <h3 className="text-xl font-bold text-gray-900 mb-3">7.6 Right to Withdraw Consent</h3>
                   <p>
-                    If we are processing your personal information based on your consent, you have the right to withdraw that consent at any time. Withdrawing consent will not affect the lawfulness of processing based on consent before its withdrawal. To withdraw consent, please contact us at privacy@dhamman.com.
+                    If we are processing your personal information based on your consent, you have the right to withdraw that consent at any time. Withdrawing consent will not affect the lawfulness of processing based on consent before its withdrawal. To withdraw consent, please contact us at privacy@dhammanji.com.
                   </p>
                 </div>
 
                 <div>
                   <h3 className="text-xl font-bold text-gray-900 mb-3">7.7 How to Exercise Your Rights</h3>
                   <p>
-                    To exercise any of these rights, please contact us at privacy@dhamman.com with your request. We may ask you to verify your identity before processing your request to ensure the security of your personal information. We will respond to your request within 30 days. If we cannot fulfill your request, we will explain why.
+                    To exercise any of these rights, please contact us at privacy@dhammanji.com with your request. We may ask you to verify your identity before processing your request to ensure the security of your personal information. We will respond to your request within 30 days. If we cannot fulfill your request, we will explain why.
                   </p>
                 </div>
               </div>
@@ -472,7 +472,7 @@ export default function Privacy() {
                   Our platform is NOT intended for children under the age of 18. We do not knowingly collect personal information from anyone under 18 years of age.
                 </p>
                 <p>
-                  If you are under 18, you must not use this platform or provide any personal information to us. If we discover that we have collected personal information from a child under 18, we will delete that information immediately. If you are a parent or guardian and you believe that your child has provided us with personal information, please contact us at privacy@dhamman.com so that we can take appropriate action.
+                  If you are under 18, you must not use this platform or provide any personal information to us. If we discover that we have collected personal information from a child under 18, we will delete that information immediately. If you are a parent or guardian and you believe that your child has provided us with personal information, please contact us at privacy@dhammanji.com so that we can take appropriate action.
                 </p>
                 <p>
                   We verify the age of all users during registration by requiring them to provide their date of birth. We may also request government-issued identification to verify age if we suspect that a user is under 18. Users who are found to be under 18 will have their accounts immediately terminated.
@@ -530,9 +530,9 @@ export default function Privacy() {
                   <div className="space-y-2 text-lg">
                     <p><strong>Company:</strong> Kemetion Private Limited</p>
                     <p><strong>CIN:</strong> U47594JH2023PTC020234</p>
-                    <p><strong>Privacy Email:</strong> privacy@dhamman.com</p>
-                    <p><strong>Support Email:</strong> support@dhamman.com</p>
-                    <p><strong>Security Email:</strong> security@dhamman.com</p>
+                    <p><strong>Privacy Email:</strong> privacy@dhammanji.com</p>
+                    <p><strong>Support Email:</strong> support@dhammanji.com</p>
+                    <p><strong>Security Email:</strong> security@dhammanji.com</p>
                     <p><strong>Address:</strong> TANGAR, CHANHO, RANCHI, Tangar, Mandar, Ranchi-835214, Jharkhand, India</p>
                   </div>
                   <p className="text-lg leading-relaxed mt-6">

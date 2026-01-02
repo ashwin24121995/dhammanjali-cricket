@@ -171,12 +171,12 @@ export default function Contact() {
                 <div>
                   <h3 className="font-bold text-lg mb-2">Email Us</h3>
                   <p className="text-blue-100 text-sm mb-2">For general inquiries:</p>
-                  <a href="mailto:support@dhamman.com" className="text-yellow-300 font-semibold hover:underline">
-                    support@dhamman.com
+                  <a href="mailto:support@dhammanji.com" className="text-yellow-300 font-semibold hover:underline">
+                    support@dhammanji.com
                   </a>
                   <p className="text-blue-100 text-sm mt-3 mb-2">For business inquiries:</p>
-                  <a href="mailto:info@dhamman.com" className="text-yellow-300 font-semibold hover:underline">
-                    info@dhamman.com
+                  <a href="mailto:info@dhammanji.com" className="text-yellow-300 font-semibold hover:underline">
+                    info@dhammanji.com
                   </a>
                 </div>
               </div>

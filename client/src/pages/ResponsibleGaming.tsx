@@ -480,7 +480,7 @@ export default function ResponsibleGaming() {
                 <div>
                   <h3 className="text-xl font-bold text-gray-900 mb-3">8.5 Contact Us</h3>
                   <p>
-                    If you have concerns about your gaming habits or need guidance on responsible gaming, you can contact us at wellbeing@dhamman.com. While we're not mental health professionals, we can provide information about responsible gaming practices and direct you to appropriate resources.
+                    If you have concerns about your gaming habits or need guidance on responsible gaming, you can contact us at wellbeing@dhammanji.com. While we're not mental health professionals, we can provide information about responsible gaming practices and direct you to appropriate resources.
                   </p>
                 </div>
               </div>
@@ -577,7 +577,7 @@ export default function ResponsibleGaming() {
                 <div>
                   <h3 className="text-xl font-bold text-gray-900 mb-3">10.5 Ongoing Support</h3>
                   <p>
-                    If you have questions or concerns about responsible gaming, we're here to help. Contact us at wellbeing@dhamman.com, and we'll do our best to provide guidance and support.
+                    If you have questions or concerns about responsible gaming, we're here to help. Contact us at wellbeing@dhammanji.com, and we'll do our best to provide guidance and support.
                   </p>
                 </div>
               </div>
@@ -601,8 +601,8 @@ export default function ResponsibleGaming() {
                     At Dhammanjali, we want fantasy cricket to be a positive part of your life. Play smart, stay healthy, and enjoy the game responsibly. If you ever need support or guidance, don't hesitate to reach out. We're here for you.
                   </p>
                   <div className="mt-6 space-y-2 text-lg">
-                    <p><strong>Wellbeing Support:</strong> wellbeing@dhamman.com</p>
-                    <p><strong>General Support:</strong> support@dhamman.com</p>
+                    <p><strong>Wellbeing Support:</strong> wellbeing@dhammanji.com</p>
+                    <p><strong>General Support:</strong> support@dhammanji.com</p>
                     <p><strong>NIMHANS Helpline:</strong> 080-46110007</p>
                     <p><strong>Vandrevala Foundation:</strong> 1860-2662-345 (24/7)</p>
                   </div>

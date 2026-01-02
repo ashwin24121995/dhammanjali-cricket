@@ -126,11 +126,11 @@ const faqData: FAQCategory[] = [
       },
       {
         question: "How does Dhammanjali protect my personal data?",
-        answer: "We take data privacy seriously and comply with Indian data protection laws. Your personal information (name, email, date of birth, state) is encrypted and stored securely. We never share your data with third parties for marketing purposes. We use your email only for account-related communications. You can request to view, modify, or delete your data at any time by contacting us at privacy@dhamman.com. Read our full Privacy Policy for detailed information."
+        answer: "We take data privacy seriously and comply with Indian data protection laws. Your personal information (name, email, date of birth, state) is encrypted and stored securely. We never share your data with third parties for marketing purposes. We use your email only for account-related communications. You can request to view, modify, or delete your data at any time by contacting us at privacy@dhammanji.com. Read our full Privacy Policy for detailed information."
       },
       {
         question: "Can I delete my account?",
-        answer: "Yes, you have the right to delete your account at any time. Contact us at support@dhamman.com with your registered email and request account deletion. We'll permanently delete your personal data within 30 days as per data protection regulations. Note that once deleted, your account cannot be recovered, and you'll need to register again if you want to return."
+        answer: "Yes, you have the right to delete your account at any time. Contact us at support@dhammanji.com with your registered email and request account deletion. We'll permanently delete your personal data within 30 days as per data protection regulations. Note that once deleted, your account cannot be recovered, and you'll need to register again if you want to return."
       }
     ]
   },
@@ -176,11 +176,11 @@ const faqData: FAQCategory[] = [
       },
       {
         question: "Why can't I see my team after creating it?",
-        answer: "This usually happens due to browser cache issues. Try refreshing the page (press F5 or Ctrl+R). If that doesn't work, clear your browser cache and cookies, then log in again. Make sure you're logged into the correct account. If the problem persists, contact support@dhamman.com with your registered email and we'll investigate."
+        answer: "This usually happens due to browser cache issues. Try refreshing the page (press F5 or Ctrl+R). If that doesn't work, clear your browser cache and cookies, then log in again. Make sure you're logged into the correct account. If the problem persists, contact support@dhammanji.com with your registered email and we'll investigate."
       },
       {
         question: "I'm not receiving emails from Dhammanjali. What should I do?",
-        answer: "First, check your spam/junk folder—our emails sometimes land there. Add support@dhamman.com and noreply@dhamman.com to your contacts to prevent this. If you still don't receive emails, your email provider might be blocking us. Try using a different email address (Gmail or Outlook work best). Contact us at support@dhamman.com if the issue continues."
+        answer: "First, check your spam/junk folder—our emails sometimes land there. Add support@dhammanji.com and noreply@dhammanji.com to your contacts to prevent this. If you still don't receive emails, your email provider might be blocking us. Try using a different email address (Gmail or Outlook work best). Contact us at support@dhammanji.com if the issue continues."
       },
       {
         question: "The website is loading slowly. How can I fix this?",
@@ -192,7 +192,7 @@ const faqData: FAQCategory[] = [
       },
       {
         question: "Who do I contact for help or support?",
-        answer: "For general queries and support, email us at support@dhamman.com. For privacy and data-related questions, contact privacy@dhamman.com. For fair play and cheating reports, email fairplay@dhamman.com. For legal or compliance questions, reach out to legal@dhamman.com. You can also visit our Contact Us page for our office addresses and business hours. We typically respond within 24-48 hours."
+        answer: "For general queries and support, email us at support@dhammanji.com. For privacy and data-related questions, contact privacy@dhammanji.com. For fair play and cheating reports, email fairplay@dhammanji.com. For legal or compliance questions, reach out to legal@dhammanji.com. You can also visit our Contact Us page for our office addresses and business hours. We typically respond within 24-48 hours."
       }
     ]
   }
@@ -320,7 +320,7 @@ export default function FAQ() {
                 CONTACT SUPPORT
               </a>
               <a
-                href="mailto:support@dhamman.com"
+                href="mailto:support@dhammanji.com"
                 className="px-8 py-4 bg-white hover:bg-gray-100 text-blue-600 font-black rounded-lg shadow-lg transform hover:scale-105 transition-all"
               >
                 EMAIL US

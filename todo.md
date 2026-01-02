@@ -531,5 +531,10 @@
 - [x] Copy KEMETION logo to project public folder
 - [x] Replace dhammanjali-logo.png with kemetion logo
 - [x] Update all logo references in components (no changes needed - using same filename)
-- [ ] Test logo display on all pages
+- [x] Test logo display on all pages
+- [x] Create checkpoint
+
+## Update Email Domain - Jan 2, 2026
+- [x] Find all @dhamman.com email addresses (48 occurrences in 9 files)
+- [x] Replace with @dhammanji.com
 - [ ] Create checkpoint

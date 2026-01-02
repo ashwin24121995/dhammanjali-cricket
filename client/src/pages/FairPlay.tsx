@@ -120,7 +120,7 @@ export default function FairPlay() {
                 <div>
                   <h3 className="text-xl font-bold text-gray-900 mb-3">2.1 Cheating and Exploitation</h3>
                   <p>
-                    <strong>Using Bugs or Exploits:</strong> Deliberately exploiting bugs, glitches, or vulnerabilities in the platform to gain an unfair advantage is strictly prohibited. If you discover a bug or vulnerability, you must report it immediately to security@dhamman.com. Users who exploit bugs instead of reporting them will face severe penalties.
+                    <strong>Using Bugs or Exploits:</strong> Deliberately exploiting bugs, glitches, or vulnerabilities in the platform to gain an unfair advantage is strictly prohibited. If you discover a bug or vulnerability, you must report it immediately to security@dhammanji.com. Users who exploit bugs instead of reporting them will face severe penalties.
                   </p>
                   <p className="mt-3">
                     <strong>Manipulating the System:</strong> Any attempt to manipulate the scoring system, leaderboards, or contest results through technical means, hacking, or other methods is prohibited. This includes attempting to alter player statistics, modify scores, or interfere with the platform's normal operation.
@@ -338,14 +338,14 @@ export default function FairPlay() {
                 <div>
                   <h3 className="text-xl font-bold text-gray-900 mb-3">6.3 If Your Account Is Compromised</h3>
                   <p>
-                    If you suspect that your account has been compromised or accessed without your authorization, immediately change your password through the "Forgot Password" link, contact us at security@dhamman.com with details of the suspected compromise, review your account activity for any unauthorized actions, and check your email for any password reset or account modification notifications. We will investigate the incident and take appropriate action to secure your account. However, you remain responsible for activity that occurs under your account until you report the compromise to us.
+                    If you suspect that your account has been compromised or accessed without your authorization, immediately change your password through the "Forgot Password" link, contact us at security@dhammanji.com with details of the suspected compromise, review your account activity for any unauthorized actions, and check your email for any password reset or account modification notifications. We will investigate the incident and take appropriate action to secure your account. However, you remain responsible for activity that occurs under your account until you report the compromise to us.
                   </p>
                 </div>
 
                 <div>
                   <h3 className="text-xl font-bold text-gray-900 mb-3">6.4 Phishing and Scams</h3>
                   <p>
-                    Be aware of phishing attempts and scams. Dhammanjali will never ask you for your password via email, phone, or any other means. We will never ask you to send money or provide payment information (our platform is completely free). We will never ask you to click on suspicious links or download files from unsolicited emails. If you receive any suspicious communications claiming to be from Dhammanjali, do not respond and report it to security@dhamman.com immediately.
+                    Be aware of phishing attempts and scams. Dhammanjali will never ask you for your password via email, phone, or any other means. We will never ask you to send money or provide payment information (our platform is completely free). We will never ask you to click on suspicious links or download files from unsolicited emails. If you receive any suspicious communications claiming to be from Dhammanjali, do not respond and report it to security@dhammanji.com immediately.
                   </p>
                 </div>
               </div>
@@ -374,7 +374,7 @@ export default function FairPlay() {
                 <div>
                   <h3 className="text-xl font-bold text-gray-900 mb-3">7.2 How to Report</h3>
                   <p>
-                    To report a violation, send an email to fairplay@dhamman.com with a clear description of the violation, the username(s) of the user(s) involved (if known), the date and time of the incident, any evidence you have (screenshots, links, etc.), and your contact information (so we can follow up if needed). All reports are treated confidentially, and we do not disclose the identity of reporters to the accused party.
+                    To report a violation, send an email to fairplay@dhammanji.com with a clear description of the violation, the username(s) of the user(s) involved (if known), the date and time of the incident, any evidence you have (screenshots, links, etc.), and your contact information (so we can follow up if needed). All reports are treated confidentially, and we do not disclose the identity of reporters to the accused party.
                   </p>
                 </div>
 
@@ -509,7 +509,7 @@ export default function FairPlay() {
                 <div>
                   <h3 className="text-xl font-bold text-gray-900 mb-3">10.1 How to Submit an Appeal</h3>
                   <p>
-                    To submit an appeal, send an email to appeals@dhamman.com within 30 days of receiving the penalty notification. Your appeal should include your username, the date you received the penalty notification, a clear explanation of why you believe the penalty was applied in error, any evidence that supports your appeal (screenshots, logs, etc.), and your contact information. Appeals submitted after 30 days may not be considered.
+                    To submit an appeal, send an email to appeals@dhammanji.com within 30 days of receiving the penalty notification. Your appeal should include your username, the date you received the penalty notification, a clear explanation of why you believe the penalty was applied in error, any evidence that supports your appeal (screenshots, logs, etc.), and your contact information. Appeals submitted after 30 days may not be considered.
                   </p>
                 </div>
 
@@ -554,16 +554,16 @@ export default function FairPlay() {
                     Fair play is not just a policy—it's a core value that defines the Dhammanjali platform. We are committed to maintaining a level playing field where every user has an equal opportunity to compete and succeed based on their cricket knowledge and strategic skills. We continuously invest in technology and human resources to detect and prevent violations, and we take swift action against those who try to cheat the system.
                   </p>
                   <p className="text-lg leading-relaxed mb-4">
-                    At the same time, we recognize that honest mistakes can happen, and we strive to be fair and reasonable in our enforcement actions. If you ever have questions about our Fair Play Policy or are unsure whether a particular action would be considered a violation, please contact us at fairplay@dhamman.com before taking that action. We're here to help you enjoy fantasy cricket in a fair and responsible manner.
+                    At the same time, we recognize that honest mistakes can happen, and we strive to be fair and reasonable in our enforcement actions. If you ever have questions about our Fair Play Policy or are unsure whether a particular action would be considered a violation, please contact us at fairplay@dhammanji.com before taking that action. We're here to help you enjoy fantasy cricket in a fair and responsible manner.
                   </p>
                   <p className="text-lg leading-relaxed">
                     Thank you for being part of the Dhammanjali community and for your commitment to fair play. Together, we can create a platform that is enjoyable, competitive, and fair for everyone.
                   </p>
                   <div className="mt-6 space-y-2 text-lg">
-                    <p><strong>Fair Play Email:</strong> fairplay@dhamman.com</p>
-                    <p><strong>Appeals Email:</strong> appeals@dhamman.com</p>
-                    <p><strong>Security Email:</strong> security@dhamman.com</p>
-                    <p><strong>General Support:</strong> support@dhamman.com</p>
+                    <p><strong>Fair Play Email:</strong> fairplay@dhammanji.com</p>
+                    <p><strong>Appeals Email:</strong> appeals@dhammanji.com</p>
+                    <p><strong>Security Email:</strong> security@dhammanji.com</p>
+                    <p><strong>General Support:</strong> support@dhammanji.com</p>
                   </div>
                 </div>
               </div>

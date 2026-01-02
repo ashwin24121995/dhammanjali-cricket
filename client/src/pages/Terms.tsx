@@ -158,7 +158,7 @@ export default function Terms() {
                   <strong>Account Verification:</strong> We reserve the right to verify your identity, age, and location at any time by requesting government-issued identification documents (such as Aadhaar card, PAN card, driver's license, or passport). Failure to provide requested verification documents within a reasonable timeframe may result in account suspension.
                 </p>
                 <p>
-                  <strong>Notification of Unauthorized Use:</strong> You must immediately notify us at support@dhamman.com if you become aware of any unauthorized use of your account or any other security breach.
+                  <strong>Notification of Unauthorized Use:</strong> You must immediately notify us at support@dhammanji.com if you become aware of any unauthorized use of your account or any other security breach.
                 </p>
               </div>
             </div>
@@ -239,7 +239,7 @@ export default function Terms() {
                   <strong>Third-Party Content:</strong> The Platform may display cricket player names, team names, match information, and other content that is owned by third parties (such as cricket boards, leagues, and players). We do not claim ownership of such content and use it solely for the purpose of operating the fantasy cricket game under applicable fair use principles.
                 </p>
                 <p>
-                  <strong>Copyright Infringement:</strong> If you believe that any content on the Platform infringes your copyright, please contact us at legal@dhamman.com with detailed information about the alleged infringement.
+                  <strong>Copyright Infringement:</strong> If you believe that any content on the Platform infringes your copyright, please contact us at legal@dhammanji.com with detailed information about the alleged infringement.
                 </p>
               </div>
             </div>
@@ -302,7 +302,7 @@ export default function Terms() {
               <h2 className="text-3xl font-black text-gray-900 mb-6">10. ACCOUNT TERMINATION AND SUSPENSION</h2>
               <div className="space-y-4 text-gray-700 leading-relaxed">
                 <p>
-                  <strong>Termination by You:</strong> You may terminate your account at any time by contacting us at support@dhamman.com. Upon termination, your access to the Platform will be revoked, and your account data will be handled in accordance with our Privacy Policy.
+                  <strong>Termination by You:</strong> You may terminate your account at any time by contacting us at support@dhammanji.com. Upon termination, your access to the Platform will be revoked, and your account data will be handled in accordance with our Privacy Policy.
                 </p>
                 <p>
                   <strong>Termination by Us:</strong> We reserve the right to suspend or terminate your account at any time, with or without notice, for any reason, including but not limited to:
@@ -320,7 +320,7 @@ export default function Terms() {
                   <strong>Effect of Termination:</strong> Upon termination, your right to use the Platform immediately ceases. We are not liable for any loss or damage resulting from account termination. You remain liable for any obligations incurred prior to termination.
                 </p>
                 <p>
-                  <strong>Appeals:</strong> If you believe your account was terminated in error, you may contact us at support@dhamman.com to request a review. We will investigate the matter and respond within a reasonable timeframe, but our decision is final.
+                  <strong>Appeals:</strong> If you believe your account was terminated in error, you may contact us at support@dhammanji.com to request a review. We will investigate the matter and respond within a reasonable timeframe, but our decision is final.
                 </p>
               </div>
             </div>
@@ -395,7 +395,7 @@ export default function Terms() {
                   <strong>Jurisdiction:</strong> Any disputes arising out of or related to these Terms or your use of the Platform shall be subject to the exclusive jurisdiction of the courts located in Ranchi, Jharkhand, India.
                 </p>
                 <p>
-                  <strong>Dispute Resolution Process:</strong> Before initiating any legal proceedings, you agree to first attempt to resolve any dispute informally by contacting us at legal@dhamman.com. We will make reasonable efforts to resolve the dispute amicably within 30 days.
+                  <strong>Dispute Resolution Process:</strong> Before initiating any legal proceedings, you agree to first attempt to resolve any dispute informally by contacting us at legal@dhammanji.com. We will make reasonable efforts to resolve the dispute amicably within 30 days.
                 </p>
                 <p>
                   <strong>Arbitration:</strong> If informal resolution fails, any dispute shall be resolved through binding arbitration in accordance with the Arbitration and Conciliation Act, 1996. The arbitration shall be conducted in Ranchi, Jharkhand, by a single arbitrator mutually agreed upon by both parties.
@@ -467,8 +467,8 @@ export default function Terms() {
                 <div className="space-y-2 text-lg">
                   <p><strong>Company:</strong> Kemetion Private Limited</p>
                   <p><strong>CIN:</strong> U47594JH2023PTC020234</p>
-                  <p><strong>Email:</strong> legal@dhamman.com</p>
-                  <p><strong>Support Email:</strong> support@dhamman.com</p>
+                  <p><strong>Email:</strong> legal@dhammanji.com</p>
+                  <p><strong>Support Email:</strong> support@dhammanji.com</p>
                   <p><strong>Address:</strong> TANGAR, CHANHO, RANCHI, Tangar, Mandar, Ranchi-835214, Jharkhand, India</p>
                 </div>
               </div>

@@ -57,7 +57,7 @@ export default function Contact() {
             <h1 className="text-5xl md:text-6xl font-black mb-6 leading-tight">
               CONTACT
               <br />
-              <span className="text-yellow-400">DHAMMANJALI</span>
+              <span className="text-yellow-400">KEMETION</span>
             </h1>
             <p className="text-xl md:text-2xl font-medium leading-relaxed">
               Have questions? We're here to help! Reach out to our team for support, feedback, or partnership inquiries.
@@ -223,15 +223,15 @@ export default function Contact() {
                 </div>
                 <div>
                   <h3 className="text-2xl font-black text-yellow-400 mb-1">Registered Office</h3>
-                  <p className="text-red-100 text-sm">Head Office - Prayagraj</p>
+                  <p className="text-red-100 text-sm">Head Office - Ranchi</p>
                 </div>
               </div>
               <div className="space-y-2 text-white">
-                <p className="font-semibold">DHAMMANJALI INDIA PRIVATE LIMITED</p>
-                <p>1st Floor, 154 Katka Jhunsi</p>
-                <p>Thana - Jhunsi District Prayagraj</p>
-                <p>Jhunsi, Allahabad - 211019</p>
-                <p>Uttar Pradesh, India</p>
+                <p className="font-semibold">KEMETION PRIVATE LIMITED</p>
+                <p>TANGAR, CHANHO, RANCHI</p>
+                <p>Tangar, Mandar</p>
+                <p>Ranchi-835214</p>
+                <p>Jharkhand, India</p>
               </div>
             </div>
 

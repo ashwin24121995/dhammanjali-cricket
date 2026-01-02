@@ -30,7 +30,7 @@ export default function Home() {
             <div className="text-white space-y-6">
               <div className="inline-block">
                 <div className="bg-yellow-400 text-black px-6 py-2 font-bold text-lg transform -skew-x-6 inline-block">
-                  <span className="block transform skew-x-6">DHAMMANJALI</span>
+                  <span className="block transform skew-x-6">KEMETION</span>
                 </div>
               </div>
               
@@ -223,7 +223,7 @@ export default function Home() {
             <div>
               <h2 className="text-5xl font-black mb-8">
                 WHY CHOOSE<br />
-                <span className="text-yellow-400">DHAMMANJALI?</span>
+                <span className="text-yellow-400">KEMETION?</span>
               </h2>
               
               <div className="space-y-6">

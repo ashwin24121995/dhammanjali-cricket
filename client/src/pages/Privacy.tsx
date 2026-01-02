@@ -32,7 +32,7 @@ export default function Privacy() {
               <div>
                 <h2 className="text-2xl font-black mb-3">YOUR PRIVACY MATTERS</h2>
                 <p className="text-lg leading-relaxed">
-                  At Dhammanjali India Private Limited, we are committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy explains how we collect, use, store, and protect your data when you use our fantasy cricket platform. By using our services, you consent to the data practices described in this policy.
+                  At Kemetion Private Limited, we are committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy explains how we collect, use, store, and protect your data when you use our fantasy cricket platform. By using our services, you consent to the data practices described in this policy.
                 </p>
               </div>
             </div>
@@ -68,7 +68,7 @@ export default function Privacy() {
                 <div>
                   <h3 className="text-xl font-bold text-gray-900 mb-3">1.1 Personal Information You Provide</h3>
                   <p className="mb-3">
-                    When you register for an account on Dhammanjali, we collect personal information that you voluntarily provide to us. This information is necessary to create and maintain your account, verify your eligibility, and provide you with our services.
+                    When you register for an account on Kemetion, we collect personal information that you voluntarily provide to us. This information is necessary to create and maintain your account, verify your eligibility, and provide you with our services.
                   </p>
                   <p className="mb-3">
                     <strong>Account Registration Data:</strong> When you create an account, we collect your full name, email address, date of birth, state of residence, phone number (optional), and password. Your date of birth is used to verify that you meet the minimum age requirement of 18 years. Your state of residence is used to ensure compliance with geographic restrictions.
@@ -84,7 +84,7 @@ export default function Privacy() {
                 <div>
                   <h3 className="text-xl font-bold text-gray-900 mb-3">1.2 Information Collected Automatically</h3>
                   <p className="mb-3">
-                    When you access and use the Dhammanjali platform, we automatically collect certain information about your device, browsing actions, and usage patterns. This information helps us improve our services, diagnose technical problems, and enhance user experience.
+                    When you access and use the Kemetion platform, we automatically collect certain information about your device, browsing actions, and usage patterns. This information helps us improve our services, diagnose technical problems, and enhance user experience.
                   </p>
                   <p className="mb-3">
                     <strong>Device Information:</strong> We collect information about the device you use to access our platform, including device type, operating system, browser type and version, screen resolution, IP address, and unique device identifiers.
@@ -528,12 +528,12 @@ export default function Privacy() {
                     If you have any questions, concerns, or requests regarding this Privacy Policy or our data practices, please contact us:
                   </p>
                   <div className="space-y-2 text-lg">
-                    <p><strong>Company:</strong> Dhammanjali India Private Limited</p>
-                    <p><strong>CIN:</strong> U15490UP2020PTC135324</p>
+                    <p><strong>Company:</strong> Kemetion Private Limited</p>
+                    <p><strong>CIN:</strong> U47594JH2023PTC020234</p>
                     <p><strong>Privacy Email:</strong> privacy@dhamman.com</p>
                     <p><strong>Support Email:</strong> support@dhamman.com</p>
                     <p><strong>Security Email:</strong> security@dhamman.com</p>
-                    <p><strong>Address:</strong> 1ST FLOOR, 154 KATKA JHUNSI, THANA- JHUNSI DISTRICT PRAYAGRAJ, Allahabad- 211019, Uttar Pradesh, India</p>
+                    <p><strong>Address:</strong> TANGAR, CHANHO, RANCHI, Tangar, Mandar, Ranchi-835214, Jharkhand, India</p>
                   </div>
                   <p className="text-lg leading-relaxed mt-6">
                     We will respond to your inquiry within 30 days. If you are not satisfied with our response, you have the right to lodge a complaint with the relevant data protection authority in your jurisdiction.

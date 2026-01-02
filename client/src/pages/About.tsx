@@ -14,7 +14,7 @@ export default function About() {
           </div>
           
           <h1 className="text-5xl md:text-7xl font-black mb-6 leading-tight">
-            DHAMMANJALI INDIA<br />
+            KEMETION<br />
             <span className="text-yellow-400">PRIVATE LIMITED</span>
           </h1>
           
@@ -31,11 +31,11 @@ export default function About() {
           
           <div className="prose prose-lg max-w-none">
             <p className="text-lg leading-relaxed text-gray-700 mb-6">
-              Dhammanjali India Private Limited is a pioneering force in the Indian fantasy sports industry, dedicated to democratizing cricket knowledge and strategic thinking through our innovative free-to-play platform. Established in <strong>2020</strong> and headquartered in <strong>Prayagraj, Uttar Pradesh</strong>, we have embarked on a mission to transform how millions of Indians engage with cricket—not through financial speculation, but through pure skill development and educational entertainment.
+              Kemetion Private Limited is a pioneering force in the Indian fantasy sports industry, dedicated to democratizing cricket knowledge and strategic thinking through our innovative free-to-play platform. Established in <strong>2020</strong> and headquartered in <strong>Ranchi, Jharkhand</strong>, we have embarked on a mission to transform how millions of Indians engage with cricket—not through financial speculation, but through pure skill development and educational entertainment.
             </p>
 
             <p className="text-lg leading-relaxed text-gray-700 mb-6">
-              Unlike traditional fantasy sports platforms that revolve around real money transactions and monetary rewards, Dhammanjali operates on a fundamentally different philosophy. We believe that the joy of fantasy cricket should be accessible to everyone, regardless of their financial capacity. Our platform serves as an <strong>educational tool</strong> where cricket enthusiasts can learn team management, player analysis, match strategy, and decision-making skills in a completely risk-free environment.
+              Unlike traditional fantasy sports platforms that revolve around real money transactions and monetary rewards, Kemetion operates on a fundamentally different philosophy. We believe that the joy of fantasy cricket should be accessible to everyone, regardless of their financial capacity. Our platform serves as an <strong>educational tool</strong> where cricket enthusiasts can learn team management, player analysis, match strategy, and decision-making skills in a completely risk-free environment.
             </p>
 
             <p className="text-lg leading-relaxed text-gray-700 mb-6">
@@ -74,19 +74,19 @@ export default function About() {
       {/* Our Story - Detailed Founding History */}
       <section className="py-20 bg-gradient-to-br from-slate-100 to-slate-200">
         <div className="container">
-          <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-12">Our Story: How Dhammanjali Was Born</h2>
+          <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-12">Our Story: How Kemetion Was Born</h2>
           
           <div className="prose prose-lg max-w-none">
             <p className="text-lg leading-relaxed text-gray-700 mb-6">
-              The idea for Dhammanjali India Private Limited emerged in <strong>2019</strong> when our founder, <strong>Vinay Nagvanshi</strong>, witnessed the growing popularity of fantasy sports in India—but also noticed a troubling trend. Most platforms were built around real money gaming, creating financial stress, addiction concerns, and legal complications for millions of users. Many cricket fans who simply wanted to test their knowledge and strategic thinking were being pushed into a monetized ecosystem that prioritized profit over education.
+              The idea for Kemetion Private Limited emerged in <strong>2019</strong> when our founder, <strong>Vinay Nagvanshi</strong>, witnessed the growing popularity of fantasy sports in India—but also noticed a troubling trend. Most platforms were built around real money gaming, creating financial stress, addiction concerns, and legal complications for millions of users. Many cricket fans who simply wanted to test their knowledge and strategic thinking were being pushed into a monetized ecosystem that prioritized profit over education.
             </p>
 
             <p className="text-lg leading-relaxed text-gray-700 mb-6">
-              Vinay, a lifelong cricket enthusiast and advocate for responsible gaming, asked a simple question: <em>"Why can't fantasy cricket be purely educational and accessible to everyone, regardless of their financial situation?"</em> This question became the foundation of Dhammanjali.
+              Vinay, a lifelong cricket enthusiast and advocate for responsible gaming, asked a simple question: <em>"Why can't fantasy cricket be purely educational and accessible to everyone, regardless of their financial situation?"</em> This question became the foundation of Kemetion.
             </p>
 
             <p className="text-lg leading-relaxed text-gray-700 mb-6">
-              In <strong>2020</strong>, after months of research, planning, and securing investor backing from individuals who believed in the educational potential of fantasy sports, Dhammanjali India Private Limited was officially incorporated. The company was registered in <strong>Prayagraj, Uttar Pradesh</strong>, with a clear mission: to build India's first completely free-to-play fantasy cricket platform focused on skill development and cricket education.
+              In <strong>2020</strong>, after months of research, planning, and securing investor backing from individuals who believed in the educational potential of fantasy sports, Kemetion Private Limited was officially incorporated. The company was registered in <strong>Ranchi, Jharkhand</strong>, with a clear mission: to build India's first completely free-to-play fantasy cricket platform focused on skill development and cricket education.
             </p>
 
             <div className="bg-white p-8 rounded-2xl shadow-lg border-l-8 border-red-600 my-8">
@@ -101,7 +101,7 @@ export default function About() {
                 </div>
                 <div className="flex gap-4">
                   <div className="flex-shrink-0 w-32 font-bold text-yellow-600">2020</div>
-                  <div className="text-gray-700">Dhammanjali India Private Limited officially incorporated (CIN: U15490UP2020PTC135324). Secured initial investor backing for free-to-play model.</div>
+                  <div className="text-gray-700">Kemetion Private Limited officially incorporated (CIN: U47594JH2023PTC020234). Secured initial investor backing for free-to-play model.</div>
                 </div>
                 <div className="flex gap-4">
                   <div className="flex-shrink-0 w-32 font-bold text-blue-600">2021-2023</div>
@@ -120,7 +120,7 @@ export default function About() {
       {/* What Makes Us Different - Detailed */}
       <section className="py-20 bg-white">
         <div className="container">
-          <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-12">What Makes Dhammanjali Different</h2>
+          <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-12">What Makes Kemetion Different</h2>
           
           <div className="grid md:grid-cols-2 gap-8">
             <div className="bg-gradient-to-br from-green-50 to-green-100 p-8 rounded-2xl border-4 border-green-600">
@@ -132,7 +132,7 @@ export default function About() {
                 <strong>No entry fees, no deposits, no hidden charges, no premium memberships.</strong> Every feature, every contest, every match is completely free. We are funded by investors who believe in fantasy education, not user wallets.
               </p>
               <p className="text-gray-700 leading-relaxed">
-                Unlike other platforms that offer "free contests" but push users toward paid options, Dhammanjali has <strong>zero monetization features</strong>. There are no ads, no in-app purchases, no subscription tiers. Every user gets the exact same experience—completely free.
+                Unlike other platforms that offer "free contests" but push users toward paid options, Kemetion has <strong>zero monetization features</strong>. There are no ads, no in-app purchases, no subscription tiers. Every user gets the exact same experience—completely free.
               </p>
             </div>
 
@@ -185,7 +185,7 @@ export default function About() {
           
           <div className="prose prose-lg max-w-none">
             <p className="text-lg leading-relaxed text-gray-700 mb-8">
-              Dhammanjali's fantasy cricket platform is designed to be simple, intuitive, and educational. Here's a detailed breakdown of how it works:
+              Kemetion's fantasy cricket platform is designed to be simple, intuitive, and educational. Here's a detailed breakdown of how it works:
             </p>
 
             <div className="space-y-6">
@@ -247,11 +247,11 @@ export default function About() {
       {/* Educational Benefits - Detailed */}
       <section className="py-20 bg-white">
         <div className="container">
-          <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-12">Educational Benefits of Dhammanjali</h2>
+          <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-12">Educational Benefits of Kemetion</h2>
           
           <div className="prose prose-lg max-w-none">
             <p className="text-lg leading-relaxed text-gray-700 mb-8">
-              Dhammanjali is more than just a fantasy cricket platform—it's an <strong>educational tool</strong> that helps users develop valuable skills and deepen their cricket knowledge. Here's what you'll learn:
+              Kemetion is more than just a fantasy cricket platform—it's an <strong>educational tool</strong> that helps users develop valuable skills and deepen their cricket knowledge. Here's what you'll learn:
             </p>
 
             <div className="grid md:grid-cols-2 gap-6">
@@ -326,7 +326,7 @@ export default function About() {
           
           <div className="prose prose-lg max-w-none">
             <p className="text-lg leading-relaxed text-gray-700 mb-6">
-              Dhammanjali India Private Limited operates in <strong>full compliance</strong> with Indian gaming laws and regulations. We take legal compliance seriously and have implemented strict measures to ensure our platform adheres to all applicable rules.
+              Kemetion Private Limited operates in <strong>full compliance</strong> with Indian gaming laws and regulations. We take legal compliance seriously and have implemented strict measures to ensure our platform adheres to all applicable rules.
             </p>
 
             <div className="bg-red-50 border-l-8 border-red-600 p-8 rounded-xl mb-8">
@@ -335,7 +335,7 @@ export default function About() {
                 State-Based Restrictions
               </h3>
               <p className="text-gray-700 leading-relaxed mb-4">
-                Due to state-specific gaming laws, Dhammanjali is <strong>NOT available</strong> in the following states:
+                Due to state-specific gaming laws, Kemetion is <strong>NOT available</strong> in the following states:
               </p>
               <ul className="list-disc list-inside text-gray-700 space-y-2 ml-4 text-lg">
                 <li><strong>Andhra Pradesh</strong> - State law prohibits online gaming platforms</li>
@@ -356,7 +356,7 @@ export default function About() {
                 Age Verification (18+ Only)
               </h3>
               <p className="text-gray-700 leading-relaxed mb-4">
-                Only users aged <strong>18 years and older</strong> are permitted to register and play on Dhammanjali. We verify age during registration by requiring users to provide their date of birth. Users under 18 are automatically blocked from creating accounts.
+                Only users aged <strong>18 years and older</strong> are permitted to register and play on Kemetion. We verify age during registration by requiring users to provide their date of birth. Users under 18 are automatically blocked from creating accounts.
               </p>
               <p className="text-gray-700 leading-relaxed">
                 This age restriction is in place to ensure responsible gaming practices and comply with Indian gaming regulations, even though our platform does not involve real money transactions.
@@ -369,7 +369,7 @@ export default function About() {
                 Skill-Based Gaming Classification
               </h3>
               <p className="text-gray-700 leading-relaxed mb-4">
-                Dhammanjali is classified as a <strong>skill-based game</strong>, not a game of chance. Fantasy cricket requires knowledge, strategy, and analytical skills to succeed. Players must evaluate statistics, understand match conditions, and make informed decisions—outcomes are not determined by luck or random chance.
+                Kemetion is classified as a <strong>skill-based game</strong>, not a game of chance. Fantasy cricket requires knowledge, strategy, and analytical skills to succeed. Players must evaluate statistics, understand match conditions, and make informed decisions—outcomes are not determined by luck or random chance.
               </p>
               <p className="text-gray-700 leading-relaxed">
                 Because our platform is <strong>100% free-to-play</strong> with no monetary rewards, we avoid the legal complexities associated with real money gaming. However, we still maintain strict compliance with all applicable laws and regulations.
@@ -386,7 +386,7 @@ export default function About() {
           
           <div className="prose prose-lg max-w-none">
             <p className="text-lg leading-relaxed text-gray-700 mb-6">
-              Many users wonder: <em>"If everything is free, how does Dhammanjali operate?"</em> The answer is simple—we are backed by <strong>investors who believe in fantasy sports as an educational tool</strong>, not a revenue stream.
+              Many users wonder: <em>"If everything is free, how does Kemetion operate?"</em> The answer is simple—we are backed by <strong>investors who believe in fantasy sports as an educational tool</strong>, not a revenue stream.
             </p>
 
             <p className="text-lg leading-relaxed text-gray-700 mb-6">
@@ -396,7 +396,7 @@ export default function About() {
             <div className="bg-gradient-to-br from-yellow-50 to-yellow-100 p-8 rounded-2xl border-4 border-yellow-600 my-8">
               <h3 className="text-2xl font-black text-gray-900 mb-4">Our Funding Philosophy</h3>
               <p className="text-gray-700 leading-relaxed mb-4">
-                Unlike traditional startups that raise funding to scale revenue, Dhammanjali raised funding to <strong>scale education</strong>. Our investors believe that:
+                Unlike traditional startups that raise funding to scale revenue, Kemetion raised funding to <strong>scale education</strong>. Our investors believe that:
               </p>
               <ul className="list-disc list-inside text-gray-700 space-y-2 ml-4">
                 <li>Fantasy sports should be accessible to everyone, not just those who can afford to pay</li>
@@ -411,7 +411,7 @@ export default function About() {
             </p>
 
             <p className="text-lg leading-relaxed text-gray-700">
-              We will <strong>never introduce real money gaming, paid contests, or monetization features</strong> that compromise our educational mission. This is our promise to every user who trusts Dhammanjali.
+              We will <strong>never introduce real money gaming, paid contests, or monetization features</strong> that compromise our educational mission. This is our promise to every user who trusts Kemetion.
             </p>
           </div>
         </div>
@@ -436,19 +436,19 @@ export default function About() {
                 
                 <div className="prose prose-lg">
                   <p className="text-gray-700 leading-relaxed mb-4">
-                    Vinay Nagvanshi founded Dhammanjali India Private Limited with a singular vision: to make fantasy cricket accessible to every Indian, free from financial barriers. With a deep passion for cricket and a commitment to responsible gaming, Vinay has built a platform that prioritizes <strong>education and skill development over profit maximization</strong>.
+                    Vinay Nagvanshi founded Kemetion Private Limited with a singular vision: to make fantasy cricket accessible to every Indian, free from financial barriers. With a deep passion for cricket and a commitment to responsible gaming, Vinay has built a platform that prioritizes <strong>education and skill development over profit maximization</strong>.
                   </p>
                   
                   <p className="text-gray-700 leading-relaxed mb-4">
-                    Before founding Dhammanjali, Vinay spent years studying the Indian fantasy sports industry and identified a critical gap: most platforms were designed to monetize users rather than educate them. He believed that fantasy cricket could be a powerful tool for teaching strategic thinking, data analysis, and cricket knowledge—but only if it was free from financial pressure.
+                    Before founding Kemetion, Vinay spent years studying the Indian fantasy sports industry and identified a critical gap: most platforms were designed to monetize users rather than educate them. He believed that fantasy cricket could be a powerful tool for teaching strategic thinking, data analysis, and cricket knowledge—but only if it was free from financial pressure.
                   </p>
                   
                   <p className="text-gray-700 leading-relaxed mb-4">
-                    Under his leadership, Dhammanjali has secured investor backing specifically for the purpose of offering <strong>free-to-play fantasy cricket education</strong>. Vinay believes that strategic thinking and cricket analysis should be available to all, and his vision continues to guide every decision the company makes.
+                    Under his leadership, Kemetion has secured investor backing specifically for the purpose of offering <strong>free-to-play fantasy cricket education</strong>. Vinay believes that strategic thinking and cricket analysis should be available to all, and his vision continues to guide every decision the company makes.
                   </p>
                   
                   <p className="text-gray-700 leading-relaxed">
-                    Vinay's commitment to transparency, responsible gaming, and user well-being has made Dhammanjali a trusted name in the Indian fantasy sports community. He remains actively involved in platform development, user feedback, and strategic planning to ensure Dhammanjali stays true to its mission.
+                    Vinay's commitment to transparency, responsible gaming, and user well-being has made Kemetion a trusted name in the Indian fantasy sports community. He remains actively involved in platform development, user feedback, and strategic planning to ensure Kemetion stays true to its mission.
                   </p>
                 </div>
               </div>
@@ -467,13 +467,13 @@ export default function About() {
               <Building2 className="w-12 h-12 text-blue-600 mb-4" />
               <h3 className="text-xl font-black text-gray-900 mb-4">Legal Entity</h3>
               <p className="text-gray-700 leading-relaxed mb-2">
-                <strong>Company Name:</strong> Dhammanjali India Private Limited
+                <strong>Company Name:</strong> Kemetion Private Limited
               </p>
               <p className="text-gray-700 leading-relaxed mb-2">
-                <strong>Corporate Identification Number (CIN):</strong> U15490UP2020PTC135324
+                <strong>Corporate Identification Number (CIN):</strong> U47594JH2023PTC020234
               </p>
               <p className="text-gray-700 leading-relaxed mb-2">
-                <strong>PAN Number:</strong> AANCM8535G
+                <strong>PAN Number:</strong> AAKCK1332N
               </p>
               <p className="text-gray-700 leading-relaxed">
                 <strong>Year of Incorporation:</strong> 2020
@@ -484,16 +484,16 @@ export default function About() {
               <MapPin className="w-12 h-12 text-green-600 mb-4" />
               <h3 className="text-xl font-black text-gray-900 mb-4">Head Office</h3>
               <p className="text-gray-700 leading-relaxed mb-2">
-                1st Floor, 154 Katka Jhunsi
+                TANGAR, CHANHO, RANCHI
               </p>
               <p className="text-gray-700 leading-relaxed mb-2">
-                Thana - Jhunsi District Prayagraj
+                Tangar, Mandar
               </p>
               <p className="text-gray-700 leading-relaxed mb-2">
-                Jhunsi, Allahabad - 211019
+                Ranchi-835214
               </p>
               <p className="text-gray-700 leading-relaxed">
-                Uttar Pradesh, India
+                Jharkhand, India
               </p>
             </div>
 
@@ -538,7 +538,7 @@ export default function About() {
           
           <div className="prose prose-lg max-w-none text-white">
             <p className="text-xl leading-relaxed mb-6">
-              Dhammanjali India Private Limited is committed to maintaining the highest standards of <strong>transparency, fairness, and responsible gaming</strong>. We comply with all applicable laws and regulations, including age restrictions and state-based gaming prohibitions.
+              Kemetion Private Limited is committed to maintaining the highest standards of <strong>transparency, fairness, and responsible gaming</strong>. We comply with all applicable laws and regulations, including age restrictions and state-based gaming prohibitions.
             </p>
 
             <div className="bg-white/10 backdrop-blur-md p-8 rounded-2xl border-2 border-white/30 my-8">
@@ -572,7 +572,7 @@ export default function About() {
             </div>
 
             <p className="text-xl leading-relaxed">
-              This is our promise to every user who trusts Dhammanjali. We are here to serve the cricket community, not to exploit it.
+              This is our promise to every user who trusts Kemetion. We are here to serve the cricket community, not to exploit it.
             </p>
           </div>
         </div>
@@ -581,7 +581,7 @@ export default function About() {
       {/* Join Us - CTA */}
       <section className="py-20 bg-white">
         <div className="container text-center">
-          <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-6">Join the Dhammanjali Community</h2>
+          <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-6">Join the Kemetion Community</h2>
           <p className="text-xl text-gray-700 mb-8 max-w-3xl mx-auto">
             Be part of India's most trusted free-to-play fantasy cricket platform. Learn, compete, and grow your cricket knowledge—all without spending a single rupee.
           </p>

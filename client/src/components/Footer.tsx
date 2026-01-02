@@ -105,9 +105,9 @@ export default function Footer() {
                 <div>
                   <p className="text-white/80 leading-relaxed">
                     <strong className="text-yellow-400">Registered Office:</strong><br />
-                    1ST FLOOR, 154 KATKA JHUNSI,<br />
-                    THANA- JHUNSI DISTRICT PRAYAGRAJ,<br />
-                    Allahabad- 211019, Uttar Pradesh, India
+                    TANGAR, CHANHO, RANCHI,<br />
+                    Tangar, Mandar,<br />
+                    Ranchi-835214, Jharkhand, India
                   </p>
                   <p className="text-white/80 leading-relaxed mt-3">
                     <strong className="text-yellow-400">Regional Office:</strong><br />
@@ -134,15 +134,15 @@ export default function Footer() {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-4 text-sm">
             <div>
               <p className="text-white/60 text-xs mb-1">COMPANY NAME</p>
-              <p className="text-white font-bold">DHAMMANJALI INDIA PRIVATE LIMITED</p>
+              <p className="text-white font-bold">KEMETION PRIVATE LIMITED</p>
             </div>
             <div>
               <p className="text-white/60 text-xs mb-1">CIN</p>
-              <p className="text-white font-bold">U15490UP2020PTC135324</p>
+              <p className="text-white font-bold">U47594JH2023PTC020234</p>
             </div>
             <div>
               <p className="text-white/60 text-xs mb-1">PAN</p>
-              <p className="text-white font-bold">AANCM8535G</p>
+              <p className="text-white font-bold">AAKCK1332N</p>
             </div>
             <div>
               <p className="text-white/60 text-xs mb-1">CEO & FOUNDER</p>
@@ -161,7 +161,7 @@ export default function Footer() {
         {/* Copyright */}
         <div className="text-center pt-6 border-t border-white/20">
           <p className="text-white/60 text-sm">
-            © {new Date().getFullYear()} <span className="font-bold text-yellow-400">DHAMMANJALI INDIA PRIVATE LIMITED</span>. All Rights Reserved.
+            © {new Date().getFullYear()} <span className="font-bold text-yellow-400">KEMETION PRIVATE LIMITED</span>. All Rights Reserved.
           </p>
           <p className="text-white/40 text-xs mt-2">
             This is a 100% free-to-play platform for entertainment and educational purposes only. Participants must be 18+ years old.

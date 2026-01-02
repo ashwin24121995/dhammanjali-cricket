@@ -80,7 +80,7 @@ export default function Login() {
               <h1 className="text-5xl md:text-6xl font-black mb-6">
                 LOGIN TO
                 <br />
-                <span className="text-yellow-400">DHAMMANJALI</span>
+                <span className="text-yellow-400">KEMETION</span>
               </h1>
               <p className="text-xl text-gray-300 leading-relaxed">
                 Continue your fantasy cricket journey! Access your teams, track your performance, and compete with players across India—completely free.

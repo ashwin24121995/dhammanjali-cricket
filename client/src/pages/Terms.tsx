@@ -14,7 +14,7 @@ export default function Terms() {
               TERMS & CONDITIONS
             </h1>
             <p className="text-xl md:text-2xl font-medium leading-relaxed text-gray-300">
-              Legal Agreement for Using Dhammanjali Fantasy Cricket Platform
+              Legal Agreement for Using Kemetion Fantasy Cricket Platform
             </p>
             <p className="text-sm text-gray-400 mt-4">
               Last Updated: December 18, 2024
@@ -32,7 +32,7 @@ export default function Terms() {
               <div>
                 <h2 className="text-2xl font-black mb-3">IMPORTANT NOTICE</h2>
                 <p className="text-lg leading-relaxed mb-3">
-                  By accessing or using the Dhammanjali fantasy cricket platform, you agree to be bound by these Terms and Conditions. If you do not agree with any part of these terms, you must not use our platform.
+                  By accessing or using the Kemetion fantasy cricket platform, you agree to be bound by these Terms and Conditions. If you do not agree with any part of these terms, you must not use our platform.
                 </p>
                 <p className="text-lg leading-relaxed font-bold">
                   This platform is NOT available in Andhra Pradesh, Assam, Odisha, Telangana, Nagaland, and Sikkim. Only users 18 years and older are permitted.
@@ -68,13 +68,13 @@ export default function Terms() {
               <h2 className="text-3xl font-black text-gray-900 mb-6">1. DEFINITIONS</h2>
               <div className="space-y-4 text-gray-700 leading-relaxed">
                 <p>
-                  <strong>"Platform"</strong> refers to the Dhammanjali fantasy cricket website, mobile applications, and all related services operated by Dhammanjali India Private Limited.
+                  <strong>"Platform"</strong> refers to the Kemetion fantasy cricket website, mobile applications, and all related services operated by Kemetion Private Limited.
                 </p>
                 <p>
                   <strong>"User," "You," or "Your"</strong> refers to any individual who accesses or uses the Platform, whether registered or not.
                 </p>
                 <p>
-                  <strong>"We," "Us," or "Our"</strong> refers to Dhammanjali India Private Limited (CIN: U15490UP2020PTC135324), the company operating this Platform.
+                  <strong>"We," "Us," or "Our"</strong> refers to Kemetion Private Limited (CIN: U47594JH2023PTC020234), the company operating this Platform.
                 </p>
                 <p>
                   <strong>"Fantasy Cricket"</strong> refers to the skill-based online game where users create virtual cricket teams using real players and earn points based on those players' actual performance in real matches.
@@ -98,7 +98,7 @@ export default function Terms() {
               <h2 className="text-3xl font-black text-gray-900 mb-6">2. ACCEPTANCE OF TERMS</h2>
               <div className="space-y-4 text-gray-700 leading-relaxed">
                 <p>
-                  By creating an account, accessing, or using the Dhammanjali Platform in any manner, you acknowledge that you have read, understood, and agree to be bound by these Terms and Conditions, as well as our Privacy Policy and Fair Play Policy. These documents constitute a legally binding agreement between you and Dhammanjali India Private Limited.
+                  By creating an account, accessing, or using the Kemetion Platform in any manner, you acknowledge that you have read, understood, and agree to be bound by these Terms and Conditions, as well as our Privacy Policy and Fair Play Policy. These documents constitute a legally binding agreement between you and Kemetion Private Limited.
                 </p>
                 <p>
                   If you do not agree with any provision of these Terms, you must immediately cease using the Platform and refrain from creating an account. Continued use of the Platform after any modifications to these Terms constitutes your acceptance of the revised Terms.
@@ -170,7 +170,7 @@ export default function Terms() {
               <h2 className="text-3xl font-black text-gray-900 mb-6">5. PLATFORM USAGE RULES</h2>
               <div className="space-y-4 text-gray-700 leading-relaxed">
                 <p>
-                  <strong>Skill-Based Gaming:</strong> Dhammanjali is a skill-based fantasy cricket platform where success depends on your knowledge of cricket, analytical abilities, and strategic decision-making. The Platform does not involve gambling, betting, or games of chance.
+                  <strong>Skill-Based Gaming:</strong> Kemetion is a skill-based fantasy cricket platform where success depends on your knowledge of cricket, analytical abilities, and strategic decision-making. The Platform does not involve gambling, betting, or games of chance.
                 </p>
                 <p>
                   <strong>Team Creation:</strong> You may create fantasy cricket teams by selecting real cricket players within the constraints of the Platform's rules (budget limits, player quotas, etc.). Your team's performance is determined by the actual performance of your selected players in real cricket matches.
@@ -197,7 +197,7 @@ export default function Terms() {
               <h2 className="text-3xl font-black text-gray-900 mb-6">6. FREE-TO-PLAY MODEL</h2>
               <div className="space-y-4 text-gray-700 leading-relaxed">
                 <p className="font-bold text-lg text-green-600">
-                  NO REAL MONEY INVOLVED: Dhammanjali operates on a 100% free-to-play model. You will never be required to pay any entry fees, subscription charges, or any other monetary payments to participate in contests.
+                  NO REAL MONEY INVOLVED: Kemetion operates on a 100% free-to-play model. You will never be required to pay any entry fees, subscription charges, or any other monetary payments to participate in contests.
                 </p>
                 <p>
                   <strong>No Cash Prizes:</strong> Winners of contests do not receive cash prizes, monetary rewards, or any form of financial compensation. The Platform is designed purely for entertainment, education, and skill development purposes.
@@ -224,13 +224,13 @@ export default function Terms() {
               <h2 className="text-3xl font-black text-gray-900 mb-6">7. INTELLECTUAL PROPERTY RIGHTS</h2>
               <div className="space-y-4 text-gray-700 leading-relaxed">
                 <p>
-                  <strong>Platform Ownership:</strong> All content, features, functionality, software, code, designs, graphics, logos, trademarks, and other materials on the Platform are owned by Dhammanjali India Private Limited or our licensors and are protected by Indian and international intellectual property laws.
+                  <strong>Platform Ownership:</strong> All content, features, functionality, software, code, designs, graphics, logos, trademarks, and other materials on the Platform are owned by Kemetion Private Limited or our licensors and are protected by Indian and international intellectual property laws.
                 </p>
                 <p>
                   <strong>Limited License:</strong> We grant you a limited, non-exclusive, non-transferable, revocable license to access and use the Platform for personal, non-commercial purposes in accordance with these Terms. This license does not include any right to reproduce, distribute, modify, create derivative works, publicly display, or commercially exploit any content from the Platform.
                 </p>
                 <p>
-                  <strong>Trademarks:</strong> "Dhammanjali," the Dhammanjali logo, and all related trademarks, service marks, and trade names are proprietary to Dhammanjali India Private Limited. You may not use these marks without our prior written consent.
+                  <strong>Trademarks:</strong> "Kemetion," the Kemetion logo, and all related trademarks, service marks, and trade names are proprietary to Kemetion Private Limited. You may not use these marks without our prior written consent.
                 </p>
                 <p>
                   <strong>User-Generated Content:</strong> By submitting content to the Platform (such as team names, profile information, or comments), you grant us a worldwide, royalty-free, perpetual, irrevocable license to use, reproduce, modify, and display such content in connection with operating the Platform.
@@ -392,13 +392,13 @@ export default function Terms() {
                   <strong>Governing Law:</strong> These Terms and Conditions shall be governed by and construed in accordance with the laws of India, without regard to conflict of law principles.
                 </p>
                 <p>
-                  <strong>Jurisdiction:</strong> Any disputes arising out of or related to these Terms or your use of the Platform shall be subject to the exclusive jurisdiction of the courts located in Prayagraj (Allahabad), Uttar Pradesh, India.
+                  <strong>Jurisdiction:</strong> Any disputes arising out of or related to these Terms or your use of the Platform shall be subject to the exclusive jurisdiction of the courts located in Ranchi, Jharkhand, India.
                 </p>
                 <p>
                   <strong>Dispute Resolution Process:</strong> Before initiating any legal proceedings, you agree to first attempt to resolve any dispute informally by contacting us at legal@dhamman.com. We will make reasonable efforts to resolve the dispute amicably within 30 days.
                 </p>
                 <p>
-                  <strong>Arbitration:</strong> If informal resolution fails, any dispute shall be resolved through binding arbitration in accordance with the Arbitration and Conciliation Act, 1996. The arbitration shall be conducted in Prayagraj, Uttar Pradesh, by a single arbitrator mutually agreed upon by both parties.
+                  <strong>Arbitration:</strong> If informal resolution fails, any dispute shall be resolved through binding arbitration in accordance with the Arbitration and Conciliation Act, 1996. The arbitration shall be conducted in Ranchi, Jharkhand, by a single arbitrator mutually agreed upon by both parties.
                 </p>
                 <p>
                   <strong>Class Action Waiver:</strong> You agree that any dispute resolution proceedings will be conducted only on an individual basis and not in a class, consolidated, or representative action.
@@ -434,7 +434,7 @@ export default function Terms() {
               <h2 className="text-3xl font-black text-gray-900 mb-6">15. MISCELLANEOUS PROVISIONS</h2>
               <div className="space-y-4 text-gray-700 leading-relaxed">
                 <p>
-                  <strong>Entire Agreement:</strong> These Terms, together with our Privacy Policy and Fair Play Policy, constitute the entire agreement between you and Dhammanjali India Private Limited regarding the use of the Platform.
+                  <strong>Entire Agreement:</strong> These Terms, together with our Privacy Policy and Fair Play Policy, constitute the entire agreement between you and Kemetion Private Limited regarding the use of the Platform.
                 </p>
                 <p>
                   <strong>Severability:</strong> If any provision of these Terms is found to be invalid or unenforceable by a court of law, the remaining provisions shall continue in full force and effect.
@@ -465,11 +465,11 @@ export default function Terms() {
                   If you have any questions, concerns, or requests regarding these Terms and Conditions, please contact us:
                 </p>
                 <div className="space-y-2 text-lg">
-                  <p><strong>Company:</strong> Dhammanjali India Private Limited</p>
-                  <p><strong>CIN:</strong> U15490UP2020PTC135324</p>
+                  <p><strong>Company:</strong> Kemetion Private Limited</p>
+                  <p><strong>CIN:</strong> U47594JH2023PTC020234</p>
                   <p><strong>Email:</strong> legal@dhamman.com</p>
                   <p><strong>Support Email:</strong> support@dhamman.com</p>
-                  <p><strong>Address:</strong> 1ST FLOOR, 154 KATKA JHUNSI, THANA- JHUNSI DISTRICT PRAYAGRAJ, Allahabad- 211019, Uttar Pradesh, India</p>
+                  <p><strong>Address:</strong> TANGAR, CHANHO, RANCHI, Tangar, Mandar, Ranchi-835214, Jharkhand, India</p>
                 </div>
               </div>
             </div>

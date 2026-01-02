@@ -517,3 +517,12 @@
 - [x] Move PromoWidget above header (in MainLayout before Header)
 - [ ] Test banner position and stealth mode
 - [ ] Deploy to Railway
+
+## Update Company Details - Jan 2, 2026
+- [x] Find all occurrences of old company details
+- [x] Update company name: DHAMMANJALI INDIA PRIVATE LIMITED → KEMETION PRIVATE LIMITED
+- [x] Update CIN: Old → U47594JH2023PTC020234
+- [x] Update PAN: Old → AAKCK1332N
+- [x] Update Head Office Address: Old → TANGAR, CHANHO, RANCHI, Tangar, Mandar, Ranchi-835214, Jharkhand
+- [ ] Test all pages
+- [ ] Create checkpoint

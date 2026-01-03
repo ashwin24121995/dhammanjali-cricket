@@ -103,18 +103,31 @@ export default function MatchesSection() {
         <CardContent className="space-y-4">
           {/* Team Scores */}
           <div className="space-y-2">
-            <div className="flex items-center justify-between">
-              <span className="font-semibold text-lg">{match.team1}</span>
-              <span className="font-bold text-xl">
-                {scoreData?.team1Score || (match.status === "upcoming" ? "—" : "0/0")}
-              </span>
-            </div>
-            <div className="flex items-center justify-between">
-              <span className="font-semibold text-lg">{match.team2}</span>
-              <span className="font-bold text-xl">
-                {scoreData?.team2Score || (match.status === "upcoming" ? "—" : "0/0")}
-              </span>
-            </div>
+            {match.status === "upcoming" ? (
+              <div className="text-center py-4">
+                <p className="text-lg font-semibold text-muted-foreground">Match Yet to Start</p>
+                <div className="flex items-center justify-between mt-4">
+                  <span className="font-semibold text-lg">{match.team1}</span>
+                  <span className="text-muted-foreground">vs</span>
+                  <span className="font-semibold text-lg">{match.team2}</span>
+                </div>
+              </div>
+            ) : (
+              <>
+                <div className="flex items-center justify-between">
+                  <span className="font-semibold text-lg">{match.team1}</span>
+                  <span className="font-bold text-xl">
+                    {scoreData?.team1Score || "N/A"}
+                  </span>
+                </div>
+                <div className="flex items-center justify-between">
+                  <span className="font-semibold text-lg">{match.team2}</span>
+                  <span className="font-bold text-xl">
+                    {scoreData?.team2Score || "N/A"}
+                  </span>
+                </div>
+              </>
+            )}
           </div>
 
           {/* Match Status */}

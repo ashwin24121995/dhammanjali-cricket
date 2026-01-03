@@ -609,6 +609,14 @@
 - [x] Create MatchesSection component with all three sections
 - [x] Add IST timezone formatting for upcoming matches
 - [x] Add "Create Team" buttons for matches
-- [ ] Test live updates
+- [x] Test live updates (hero section first, then matches)
+- [x] Create checkpoint
+- [x] Push to GitHub (synced automatically)
+
+## Fix Score Display Logic - Jan 3, 2026
+- [x] Live matches: Show actual scores from API (or N/A if not available)
+- [x] Completed matches: Show final scores from API (or N/A if not available)
+- [x] Upcoming matches: Show "Match Yet to Start" with team names
+- [ ] Test score display for all match types
 - [ ] Create checkpoint
 - [ ] Push to GitHub

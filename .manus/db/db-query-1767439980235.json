@@ -1,0 +1,13 @@
+{
+  "query": "SELECT COUNT(*) as match_count FROM matches",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 2EKhjpwgmHfHvW4.77bd979a2294 --database 8xMuqhEENCZY8hGr8r4g4r --execute SELECT COUNT(*) as match_count FROM matches",
+  "rows": [
+    {
+      "match_count": "147"
+    }
+  ],
+  "messages": [],
+  "stdout": "match_count\n147\n",
+  "stderr": "",
+  "execution_time_ms": 2119
+}

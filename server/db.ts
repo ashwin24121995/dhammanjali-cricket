@@ -1,4 +1,4 @@
-import { eq, desc } from "drizzle-orm";
+import { eq, desc, asc } from "drizzle-orm";
 import { drizzle } from "drizzle-orm/mysql2";
 import * as schema from "../drizzle/schema";
 import { 
@@ -157,7 +157,8 @@ export async function markTokenAsUsed(token: string): Promise<void> {
 export async function getAllMatches(): Promise<Match[]> {
   const db = await getDb();
   if (!db) return [];
-  return await db.select().from(matches).where(eq(matches.status, "upcoming"));
+  // Return all matches that haven't ended (upcoming, live, or not started)
+  return await db.select().from(matches).orderBy(asc(matches.matchDate));
 }
 
 export async function getMatchById(id: number): Promise<Match | undefined> {

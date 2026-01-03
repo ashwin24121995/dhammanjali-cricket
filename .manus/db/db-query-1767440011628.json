@@ -1,0 +1,22 @@
+{
+  "query": "SELECT DISTINCT status, COUNT(*) as count FROM matches GROUP BY status",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 2EKhjpwgmHfHvW4.77bd979a2294 --database 8xMuqhEENCZY8hGr8r4g4r --execute SELECT DISTINCT status, COUNT(*) as count FROM matches GROUP BY status",
+  "rows": [
+    {
+      "status": "live",
+      "count": "13"
+    },
+    {
+      "status": "upcoming",
+      "count": "5"
+    },
+    {
+      "status": "completed",
+      "count": "129"
+    }
+  ],
+  "messages": [],
+  "stdout": "status\tcount\nlive\t13\nupcoming\t5\ncompleted\t129\n",
+  "stderr": "",
+  "execution_time_ms": 1512
+}

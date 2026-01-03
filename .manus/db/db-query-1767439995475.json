@@ -1,0 +1,80 @@
+{
+  "query": "SELECT id, team1, team2, status, matchDate FROM matches LIMIT 10",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 2EKhjpwgmHfHvW4.77bd979a2294 --database 8xMuqhEENCZY8hGr8r4g4r --execute SELECT id, team1, team2, status, matchDate FROM matches LIMIT 10",
+  "rows": [
+    {
+      "id": "1",
+      "team1": "Mumbai Indians",
+      "team2": "Chennai Super Kings",
+      "status": "upcoming",
+      "matchDate": "2024-03-25 19:30:00"
+    },
+    {
+      "id": "2",
+      "team1": "Royal Challengers Bangalore",
+      "team2": "Kolkata Knight Riders",
+      "status": "upcoming",
+      "matchDate": "2024-03-26 15:30:00"
+    },
+    {
+      "id": "3",
+      "team1": "Delhi Capitals",
+      "team2": "Punjab Kings",
+      "status": "upcoming",
+      "matchDate": "2024-03-27 19:30:00"
+    },
+    {
+      "id": "4",
+      "team1": "Sunrisers Hyderabad",
+      "team2": "Rajasthan Royals",
+      "status": "upcoming",
+      "matchDate": "2024-03-28 15:30:00"
+    },
+    {
+      "id": "5",
+      "team1": "Gujarat Titans",
+      "team2": "Lucknow Super Giants",
+      "status": "upcoming",
+      "matchDate": "2024-03-29 19:30:00"
+    },
+    {
+      "id": "30001",
+      "team1": "South Western Districts",
+      "team2": "Border",
+      "status": "live",
+      "matchDate": "2025-12-18 08:00:00"
+    },
+    {
+      "id": "30002",
+      "team1": "Abu Dhabi Knight Riders",
+      "team2": "Gulf Giants",
+      "status": "completed",
+      "matchDate": "2025-12-18 19:30:00"
+    },
+    {
+      "id": "30003",
+      "team1": "Haryana",
+      "team2": "Jharkhand",
+      "status": "completed",
+      "matchDate": "2025-12-18 09:30:00"
+    },
+    {
+      "id": "30004",
+      "team1": "Melbourne Stars",
+      "team2": "Hobart Hurricanes",
+      "status": "completed",
+      "matchDate": "2025-12-18 13:15:00"
+    },
+    {
+      "id": "30005",
+      "team1": "New Zealand",
+      "team2": "West Indies",
+      "status": "live",
+      "matchDate": "2025-12-17 22:00:00"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\tteam1\tteam2\tstatus\tmatchDate\n1\tMumbai Indians\tChennai Super Kings\tupcoming\t2024-03-25 19:30:00\n2\tRoyal Challengers Bangalore\tKolkata Knight Riders\tupcoming\t2024-03-26 15:30:00\n3\tDelhi Capitals\tPunjab Kings\tupcoming\t2024-03-27 19:30:00\n4\tSunrisers Hyderabad\tRajasthan Royals\tupcoming\t2024-03-28 15:30:00\n5\tGujarat Titans\tLucknow Super Giants\tupcoming\t2024-03-29 19:30:00\n30001\tSouth Western Districts\tBorder\tlive\t2025-12-18 08:00:00\n30002\tAbu Dhabi Knight Riders\tGulf Giants\tcompleted\t2025-12-18 19:30:00\n30003\tHaryana\tJharkhand\tcompleted\t2025-12-18 09:30:00\n30004\tMelbourne Stars\tHobart Hurricanes\tcompleted\t2025-12-18 13:15:00\n30005\tNew Zealand\tWest Indies\tlive\t2025-12-17 22:00:00\n",
+  "stderr": "",
+  "execution_time_ms": 1516
+}

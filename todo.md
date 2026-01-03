@@ -544,4 +544,9 @@
 - [x] Update from "Dhammanjali Fantasy Cricket" to "KEMETION - Fantasy Cricket"
 - [x] Update meta description tags (none found - using default)
 - [x] Create checkpoint
+- [x] Push to GitHub
+
+## Disable FairPlay Banner - Jan 2, 2026
+- [x] Comment out PromoWidget in MainLayout.tsx
+- [ ] Create checkpoint
 - [ ] Push to GitHub

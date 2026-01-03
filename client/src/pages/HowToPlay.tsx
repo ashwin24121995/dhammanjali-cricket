@@ -34,7 +34,7 @@ export default function HowToPlay() {
               Fantasy Cricket is a skill-based online game where you create your own virtual cricket team using real players from upcoming matches. Your team earns points based on how those players perform in actual matches. The better your players perform in real life, the more points your fantasy team scores.
             </p>
             <p className="text-lg text-gray-700 leading-relaxed">
-              At Dhammanjali, you compete against other users on our leaderboard without any money involved. It's completely free to play, and winners earn recognition and glory rather than cash prizes. This makes it the perfect platform to learn cricket strategy, test your analytical skills, and enjoy the thrill of competition without financial risk.
+              At KEMETION, you compete against other users on our leaderboard without any money involved. It's completely free to play, and winners earn recognition and glory rather than cash prizes. This makes it the perfect platform to learn cricket strategy, test your analytical skills, and enjoy the thrill of competition without financial risk.
             </p>
           </div>
 
@@ -50,7 +50,7 @@ export default function HowToPlay() {
               <div className="flex-1 bg-white p-8 rounded-xl shadow-lg border-2 border-red-200">
                 <h3 className="text-2xl font-black text-gray-900 mb-3">Register & Login</h3>
                 <p className="text-lg text-gray-700 leading-relaxed mb-4">
-                  Create your free Dhammanjali account by providing your name, email, date of birth (must be 18+), and state. We verify your age and ensure you're not from a restricted state (Andhra Pradesh, Assam, Odisha, Telangana, Nagaland, or Sikkim). Once registered, log in to access your dashboard.
+                  Create your free KEMETION account by providing your name, email, date of birth (must be 18+), and state. We verify your age and ensure you're not from a restricted state (Andhra Pradesh, Assam, Odisha, Telangana, Nagaland, or Sikkim). Once registered, log in to access your dashboard.
                 </p>
                 <div className="bg-red-50 p-4 rounded-lg">
                   <p className="text-sm text-red-800 font-semibold">
@@ -128,7 +128,7 @@ export default function HowToPlay() {
               <div className="flex-1 bg-white p-8 rounded-xl shadow-lg border-2 border-green-200">
                 <h3 className="text-2xl font-black text-gray-900 mb-3">Watch the Match & Track Points</h3>
                 <p className="text-lg text-gray-700 leading-relaxed mb-4">
-                  Once the real match begins, your fantasy team starts earning points based on your players' actual performance. Watch the live match and track your team's score in real-time on Dhammanjali. Every run, wicket, catch, and milestone contributes to your total points.
+                  Once the real match begins, your fantasy team starts earning points based on your players' actual performance. Watch the live match and track your team's score in real-time on KEMETION. Every run, wicket, catch, and milestone contributes to your total points.
                 </p>
                 <p className="text-lg text-gray-700 leading-relaxed">
                   You can see how your team is performing compared to other users on the live leaderboard. This is where the excitement builds—will your captain deliver? Did you make the right bowling choices? The match outcome directly impacts your fantasy score.
@@ -144,7 +144,7 @@ export default function HowToPlay() {
               <div className="flex-1 bg-white p-8 rounded-xl shadow-lg border-2 border-purple-200">
                 <h3 className="text-2xl font-black text-gray-900 mb-3">Check Leaderboard & Earn Recognition</h3>
                 <p className="text-lg text-gray-700 leading-relaxed mb-4">
-                  After the match ends, final points are calculated and the leaderboard is updated. Users with the highest scores are ranked at the top and earn recognition in the Dhammanjali community. While there are no cash prizes, top performers gain bragging rights, leaderboard glory, and the satisfaction of outsmarting thousands of other cricket fans.
+                  After the match ends, final points are calculated and the leaderboard is updated. Users with the highest scores are ranked at the top and earn recognition in the KEMETION community. While there are no cash prizes, top performers gain bragging rights, leaderboard glory, and the satisfaction of outsmarting thousands of other cricket fans.
                 </p>
                 <div className="bg-purple-50 p-4 rounded-lg">
                   <p className="text-sm text-purple-800 font-semibold">

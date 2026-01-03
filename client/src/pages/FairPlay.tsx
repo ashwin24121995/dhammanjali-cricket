@@ -32,7 +32,7 @@ export default function FairPlay() {
               <div>
                 <h2 className="text-2xl font-black mb-3">OUR COMMITMENT TO FAIR PLAY</h2>
                 <p className="text-lg leading-relaxed">
-                  At Dhammanjali, we are committed to providing a fair, transparent, and enjoyable fantasy cricket experience for all users. Fair play is the foundation of our platform, and we have zero tolerance for cheating, collusion, or any form of unfair advantage. This Fair Play Policy outlines our principles, the measures we take to ensure fair competition, prohibited activities, and the consequences for violations.
+                  At KEMETION, we are committed to providing a fair, transparent, and enjoyable fantasy cricket experience for all users. Fair play is the foundation of our platform, and we have zero tolerance for cheating, collusion, or any form of unfair advantage. This Fair Play Policy outlines our principles, the measures we take to ensure fair competition, prohibited activities, and the consequences for violations.
                 </p>
               </div>
             </div>
@@ -70,7 +70,7 @@ export default function FairPlay() {
                 <div>
                   <h3 className="text-xl font-bold text-gray-900 mb-3">1.1 Equal Opportunity</h3>
                   <p>
-                    Every user on Dhammanjali has equal access to the same information, features, and opportunities. We do not provide any user with preferential treatment, insider information, or unfair advantages. All contests are open to eligible users on the same terms, and all players have access to the same player statistics, match data, and platform features. We believe that success on our platform should be determined solely by cricket knowledge, strategic thinking, and skill—not by cheating or manipulation.
+                    Every user on KEMETION has equal access to the same information, features, and opportunities. We do not provide any user with preferential treatment, insider information, or unfair advantages. All contests are open to eligible users on the same terms, and all players have access to the same player statistics, match data, and platform features. We believe that success on our platform should be determined solely by cricket knowledge, strategic thinking, and skill—not by cheating or manipulation.
                   </p>
                 </div>
 
@@ -114,7 +114,7 @@ export default function FairPlay() {
               </div>
               <div className="space-y-6 text-gray-700 leading-relaxed">
                 <p>
-                  The following activities are strictly prohibited on the Dhammanjali platform. Engaging in any of these activities will result in immediate investigation and may lead to account suspension, permanent ban, and legal action if applicable.
+                  The following activities are strictly prohibited on the KEMETION platform. Engaging in any of these activities will result in immediate investigation and may lead to account suspension, permanent ban, and legal action if applicable.
                 </p>
 
                 <div>
@@ -198,7 +198,7 @@ export default function FairPlay() {
               </div>
               <div className="space-y-6 text-gray-700 leading-relaxed">
                 <p>
-                  Each user is permitted to have only one account on the Dhammanjali platform. Creating or operating multiple accounts is a serious violation of our Fair Play Policy and undermines the integrity of our contests.
+                  Each user is permitted to have only one account on the KEMETION platform. Creating or operating multiple accounts is a serious violation of our Fair Play Policy and undermines the integrity of our contests.
                 </p>
 
                 <div>
@@ -218,7 +218,7 @@ export default function FairPlay() {
                 <div>
                   <h3 className="text-xl font-bold text-gray-900 mb-3">3.3 Legitimate Reasons for Similar Accounts</h3>
                   <p>
-                    We understand that in some cases, multiple accounts from the same household or location may be legitimate (for example, family members living together). If you share a household with another Dhammanjali user, please ensure that each person has their own unique email address, phone number, and device. If our systems flag your accounts as potentially related, you may be asked to provide verification that you are separate individuals. Legitimate users have nothing to worry about—our investigation process is designed to distinguish between genuine multi-user households and fraudulent multiple account schemes.
+                    We understand that in some cases, multiple accounts from the same household or location may be legitimate (for example, family members living together). If you share a household with another KEMETION user, please ensure that each person has their own unique email address, phone number, and device. If our systems flag your accounts as potentially related, you may be asked to provide verification that you are separate individuals. Legitimate users have nothing to worry about—our investigation process is designed to distinguish between genuine multi-user households and fraudulent multiple account schemes.
                   </p>
                 </div>
 
@@ -258,7 +258,7 @@ export default function FairPlay() {
                 <div>
                   <h3 className="text-xl font-bold text-gray-900 mb-3">4.3 Match-Fixing and Real Cricket Integrity</h3>
                   <p>
-                    While Dhammanjali is a fantasy cricket platform and does not involve real money, we take the integrity of real cricket matches seriously. If we have reason to believe that a user is involved in or has knowledge of match-fixing, spot-fixing, or other corruption in real cricket matches, we will report this information to the appropriate cricket authorities and law enforcement agencies. We will also immediately ban any user found to be using information about fixed matches to gain an advantage on our platform.
+                    While KEMETION is a fantasy cricket platform and does not involve real money, we take the integrity of real cricket matches seriously. If we have reason to believe that a user is involved in or has knowledge of match-fixing, spot-fixing, or other corruption in real cricket matches, we will report this information to the appropriate cricket authorities and law enforcement agencies. We will also immediately ban any user found to be using information about fixed matches to gain an advantage on our platform.
                   </p>
                 </div>
 
@@ -278,7 +278,7 @@ export default function FairPlay() {
               <h2 className="text-3xl font-black text-gray-900 mb-6">5. BOT AND AUTOMATION DETECTION</h2>
               <div className="space-y-6 text-gray-700 leading-relaxed">
                 <p>
-                  The use of bots, scripts, or automated tools to interact with the Dhammanjali platform is strictly prohibited. Our platform is designed for human users to compete based on their cricket knowledge and strategic thinking, not for automated systems.
+                  The use of bots, scripts, or automated tools to interact with the KEMETION platform is strictly prohibited. Our platform is designed for human users to compete based on their cricket knowledge and strategic thinking, not for automated systems.
                 </p>
 
                 <div>
@@ -324,7 +324,7 @@ export default function FairPlay() {
                 <div>
                   <h3 className="text-xl font-bold text-gray-900 mb-3">6.1 Your Responsibilities</h3>
                   <p>
-                    Choose a strong, unique password that you don't use for other websites. Never share your password with anyone, including friends, family, or people claiming to be Dhammanjali staff. Log out of your account when using shared or public computers. Enable two-factor authentication if we offer it in the future. Monitor your account for suspicious activity and report it immediately. Keep your email address up to date so we can contact you about security issues.
+                    Choose a strong, unique password that you don't use for other websites. Never share your password with anyone, including friends, family, or people claiming to be KEMETION staff. Log out of your account when using shared or public computers. Enable two-factor authentication if we offer it in the future. Monitor your account for suspicious activity and report it immediately. Keep your email address up to date so we can contact you about security issues.
                   </p>
                 </div>
 
@@ -345,7 +345,7 @@ export default function FairPlay() {
                 <div>
                   <h3 className="text-xl font-bold text-gray-900 mb-3">6.4 Phishing and Scams</h3>
                   <p>
-                    Be aware of phishing attempts and scams. Dhammanjali will never ask you for your password via email, phone, or any other means. We will never ask you to send money or provide payment information (our platform is completely free). We will never ask you to click on suspicious links or download files from unsolicited emails. If you receive any suspicious communications claiming to be from Dhammanjali, do not respond and report it to security@dhammanji.com immediately.
+                    Be aware of phishing attempts and scams. KEMETION will never ask you for your password via email, phone, or any other means. We will never ask you to send money or provide payment information (our platform is completely free). We will never ask you to click on suspicious links or download files from unsolicited emails. If you receive any suspicious communications claiming to be from KEMETION, do not respond and report it to security@dhammanji.com immediately.
                   </p>
                 </div>
               </div>
@@ -490,7 +490,7 @@ export default function FairPlay() {
                 <div>
                   <h3 className="text-xl font-bold text-gray-900 mb-3">9.4 No Refunds or Compensation</h3>
                   <p>
-                    Since Dhammanjali is a free-to-play platform with no real money involved, there are no refunds or financial compensation issues. However, please note that if we introduce any paid features in the future, users who are banned for Fair Play violations will not be entitled to refunds for any purchases made before the ban.
+                    Since KEMETION is a free-to-play platform with no real money involved, there are no refunds or financial compensation issues. However, please note that if we introduce any paid features in the future, users who are banned for Fair Play violations will not be entitled to refunds for any purchases made before the ban.
                   </p>
                 </div>
               </div>
@@ -551,13 +551,13 @@ export default function FairPlay() {
                 <div>
                   <h2 className="text-2xl font-black mb-4">OUR COMMITMENT TO YOU</h2>
                   <p className="text-lg leading-relaxed mb-4">
-                    Fair play is not just a policy—it's a core value that defines the Dhammanjali platform. We are committed to maintaining a level playing field where every user has an equal opportunity to compete and succeed based on their cricket knowledge and strategic skills. We continuously invest in technology and human resources to detect and prevent violations, and we take swift action against those who try to cheat the system.
+                    Fair play is not just a policy—it's a core value that defines the KEMETION platform. We are committed to maintaining a level playing field where every user has an equal opportunity to compete and succeed based on their cricket knowledge and strategic skills. We continuously invest in technology and human resources to detect and prevent violations, and we take swift action against those who try to cheat the system.
                   </p>
                   <p className="text-lg leading-relaxed mb-4">
                     At the same time, we recognize that honest mistakes can happen, and we strive to be fair and reasonable in our enforcement actions. If you ever have questions about our Fair Play Policy or are unsure whether a particular action would be considered a violation, please contact us at fairplay@dhammanji.com before taking that action. We're here to help you enjoy fantasy cricket in a fair and responsible manner.
                   </p>
                   <p className="text-lg leading-relaxed">
-                    Thank you for being part of the Dhammanjali community and for your commitment to fair play. Together, we can create a platform that is enjoyable, competitive, and fair for everyone.
+                    Thank you for being part of the KEMETION community and for your commitment to fair play. Together, we can create a platform that is enjoyable, competitive, and fair for everyone.
                   </p>
                   <div className="mt-6 space-y-2 text-lg">
                     <p><strong>Fair Play Email:</strong> fairplay@dhammanji.com</p>

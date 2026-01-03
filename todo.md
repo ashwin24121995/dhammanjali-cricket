@@ -548,5 +548,26 @@
 
 ## Disable FairPlay Banner - Jan 2, 2026
 - [x] Comment out PromoWidget in MainLayout.tsx
+- [x] Create checkpoint
+- [x] Push to GitHub (synced automatically)
+
+## Fix Google Ads Suspension Issues - Jan 2, 2026
+### Broken Footer Links
+- [x] Check Footer.tsx for broken links
+- [x] Fix Privacy Policy link (already working)
+- [x] Fix Terms & Conditions link (already working)
+- [x] Fix Blog link (removed - page doesn't exist)
+- [ ] Verify all footer links work
+
+### Unify Branding to KEMETION
+- [x] Search for any remaining "Dhammanjali" text (found 42 occurrences in 7 files)
+- [x] Replace with "KEMETION" consistently (all 42 replaced)
+- [x] Check all pages for brand consistency
+- [x] Verify logo displays KEMETION everywhere
+
+### Testing & Deployment
+- [x] Test all footer links manually (Blog removed, others work)
+- [x] Verify brand consistency across all pages (all KEMETION)
 - [ ] Create checkpoint
 - [ ] Push to GitHub
+- [ ] Deploy to Railway

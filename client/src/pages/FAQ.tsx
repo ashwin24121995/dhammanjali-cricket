@@ -20,8 +20,8 @@ const faqData: FAQCategory[] = [
     color: "blue",
     questions: [
       {
-        question: "What is Dhammanjali Fantasy Cricket?",
-        answer: "Dhammanjali is a 100% free fantasy cricket platform designed for education and entertainment. You can build virtual cricket teams, compete with other players, and climb leaderboards—all without spending any money. It's a skill-based game where you learn cricket strategy, player analysis, and team management."
+        question: "What is KEMETION Fantasy Cricket?",
+        answer: "KEMETION is a 100% free fantasy cricket platform designed for education and entertainment. You can build virtual cricket teams, compete with other players, and climb leaderboards—all without spending any money. It's a skill-based game where you learn cricket strategy, player analysis, and team management."
       },
       {
         question: "How do I register for an account?",
@@ -36,8 +36,8 @@ const faqData: FAQCategory[] = [
         answer: "Click 'Forgot Password?' on the login page. Enter your registered email address and click 'VERIFY EMAIL'. If your email exists in our system, you'll immediately see a form to create a new password. Enter your new password twice, and you're done! No need to wait for emails—it's instant."
       },
       {
-        question: "Is Dhammanjali really 100% free?",
-        answer: "Yes! Dhammanjali is completely free—no deposits, no payments, no hidden charges, and no in-app purchases. You'll never be asked for credit card information or payment details. We're backed by investors who believe in fantasy cricket education, so you can play unlimited contests without spending a single rupee."
+        question: "Is KEMETION really 100% free?",
+        answer: "Yes! KEMETION is completely free—no deposits, no payments, no hidden charges, and no in-app purchases. You'll never be asked for credit card information or payment details. We're backed by investors who believe in fantasy cricket education, so you can play unlimited contests without spending a single rupee."
       }
     ]
   },
@@ -114,18 +114,18 @@ const faqData: FAQCategory[] = [
       },
       {
         question: "Is fantasy cricket legal in India?",
-        answer: "Yes! Fantasy sports are recognized as games of skill (not gambling) by the Supreme Court of India and various High Courts. Skill-based games are legal under Indian law. However, individual states have the authority to regulate or restrict fantasy sports within their jurisdiction, which is why we block certain states. Dhammanjali is 100% free with no real money involved, making it purely educational and entertainment-focused."
+        answer: "Yes! Fantasy sports are recognized as games of skill (not gambling) by the Supreme Court of India and various High Courts. Skill-based games are legal under Indian law. However, individual states have the authority to regulate or restrict fantasy sports within their jurisdiction, which is why we block certain states. KEMETION is 100% free with no real money involved, making it purely educational and entertainment-focused."
       },
       {
-        question: "What makes Dhammanjali a 'game of skill' and not gambling?",
-        answer: "Fantasy cricket is a game of skill because success depends on your knowledge, analysis, and strategy—not chance. You must research player form, pitch conditions, weather, team combinations, and match situations to build winning teams. Outcomes are based on real cricket performances, and skilled players consistently perform better over time. Since Dhammanjali involves no money and no prizes, it's purely educational, making it clearly a skill-based platform."
+        question: "What makes KEMETION a 'game of skill' and not gambling?",
+        answer: "Fantasy cricket is a game of skill because success depends on your knowledge, analysis, and strategy—not chance. You must research player form, pitch conditions, weather, team combinations, and match situations to build winning teams. Outcomes are based on real cricket performances, and skilled players consistently perform better over time. Since KEMETION involves no money and no prizes, it's purely educational, making it clearly a skill-based platform."
       },
       {
         question: "Do I need to pay taxes on my winnings?",
-        answer: "There are no winnings on Dhammanjali! We're a 100% free platform with no cash prizes, no rewards, and no monetary benefits. You play for leaderboard rankings, bragging rights, and the joy of competition. Since there's no money involved, there are no tax implications. You're simply learning cricket strategy and competing with other fans for fun."
+        answer: "There are no winnings on KEMETION! We're a 100% free platform with no cash prizes, no rewards, and no monetary benefits. You play for leaderboard rankings, bragging rights, and the joy of competition. Since there's no money involved, there are no tax implications. You're simply learning cricket strategy and competing with other fans for fun."
       },
       {
-        question: "How does Dhammanjali protect my personal data?",
+        question: "How does KEMETION protect my personal data?",
         answer: "We take data privacy seriously and comply with Indian data protection laws. Your personal information (name, email, date of birth, state) is encrypted and stored securely. We never share your data with third parties for marketing purposes. We use your email only for account-related communications. You can request to view, modify, or delete your data at any time by contacting us at privacy@dhammanji.com. Read our full Privacy Policy for detailed information."
       },
       {
@@ -172,14 +172,14 @@ const faqData: FAQCategory[] = [
     questions: [
       {
         question: "Which browsers are supported?",
-        answer: "Dhammanjali works best on modern browsers: Google Chrome (recommended), Mozilla Firefox, Safari, and Microsoft Edge. We recommend using the latest version of your browser for the best experience. Mobile browsers are also fully supported—you can play on your smartphone or tablet. If you experience issues, try clearing your browser cache or switching to an incognito/private window."
+        answer: "KEMETION works best on modern browsers: Google Chrome (recommended), Mozilla Firefox, Safari, and Microsoft Edge. We recommend using the latest version of your browser for the best experience. Mobile browsers are also fully supported—you can play on your smartphone or tablet. If you experience issues, try clearing your browser cache or switching to an incognito/private window."
       },
       {
         question: "Why can't I see my team after creating it?",
         answer: "This usually happens due to browser cache issues. Try refreshing the page (press F5 or Ctrl+R). If that doesn't work, clear your browser cache and cookies, then log in again. Make sure you're logged into the correct account. If the problem persists, contact support@dhammanji.com with your registered email and we'll investigate."
       },
       {
-        question: "I'm not receiving emails from Dhammanjali. What should I do?",
+        question: "I'm not receiving emails from KEMETION. What should I do?",
         answer: "First, check your spam/junk folder—our emails sometimes land there. Add support@dhammanji.com and noreply@dhammanji.com to your contacts to prevent this. If you still don't receive emails, your email provider might be blocking us. Try using a different email address (Gmail or Outlook work best). Contact us at support@dhammanji.com if the issue continues."
       },
       {
@@ -187,8 +187,8 @@ const faqData: FAQCategory[] = [
         answer: "Slow loading can be caused by internet connection, browser cache, or server load. First, check your internet speed. Then, try clearing your browser cache and cookies. Close unnecessary tabs and applications. If the issue persists during match time, it might be due to high traffic—please be patient, our servers handle thousands of users. You can also try accessing the site during off-peak hours."
       },
       {
-        question: "Can I play Dhammanjali on my mobile phone?",
-        answer: "Yes! Dhammanjali is fully mobile-responsive. You can access the website from your mobile browser (Chrome, Safari, Firefox) and enjoy the full experience. We don't have a mobile app yet, but the mobile website works perfectly. Simply visit dhamman.com from your phone's browser, log in, and start playing. The interface automatically adapts to your screen size."
+        question: "Can I play KEMETION on my mobile phone?",
+        answer: "Yes! KEMETION is fully mobile-responsive. You can access the website from your mobile browser (Chrome, Safari, Firefox) and enjoy the full experience. We don't have a mobile app yet, but the mobile website works perfectly. Simply visit dhamman.com from your phone's browser, log in, and start playing. The interface automatically adapts to your screen size."
       },
       {
         question: "Who do I contact for help or support?",
@@ -264,7 +264,7 @@ export default function FAQ() {
               <span className="text-yellow-400">QUESTIONS</span>
             </h1>
             <p className="text-xl text-red-100 max-w-2xl mx-auto">
-              Everything you need to know about Dhammanjali Fantasy Cricket—from registration to advanced strategies
+              Everything you need to know about KEMETION Fantasy Cricket—from registration to advanced strategies
             </p>
           </div>
         </div>

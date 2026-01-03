@@ -14,7 +14,7 @@ export default function Footer() {
             <div className="mb-6">
               <img 
                 src="/dhammanjali-logo.png" 
-                alt="Dhammanjali" 
+                alt="KEMETION" 
                 style={{ height: '81px' }}
                 className="w-auto"
               />
@@ -61,11 +61,7 @@ export default function Footer() {
                   <span className="text-white/80 hover:text-yellow-400 transition-colors cursor-pointer font-semibold">→ Contact Us</span>
                 </Link>
               </li>
-              <li>
-                <Link href="/blog">
-                  <span className="text-white/80 hover:text-yellow-400 transition-colors cursor-pointer font-semibold">→ Blog</span>
-                </Link>
-              </li>
+
             </ul>
           </div>
 

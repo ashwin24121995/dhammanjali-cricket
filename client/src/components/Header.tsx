@@ -40,7 +40,7 @@ export default function Header() {
     { href: "/about", label: "ABOUT US" },
     { href: "/how-to-play", label: "HOW TO PLAY" },
     { href: "/faq", label: "FAQ" },
-    { href: "/blog", label: "BLOG" },
+
     { href: "/contact", label: "CONTACT" },
   ];
 
@@ -60,7 +60,7 @@ export default function Header() {
           <Link href="/">
             <img 
               src="/dhammanjali-logo.png" 
-              alt="Dhammanjali Cricket" 
+              alt="KEMETION Cricket" 
               style={{ height: '100px' }}
               className="w-auto cursor-pointer hover:opacity-90 transition-opacity"
             />

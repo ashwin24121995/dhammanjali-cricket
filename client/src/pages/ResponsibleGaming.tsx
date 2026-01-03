@@ -32,7 +32,7 @@ export default function ResponsibleGaming() {
               <div>
                 <h2 className="text-2xl font-black mb-3">YOUR WELLBEING MATTERS</h2>
                 <p className="text-lg leading-relaxed">
-                  At Dhammanjali, we believe that fantasy cricket should be an enjoyable, educational, and positive experience. While our platform is completely free-to-play with no real money involved, we recognize that any form of gaming—even skill-based fantasy sports—should be approached responsibly. This Responsible Gaming page provides guidance on maintaining healthy gaming habits, recognizing potential issues, and accessing support if needed. We are committed to promoting responsible gaming and ensuring that our platform remains a safe, balanced, and enjoyable space for all users.
+                  At KEMETION, we believe that fantasy cricket should be an enjoyable, educational, and positive experience. While our platform is completely free-to-play with no real money involved, we recognize that any form of gaming—even skill-based fantasy sports—should be approached responsibly. This Responsible Gaming page provides guidance on maintaining healthy gaming habits, recognizing potential issues, and accessing support if needed. We are committed to promoting responsible gaming and ensuring that our platform remains a safe, balanced, and enjoyable space for all users.
                 </p>
               </div>
             </div>
@@ -70,7 +70,7 @@ export default function ResponsibleGaming() {
                 <div>
                   <h3 className="text-xl font-bold text-gray-900 mb-3">1.1 Why Responsible Gaming Matters</h3>
                   <p>
-                    Even though Dhammanjali is a free-to-play platform with no real money at stake, it's still important to approach fantasy cricket responsibly. Spending excessive time on any activity—even a free one—can impact your work, studies, relationships, physical health, and overall wellbeing. Fantasy cricket should be a fun hobby that complements your life, not something that consumes it. By practicing responsible gaming, you can enjoy the educational and entertainment value of fantasy cricket while maintaining balance in all areas of your life.
+                    Even though KEMETION is a free-to-play platform with no real money at stake, it's still important to approach fantasy cricket responsibly. Spending excessive time on any activity—even a free one—can impact your work, studies, relationships, physical health, and overall wellbeing. Fantasy cricket should be a fun hobby that complements your life, not something that consumes it. By practicing responsible gaming, you can enjoy the educational and entertainment value of fantasy cricket while maintaining balance in all areas of your life.
                   </p>
                 </div>
 
@@ -179,7 +179,7 @@ export default function ResponsibleGaming() {
                 <div>
                   <h3 className="text-xl font-bold text-gray-900 mb-3">3.2 Use Time-Tracking Tools</h3>
                   <p>
-                    Many smartphones and devices have built-in screen time tracking features that can show you how much time you're spending on the Dhammanjali website or app. Review these statistics regularly to ensure you're staying within your intended limits. If you notice your usage creeping up, take steps to bring it back down.
+                    Many smartphones and devices have built-in screen time tracking features that can show you how much time you're spending on the KEMETION website or app. Review these statistics regularly to ensure you're staying within your intended limits. If you notice your usage creeping up, take steps to bring it back down.
                   </p>
                 </div>
 
@@ -216,7 +216,7 @@ export default function ResponsibleGaming() {
               </div>
               <div className="space-y-6 text-gray-700 leading-relaxed">
                 <p>
-                  While Dhammanjali is a free-to-play platform, it's still possible to develop unhealthy gaming patterns. Being able to recognize the warning signs of problem gaming is the first step toward addressing the issue. Here are some red flags to watch out for:
+                  While KEMETION is a free-to-play platform, it's still possible to develop unhealthy gaming patterns. Being able to recognize the warning signs of problem gaming is the first step toward addressing the issue. Here are some red flags to watch out for:
                 </p>
 
                 <div>
@@ -496,13 +496,13 @@ export default function ResponsibleGaming() {
               </div>
               <div className="space-y-6 text-gray-700 leading-relaxed">
                 <p>
-                  While Dhammanjali is restricted to users 18 years and older, we recognize that parents and guardians may have questions about fantasy cricket and responsible gaming. Here's some guidance:
+                  While KEMETION is restricted to users 18 years and older, we recognize that parents and guardians may have questions about fantasy cricket and responsible gaming. Here's some guidance:
                 </p>
 
                 <div>
                   <h3 className="text-xl font-bold text-gray-900 mb-3">9.1 Understanding Fantasy Cricket</h3>
                   <p>
-                    Fantasy cricket is a skill-based game where participants create virtual teams of real cricket players and earn points based on those players' actual performance in real matches. Dhammanjali is a free-to-play platform with no real money involved, making it a safer option than real-money fantasy sports. The platform is designed to be educational, helping users learn about cricket strategy, player statistics, and team management.
+                    Fantasy cricket is a skill-based game where participants create virtual teams of real cricket players and earn points based on those players' actual performance in real matches. KEMETION is a free-to-play platform with no real money involved, making it a safer option than real-money fantasy sports. The platform is designed to be educational, helping users learn about cricket strategy, player statistics, and team management.
                   </p>
                 </div>
 
@@ -543,7 +543,7 @@ export default function ResponsibleGaming() {
               <h2 className="text-3xl font-black text-gray-900 mb-6">10. OUR COMMITMENT TO YOUR WELLBEING</h2>
               <div className="space-y-6 text-gray-700 leading-relaxed">
                 <p>
-                  At Dhammanjali, your wellbeing is our priority. We are committed to promoting responsible gaming and creating a platform that enhances your life rather than detracting from it. Here's what we're doing to support responsible gaming:
+                  At KEMETION, your wellbeing is our priority. We are committed to promoting responsible gaming and creating a platform that enhances your life rather than detracting from it. Here's what we're doing to support responsible gaming:
                 </p>
 
                 <div>
@@ -598,7 +598,7 @@ export default function ResponsibleGaming() {
                     There's no shame in admitting that you need to make changes to your gaming habits. In fact, recognizing the need for change and taking action is a sign of strength and self-awareness. Whether that means setting stricter limits, taking a break, or seeking support, know that help is available and that you can regain balance in your life.
                   </p>
                   <p className="text-lg leading-relaxed">
-                    At Dhammanjali, we want fantasy cricket to be a positive part of your life. Play smart, stay healthy, and enjoy the game responsibly. If you ever need support or guidance, don't hesitate to reach out. We're here for you.
+                    At KEMETION, we want fantasy cricket to be a positive part of your life. Play smart, stay healthy, and enjoy the game responsibly. If you ever need support or guidance, don't hesitate to reach out. We're here for you.
                   </p>
                   <div className="mt-6 space-y-2 text-lg">
                     <p><strong>Wellbeing Support:</strong> wellbeing@dhammanji.com</p>

@@ -246,7 +246,7 @@ export default function Home() {
                   <div>
                     <h3 className="text-xl font-bold mb-2">Pure Skill-Based Competition</h3>
                     <p className="text-white/80 leading-relaxed">
-                      Success on Dhammanjali comes from cricket knowledge, strategic thinking, and analytical skills. Study player form, understand pitch conditions, analyze team compositions, and make informed decisions to climb the leaderboard.
+                      Success on KEMETION comes from cricket knowledge, strategic thinking, and analytical skills. Study player form, understand pitch conditions, analyze team compositions, and make informed decisions to climb the leaderboard.
                     </p>
                   </div>
                 </div>
@@ -297,7 +297,7 @@ export default function Home() {
                     <h3 className="text-2xl font-black text-white">EDUCATIONAL FOCUS</h3>
                   </div>
                   <p className="text-white/90 text-lg leading-relaxed">
-                    Dhammanjali is more than just a game - it's a learning platform. Understand cricket strategies, player roles, match dynamics, and decision-making under pressure. Apply these skills to become a more informed cricket fan and analyst.
+                    KEMETION is more than just a game - it's a learning platform. Understand cricket strategies, player roles, match dynamics, and decision-making under pressure. Apply these skills to become a more informed cricket fan and analyst.
                   </p>
                 </CardContent>
               </Card>

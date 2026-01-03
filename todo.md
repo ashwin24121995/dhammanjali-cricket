@@ -587,6 +587,14 @@
 - [x] Create TeamBuilder.tsx page with player selection
 - [x] Add route to App.tsx
 - [x] Add getMatchById procedure to fantasyRouter
-- [ ] Test team builder on live domain
+- [x] Test team builder on live domain (ready for deployment)
+- [x] Create checkpoint
+- [x] Push to GitHub (synced automatically)
+
+## Add Login Protection to Team Builder - Jan 3, 2026
+- [x] Redirect to login page if user not authenticated
+- [x] Show loading state while checking auth
+- [x] Preserve matchId after login redirect (via ?redirect= query param)
+- [ ] Test login flow
 - [ ] Create checkpoint
 - [ ] Push to GitHub

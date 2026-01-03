@@ -24,8 +24,15 @@ export default function TeamBuilder() {
   const [, params] = useRoute("/team-builder/:matchId");
   const matchId = params?.matchId ? parseInt(params.matchId) : null;
   
-  const { data: authData } = trpc.auth.me.useQuery();
+  const { data: authData, isLoading: authLoading } = trpc.auth.me.useQuery();
   const user = authData?.user || null;
+
+  // Redirect to login if not authenticated
+  useEffect(() => {
+    if (!authLoading && !user && matchId) {
+      window.location.href = `/login?redirect=/team-builder/${matchId}`;
+    }
+  }, [authLoading, user, matchId]);
   const [selectedPlayers, setSelectedPlayers] = useState<Player[]>([]);
   const [captain, setCaptain] = useState<number | null>(null);
   const [viceCaptain, setViceCaptain] = useState<number | null>(null);
@@ -179,10 +186,30 @@ export default function TeamBuilder() {
     );
   }
 
-  if (matchLoading || playersLoading) {
+  // Show loading while checking auth or fetching data
+  if (authLoading || matchLoading || playersLoading) {
     return (
       <div className="container py-12 flex justify-center">
         <Loader2 className="h-8 w-8 animate-spin" />
+      </div>
+    );
+  }
+
+  // If not logged in, show message (will redirect via useEffect)
+  if (!user) {
+    return (
+      <div className="container py-12">
+        <Card>
+          <CardHeader>
+            <CardTitle>Login Required</CardTitle>
+            <CardDescription>Please login to create your team</CardDescription>
+          </CardHeader>
+          <CardContent>
+            <Button onClick={() => window.location.href = `/login?redirect=/team-builder/${matchId}`}>
+              Login Now
+            </Button>
+          </CardContent>
+        </Card>
       </div>
     );
   }

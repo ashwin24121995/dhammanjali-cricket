@@ -634,3 +634,11 @@
 - [x] Update Cricket API sync to store team logo URLs from teamInfo array
 - [x] Update MatchesSection component to display team logos next to team names
 - [x] Test team logos display correctly on all match cards (Live/Upcoming/Completed)
+
+## Matches Pagination - Show More Feature
+- [x] Add state management for visible match count in MatchesSection
+- [x] Set initial display limit (e.g., 6 matches per category)
+- [x] Add "Show More" button at the end of each match category
+- [x] Implement load more functionality to increase visible matches
+- [x] Add smooth transition when loading more matches
+- [x] Test pagination works for Live, Upcoming, and Completed matches

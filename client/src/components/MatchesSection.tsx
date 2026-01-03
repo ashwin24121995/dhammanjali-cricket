@@ -22,6 +22,9 @@ type Match = {
 
 export default function MatchesSection() {
   const [refreshKey, setRefreshKey] = useState(0);
+  const [visibleLive, setVisibleLive] = useState(6);
+  const [visibleUpcoming, setVisibleUpcoming] = useState(6);
+  const [visibleCompleted, setVisibleCompleted] = useState(6);
 
   const { data: matches, isLoading } = trpc.fantasy.getMatches.useQuery();
 
@@ -208,13 +211,24 @@ export default function MatchesSection() {
             <Badge variant="destructive">LIVE</Badge>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {liveMatches.map((match) => (
+            {liveMatches.slice(0, visibleLive).map((match) => (
               <MatchCard key={match.id} match={match} showLiveBadge />
             ))}
           </div>
           <div className="text-xs text-center text-muted-foreground mt-4">
             Auto-refreshing every 3 seconds...
           </div>
+          {liveMatches.length > visibleLive && (
+            <div className="flex justify-center mt-6">
+              <Button
+                onClick={() => setVisibleLive(prev => prev + 6)}
+                variant="outline"
+                className="bg-yellow-400 hover:bg-yellow-500 text-black font-bold"
+              >
+                Show More Live Matches ({liveMatches.length - visibleLive} remaining)
+              </Button>
+            </div>
+          )}
         </section>
       )}
 
@@ -227,10 +241,21 @@ export default function MatchesSection() {
             <Badge variant="outline">IST</Badge>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {upcomingMatches.map((match) => (
+            {upcomingMatches.slice(0, visibleUpcoming).map((match) => (
               <MatchCard key={match.id} match={match} />
             ))}
           </div>
+          {upcomingMatches.length > visibleUpcoming && (
+            <div className="flex justify-center mt-6">
+              <Button
+                onClick={() => setVisibleUpcoming(prev => prev + 6)}
+                variant="outline"
+                className="bg-yellow-400 hover:bg-yellow-500 text-black font-bold"
+              >
+                Show More Upcoming Matches ({upcomingMatches.length - visibleUpcoming} remaining)
+              </Button>
+            </div>
+          )}
         </section>
       )}
 
@@ -242,10 +267,21 @@ export default function MatchesSection() {
             <h2 className="text-3xl font-bold">Completed Matches</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {completedMatches.map((match) => (
+            {completedMatches.slice(0, visibleCompleted).map((match) => (
               <MatchCard key={match.id} match={match} />
             ))}
           </div>
+          {completedMatches.length > visibleCompleted && (
+            <div className="flex justify-center mt-6">
+              <Button
+                onClick={() => setVisibleCompleted(prev => prev + 6)}
+                variant="outline"
+                className="bg-yellow-400 hover:bg-yellow-500 text-black font-bold"
+              >
+                Show More Completed Matches ({completedMatches.length - visibleCompleted} remaining)
+              </Button>
+            </div>
+          )}
         </section>
       )}
 

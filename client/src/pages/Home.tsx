@@ -19,9 +19,6 @@ export default function Home() {
   return (
     <div className="min-h-screen">
 
-      {/* Matches Section: Live → Upcoming → Completed */}
-      <MatchesSection />
-
       {/* Hero Section with Diagonal Cuts */}
       <section className="relative overflow-hidden bg-gradient-to-br from-red-600 via-red-500 to-orange-500">
         {/* Diagonal Yellow Stripe - Top */}
@@ -101,8 +98,8 @@ export default function Home() {
         <div className="absolute bottom-0 left-0 w-full h-20 bg-white transform skew-y-2 origin-bottom-left"></div>
       </section>
 
-      {/* Upcoming Matches Section */}
-      <UpcomingMatchesSection />
+      {/* Matches Section: Live → Upcoming → Completed */}
+      <MatchesSection />
 
       {/* Feature Highlights */}
       <section className="py-20 bg-gray-50 relative overflow-hidden">

@@ -11,6 +11,7 @@ import {
   CheckCircle, XCircle, Star, TrendingUp,
   AlertCircle, ArrowLeft, Loader2
 } from "lucide-react";
+import CommentarySection from "@/components/CommentarySection";
 
 
 type PlayerRole = 'batsman' | 'bowler' | 'all-rounder' | 'wicket-keeper';
@@ -506,47 +507,18 @@ export default function MatchDetail() {
 
           {/* Commentary Tab */}
           <TabsContent value="commentary">
-            <Card>
-              <CardHeader>
-                <CardTitle className="flex items-center gap-2">
-                  <Clock className="w-5 h-5" />
-                  Live Commentary
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                {commentaryLoading ? (
-                  <div className="text-center py-8">
-                    <Loader2 className="w-8 h-8 animate-spin mx-auto text-blue-600" />
-                  </div>
-                ) : match.status === 'upcoming' ? (
-                  <div className="text-center py-12 text-gray-500">
-                    <Clock className="w-12 h-12 mx-auto mb-4 text-gray-400" />
-                    <p className="text-lg font-semibold">Match hasn't started yet</p>
-                    <p className="text-sm">Commentary will be available once the match begins</p>
-                  </div>
-                ) : (
-                  <div className="space-y-4 max-h-[600px] overflow-y-auto">
-                    {commentaryData?.scorecard?.commentary && commentaryData.scorecard.commentary.length > 0 ? (
-                      commentaryData.scorecard.commentary.map((comment: any, index: number) => (
-                        <div key={index} className="p-4 bg-gray-50 rounded border-l-4 border-blue-600">
-                          <div className="flex items-center gap-2 mb-2">
-                            <Badge variant="outline">{comment.over}</Badge>
-                            <span className="text-sm text-gray-600">{comment.time}</span>
-                          </div>
-                          <p className="text-sm">{comment.text}</p>
-                        </div>
-                      ))
-                    ) : (
-                      <div className="text-center py-12 text-gray-500">
-                        <AlertCircle className="w-12 h-12 mx-auto mb-4 text-gray-400" />
-                        <p className="text-lg font-semibold">No commentary available</p>
-                        <p className="text-sm">Check back during the live match</p>
-                      </div>
-                    )}
-                  </div>
-                )}
-              </CardContent>
-            </Card>
+            {match.externalId ? (
+              <CommentarySection 
+                matchId={match.externalId} 
+                isLive={match.status === 'live'} 
+              />
+            ) : (
+              <Card>
+                <CardContent className="p-8 text-center text-muted-foreground">
+                  <p>Match ID not available</p>
+                </CardContent>
+              </Card>
+            )}
           </TabsContent>
         </Tabs>
       </div>

@@ -175,6 +175,30 @@ export const cricketRouter = router({
     }),
 
   /**
+   * Get ball-by-ball commentary for a specific match
+   */
+  getMatchCommentary: publicProcedure
+    .input(
+      z.object({
+        matchId: z.string(),
+      })
+    )
+    .query(async ({ input }) => {
+      try {
+        const { fetchMatchCommentary } = await import("./cricketApi");
+        const commentary = await fetchMatchCommentary(input.matchId);
+        
+        return {
+          success: true,
+          commentary: commentary.commentary,
+        };
+      } catch (error) {
+        console.error("[Cricket API] Error fetching commentary:", error);
+        throw new Error("Failed to fetch match commentary");
+      }
+    }),
+
+  /**
    * Sync matches from Cricket API (admin/manual trigger)
    */
   syncMatches: publicProcedure.mutation(async () => {

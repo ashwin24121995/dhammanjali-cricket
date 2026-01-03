@@ -655,3 +655,14 @@
 - [x] Calculate API usage to ensure we stay within 100 calls/24hr limit
 - [x] Test real-time updates work correctly on frontend
 - [x] Verify live match scores update every 2-3 minutes
+
+## Live Ball-by-Ball Commentary Feature
+- [x] Research Cricket API commentary endpoint and response format
+- [x] Add fetchMatchCommentary function to cricketApi.ts
+- [x] Create database schema for storing commentary data (skipped - fetch fresh from API)
+- [x] Add tRPC procedure to fetch commentary for a specific match
+- [x] Create CommentarySection component to display ball-by-ball updates
+- [x] Add commentary section to MatchDetail page
+- [x] Implement auto-refresh for live match commentary (30s interval)
+- [x] Style commentary with cricket-specific formatting (overs, runs, wickets)
+- [x] Test commentary display with live matches

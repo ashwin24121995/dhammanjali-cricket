@@ -65,6 +65,27 @@ interface Player {
   country?: string;
 }
 
+interface CommentaryItem {
+  o: number; // over number
+  b: number; // ball number
+  r: number; // runs scored
+  w: number; // wickets (0 or 1)
+  t: string; // commentary text
+  batsmanStriker: {
+    id: string;
+    name: string;
+  };
+  bowler: {
+    id: string;
+    name: string;
+  };
+}
+
+interface MatchCommentary {
+  matchId: string;
+  commentary: CommentaryItem[];
+}
+
 /**
  * Fetch current/live matches from Cricket API
  */
@@ -151,6 +172,51 @@ export async function fetchPlayersFromApi(offset: number = 0): Promise<Player[]>
     return result.data;
   } catch (error) {
     console.error("[Cricket API] Error fetching players:", error);
+    throw error;
+  }
+}
+
+/**
+ * Fetch ball-by-ball commentary for a specific match
+ */
+export async function fetchMatchCommentary(matchId: string): Promise<MatchCommentary> {
+  try {
+    const url = `${CRICKET_API_BASE_URL}/match_info?apikey=${CRICKET_API_KEY}&id=${matchId}`;
+    
+    console.log(`[Cricket API] Fetching commentary for match ${matchId}...`);
+    const response = await fetch(url);
+    
+    if (!response.ok) {
+      throw new Error(`API request failed: ${response.status} ${response.statusText}`);
+    }
+    
+    const result: any = await response.json();
+    
+    if (result.status !== "success") {
+      throw new Error("API returned failure status");
+    }
+    
+    console.log(`[Cricket API] Fetched commentary for match ${matchId}`);
+    console.log(`[Cricket API] Usage: ${result.info.hitsToday}/${result.info.hitsLimit} hits today`);
+    
+    // Extract commentary from the response
+    // The API returns commentary in the 'data' field with ball-by-ball details
+    const commentary = result.data.score || [];
+    
+    return {
+      matchId,
+      commentary: commentary.map((item: any, index: number) => ({
+        o: Math.floor(index / 6) + 1, // Calculate over number
+        b: (index % 6) + 1, // Calculate ball number
+        r: item.r || 0,
+        w: item.w || 0,
+        t: item.commentary || `Ball ${index + 1}`,
+        batsmanStriker: item.batsman || { id: "", name: "Unknown" },
+        bowler: item.bowler || { id: "", name: "Unknown" },
+      })),
+    };
+  } catch (error) {
+    console.error(`[Cricket API] Error fetching commentary for ${matchId}:`, error);
     throw error;
   }
 }

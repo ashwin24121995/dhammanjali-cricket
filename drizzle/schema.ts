@@ -69,6 +69,7 @@ export const matches = mysqlTable("matches", {
   matchTime: varchar("matchTime", { length: 50 }).notNull(),
   matchType: varchar("matchType", { length: 50 }).notNull(), // IPL, T20, ODI, Test
   status: mysqlEnum("status", ["upcoming", "live", "completed"]).default("upcoming").notNull(),
+  matchResult: varchar("matchResult", { length: 50 }), // Match result: won, draw, tie, abandoned, no result
   score: text("score"), // JSON string of score data from API
   lastUpdated: timestamp("lastUpdated"), // Last time data was fetched from API
   createdAt: timestamp("createdAt").defaultNow().notNull(),

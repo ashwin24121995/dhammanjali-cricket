@@ -666,3 +666,13 @@
 - [x] Implement auto-refresh for live match commentary (30s interval)
 - [x] Style commentary with cricket-specific formatting (overs, runs, wickets)
 - [x] Test commentary display with live matches
+
+## Enhanced Match Status Display
+- [x] Analyze Cricket API response to identify draw/tie match indicators
+- [x] Update database schema to add matchResult field (won/draw/tie/abandoned)
+- [x] Update cricketDataSync to detect and store match results including draws
+- [x] Add animated "LIVE" badge for running matches with pulsing effect
+- [x] Add "DRAW" badge for drawn matches (yellow)
+- [x] Add "TIE" badge for tied matches (orange)
+- [x] Update MatchesSection component with enhanced status badges
+- [x] Test status updates with different match outcomes

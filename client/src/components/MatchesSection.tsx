@@ -17,6 +17,7 @@ type Match = {
   matchTime: string;
   matchType: string;
   status: "upcoming" | "live" | "completed";
+  matchResult: string | null;
   score: string | null;
 };
 
@@ -103,16 +104,35 @@ export default function MatchesSection() {
           <div className="flex items-center justify-between">
             <Badge variant="outline">{match.matchType}</Badge>
             {showLiveBadge && (
-              <Badge variant="destructive" className="animate-pulse">
-                <Radio className="h-3 w-3 mr-1" />
-                LIVE
+              <Badge variant="destructive" className="animate-pulse flex items-center gap-1">
+                <Radio className="h-3 w-3 animate-pulse" />
+                <span className="font-bold">LIVE</span>
               </Badge>
             )}
             {match.status === "completed" && (
-              <Badge variant="secondary">
-                <CheckCircle className="h-3 w-3 mr-1" />
-                Completed
-              </Badge>
+              <>
+                {match.matchResult === "draw" ? (
+                  <Badge variant="secondary" className="bg-yellow-500 text-black font-bold">
+                    <CheckCircle className="h-3 w-3 mr-1" />
+                    DRAW
+                  </Badge>
+                ) : match.matchResult === "tie" ? (
+                  <Badge variant="secondary" className="bg-orange-500 text-white font-bold">
+                    <CheckCircle className="h-3 w-3 mr-1" />
+                    TIE
+                  </Badge>
+                ) : match.matchResult === "abandoned" || match.matchResult === "no result" ? (
+                  <Badge variant="secondary" className="bg-gray-500 text-white font-bold">
+                    <CheckCircle className="h-3 w-3 mr-1" />
+                    {match.matchResult.toUpperCase()}
+                  </Badge>
+                ) : (
+                  <Badge variant="secondary">
+                    <CheckCircle className="h-3 w-3 mr-1" />
+                    COMPLETED
+                  </Badge>
+                )}
+              </>
             )}
           </div>
         </CardHeader>

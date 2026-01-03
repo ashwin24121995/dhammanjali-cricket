@@ -1,0 +1,1 @@
+ALTER TABLE `matches` ADD `matchResult` varchar(50);

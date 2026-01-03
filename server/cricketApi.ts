@@ -247,6 +247,23 @@ export function formatMatchForDatabase(apiMatch: CurrentMatch) {
   const team1Logo = apiMatch.teamInfo?.find(t => t.name === apiMatch.teams[0])?.img || null;
   const team2Logo = apiMatch.teamInfo?.find(t => t.name === apiMatch.teams[1])?.img || null;
 
+  // Detect match result from API status field
+  let matchResult: string | null = null;
+  if (apiMatch.matchEnded && apiMatch.status) {
+    const statusLower = apiMatch.status.toLowerCase();
+    if (statusLower.includes('draw')) {
+      matchResult = 'draw';
+    } else if (statusLower.includes('tie')) {
+      matchResult = 'tie';
+    } else if (statusLower.includes('abandon')) {
+      matchResult = 'abandoned';
+    } else if (statusLower.includes('no result')) {
+      matchResult = 'no result';
+    } else if (statusLower.includes('won') || statusLower.includes('win')) {
+      matchResult = 'won';
+    }
+  }
+
   return {
     externalId: apiMatch.id,
     team1: apiMatch.teams[0] || "TBD",
@@ -262,6 +279,7 @@ export function formatMatchForDatabase(apiMatch: CurrentMatch) {
     }),
     matchType: apiMatch.matchType.toUpperCase(),
     status,
+    matchResult,
     score: apiMatch.score ? JSON.stringify(apiMatch.score) : null,
     lastUpdated: new Date(),
   };

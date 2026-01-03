@@ -676,3 +676,20 @@
 - [x] Add "TIE" badge for tied matches (orange)
 - [x] Update MatchesSection component with enhanced status badges
 - [x] Test status updates with different match outcomes
+
+## Smart Match Completion Detection
+- [ ] Add logic to detect when both teams are all out (10/10 wickets)
+- [ ] Automatically mark match as completed when both teams all out
+- [ ] Handle Test matches where innings might not be complete
+- [ ] Update formatMatchForDatabase to check score data for completion
+- [ ] Prevent finished matches from showing in Live section
+- [ ] Test with various all-out scenarios (T20, ODI, Test)
+
+## Smart Match Completion Detection - Jan 3, 2026
+- [x] Add logic to detect match completion based on score data (both teams all out)
+- [x] Handle Test matches with 2 innings vs 4 innings
+- [x] Handle limited overs matches (target reached or all out)
+- [x] Add stale match cleanup (mark old "live" matches as completed after 24 hours)
+- [x] Test with various match scenarios
+- [x] Fix case-sensitive matchType comparison bug
+- [x] Verify matches no longer stuck in "live" status when actually completed

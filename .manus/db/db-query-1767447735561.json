@@ -1,0 +1,28 @@
+{
+  "query": "SELECT id, externalId, team1, team2, status, matchType, matchDate FROM matches WHERE (team1 = 'Australia' AND team2 = 'England') ORDER BY matchDate DESC;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 2EKhjpwgmHfHvW4.77bd979a2294 --database 8xMuqhEENCZY8hGr8r4g4r --execute SELECT id, externalId, team1, team2, status, matchType, matchDate FROM matches WHERE (team1 = 'Australia' AND team2 = 'England') ORDER BY matchDate DESC;",
+  "rows": [
+    {
+      "id": "180025",
+      "externalId": "b0b73513-c5b2-4b50-83e4-84da9579b3ea",
+      "team1": "Australia",
+      "team2": "England",
+      "status": "live",
+      "matchType": "TEST",
+      "matchDate": "2025-12-26 05:00:00"
+    },
+    {
+      "id": "30006",
+      "externalId": "f1470b2c-5c7f-4ada-81db-cacb31da206b",
+      "team1": "Australia",
+      "team2": "England",
+      "status": "live",
+      "matchType": "TEST",
+      "matchDate": "2025-12-17 00:00:00"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\texternalId\tteam1\tteam2\tstatus\tmatchType\tmatchDate\n180025\tb0b73513-c5b2-4b50-83e4-84da9579b3ea\tAustralia\tEngland\tlive\tTEST\t2025-12-26 05:00:00\n30006\tf1470b2c-5c7f-4ada-81db-cacb31da206b\tAustralia\tEngland\tlive\tTEST\t2025-12-17 00:00:00\n",
+  "stderr": "",
+  "execution_time_ms": 1540
+}

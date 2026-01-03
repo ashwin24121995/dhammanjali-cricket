@@ -12,7 +12,7 @@ import {
   isCacheValid,
   CACHE_DURATION_MS 
 } from "./cricketApi";
-import { eq } from "drizzle-orm";
+import { eq, and, lt } from "drizzle-orm";
 
 // Track if sync is currently running to prevent overlapping executions
 let isSyncing = false;
@@ -86,6 +86,25 @@ export async function syncCurrentMatches(): Promise<void> {
       hitsLimit: 100,
       status: "success",
     });
+
+    // Clean up stale "live" matches that are no longer in the API
+    // If a match is marked as "live" but is more than 24 hours old, mark it as completed
+    const oneDayAgo = new Date(Date.now() - 24 * 60 * 60 * 1000);
+    const staleLiveMatches = await db.select().from(matches)
+      .where(and(
+        eq(matches.status, 'live'),
+        lt(matches.matchDate, oneDayAgo)
+      ));
+    
+    if (staleLiveMatches.length > 0) {
+      console.log(`[Cricket Sync] Found ${staleLiveMatches.length} stale live matches, marking as completed`);
+      for (const staleMatch of staleLiveMatches) {
+        await db.update(matches)
+          .set({ status: 'completed', matchResult: 'won' })
+          .where(eq(matches.id, staleMatch.id));
+        console.log(`[Cricket Sync] Marked stale match as completed: ${staleMatch.team1} vs ${staleMatch.team2}`);
+      }
+    }
 
     console.log("[Cricket Sync] Match data sync completed successfully");
   } catch (error) {

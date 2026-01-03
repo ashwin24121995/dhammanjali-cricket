@@ -1,0 +1,22 @@
+{
+  "query": "SELECT team1, team2, status, score FROM matches WHERE (team1 = 'Australia' AND team2 = 'England') LIMIT 2;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 2EKhjpwgmHfHvW4.77bd979a2294 --database 8xMuqhEENCZY8hGr8r4g4r --execute SELECT team1, team2, status, score FROM matches WHERE (team1 = 'Australia' AND team2 = 'England') LIMIT 2;",
+  "rows": [
+    {
+      "team1": "Australia",
+      "team2": "England",
+      "status": "live",
+      "score": "[{\"r\":371,\"w\":10,\"o\":91.2,\"inning\":\"australia Inning 1\"},{\"r\":286,\"w\":10,\"o\":87.2,\"inning\":\"Australia,England Inning 1\"},{\"r\":349,\"w\":10,\"o\":84.4,\"inning\":\"australia Inning 2\"},{\"r\":207,\"w\":6,\"o\":63,\"inning\":\"Australia,England Inning 2\"}]"
+    },
+    {
+      "team1": "Australia",
+      "team2": "England",
+      "status": "live",
+      "score": "[{\"r\":152,\"w\":10,\"o\":45.2,\"inning\":\"Australia Inning 1\"},{\"r\":110,\"w\":10,\"o\":29.5,\"inning\":\"England Inning 1\"},{\"r\":94,\"w\":6,\"o\":24.3,\"inning\":\"Australia Inning 2\"}]"
+    }
+  ],
+  "messages": [],
+  "stdout": "team1\tteam2\tstatus\tscore\nAustralia\tEngland\tlive\t[{\"r\":371,\"w\":10,\"o\":91.2,\"inning\":\"australia Inning 1\"},{\"r\":286,\"w\":10,\"o\":87.2,\"inning\":\"Australia,England Inning 1\"},{\"r\":349,\"w\":10,\"o\":84.4,\"inning\":\"australia Inning 2\"},{\"r\":207,\"w\":6,\"o\":63,\"inning\":\"Australia,England Inning 2\"}]\nAustralia\tEngland\tlive\t[{\"r\":152,\"w\":10,\"o\":45.2,\"inning\":\"Australia Inning 1\"},{\"r\":110,\"w\":10,\"o\":29.5,\"inning\":\"England Inning 1\"},{\"r\":94,\"w\":6,\"o\":24.3,\"inning\":\"Australia Inning 2\"}]\n",
+  "stderr": "",
+  "execution_time_ms": 1560
+}

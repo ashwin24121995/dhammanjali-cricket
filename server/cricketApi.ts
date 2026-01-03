@@ -237,7 +237,50 @@ export function isCacheValid(lastUpdated: Date | null): boolean {
  * Format Cricket API match data to our database schema
  */
 export function formatMatchForDatabase(apiMatch: CurrentMatch) {
-  const status: "completed" | "live" | "upcoming" = apiMatch.matchEnded 
+  // Smart match completion detection based on cricket rules
+  let isMatchComplete = apiMatch.matchEnded;
+  
+  // Additional check: analyze score data to detect if match is actually complete
+  // This runs even if API says matchEnded to ensure accuracy
+  if (apiMatch.score && apiMatch.score.length >= 2 && apiMatch.matchStarted) {
+    const innings1 = apiMatch.score[0];
+    const innings2 = apiMatch.score[1];
+    
+    if (innings1 && innings2) {
+      const team1Runs = innings1.r || 0;
+      const team1Wickets = innings1.w || 0;
+      const team2Runs = innings2.r || 0;
+      const team2Wickets = innings2.w || 0;
+      
+      // For limited overs cricket (T20/ODI)
+      const matchTypeLower = apiMatch.matchType.toLowerCase();
+      if (matchTypeLower === 't20' || matchTypeLower === 'odi') {
+        // Match is complete if:
+        // 1. Both teams all out (10 wickets each)
+        if (team1Wickets === 10 && team2Wickets === 10) {
+          isMatchComplete = true;
+        }
+        // 2. Second team reached/exceeded target (won the match)
+        else if (team2Runs > team1Runs) {
+          isMatchComplete = true;
+        }
+        // 3. Second team all out while chasing (lost the match)
+        else if (team2Wickets === 10 && team2Runs < team1Runs) {
+          isMatchComplete = true;
+        }
+      }
+      // For Test matches
+      else if (matchTypeLower === 'test') {
+        // If both teams are all out and we only have 2 innings (not 4), match is likely complete
+        // This handles cases where API hasn't updated matchEnded flag yet
+        if (team1Wickets === 10 && team2Wickets === 10 && apiMatch.score.length === 2) {
+          isMatchComplete = true;
+        }
+      }
+    }
+  }
+  
+  const status: "completed" | "live" | "upcoming" = isMatchComplete
     ? "completed" 
     : apiMatch.matchStarted 
     ? "live" 

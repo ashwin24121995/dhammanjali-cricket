@@ -1,0 +1,26 @@
+{
+  "query": "SELECT externalId, team1, team2, status, score, matchResult FROM matches WHERE team1 LIKE '%Australia%' OR team2 LIKE '%Australia%' LIMIT 5;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 2EKhjpwgmHfHvW4.77bd979a2294 --database 8xMuqhEENCZY8hGr8r4g4r --execute SELECT externalId, team1, team2, status, score, matchResult FROM matches WHERE team1 LIKE '%Australia%' OR team2 LIKE '%Australia%' LIMIT 5;",
+  "rows": [
+    {
+      "externalId": "f1470b2c-5c7f-4ada-81db-cacb31da206b",
+      "team1": "Australia",
+      "team2": "England",
+      "status": "live",
+      "score": "[{\"r\":371,\"w\":10,\"o\":91.2,\"inning\":\"australia Inning 1\"},{\"r\":286,\"w\":10,\"o\":87.2,\"inning\":\"Australia,England Inning 1\"},{\"r\":349,\"w\":10,\"o\":84.4,\"inning\":\"australia Inning 2\"},{\"r\":207,\"w\":6,\"o\":63,\"inning\":\"Australia,England Inning 2\"}]",
+      "matchResult": "NULL"
+    },
+    {
+      "externalId": "b0b73513-c5b2-4b50-83e4-84da9579b3ea",
+      "team1": "Australia",
+      "team2": "England",
+      "status": "live",
+      "score": "[{\"r\":152,\"w\":10,\"o\":45.2,\"inning\":\"Australia Inning 1\"},{\"r\":110,\"w\":10,\"o\":29.5,\"inning\":\"England Inning 1\"},{\"r\":94,\"w\":6,\"o\":24.3,\"inning\":\"Australia Inning 2\"}]",
+      "matchResult": "NULL"
+    }
+  ],
+  "messages": [],
+  "stdout": "externalId\tteam1\tteam2\tstatus\tscore\tmatchResult\nf1470b2c-5c7f-4ada-81db-cacb31da206b\tAustralia\tEngland\tlive\t[{\"r\":371,\"w\":10,\"o\":91.2,\"inning\":\"australia Inning 1\"},{\"r\":286,\"w\":10,\"o\":87.2,\"inning\":\"Australia,England Inning 1\"},{\"r\":349,\"w\":10,\"o\":84.4,\"inning\":\"australia Inning 2\"},{\"r\":207,\"w\":6,\"o\":63,\"inning\":\"Australia,England Inning 2\"}]\tNULL\nb0b73513-c5b2-4b50-83e4-84da9579b3ea\tAustralia\tEngland\tlive\t[{\"r\":152,\"w\":10,\"o\":45.2,\"inning\":\"Australia Inning 1\"},{\"r\":110,\"w\":10,\"o\":29.5,\"inning\":\"England Inning 1\"},{\"r\":94,\"w\":6,\"o\":24.3,\"inning\":\"Australia Inning 2\"}]\tNULL\n",
+  "stderr": "",
+  "execution_time_ms": 1528
+}

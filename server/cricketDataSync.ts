@@ -16,6 +16,7 @@ import { eq } from "drizzle-orm";
 
 // Track if sync is currently running to prevent overlapping executions
 let isSyncing = false;
+let isLiveSyncing = false;
 
 /**
  * Sync current matches from Cricket API to database
@@ -108,22 +109,95 @@ export async function syncCurrentMatches(): Promise<void> {
 }
 
 /**
- * Start the background sync job
- * Runs every 30 minutes (1,800,000 milliseconds)
+ * Sync only live matches for real-time updates
+ * Faster sync interval (2 minutes) for live match scores
+ */
+export async function syncLiveMatches(): Promise<void> {
+  if (isLiveSyncing) {
+    console.log("[Live Sync] Live sync already in progress, skipping...");
+    return;
+  }
+
+  const db = await getDb();
+  if (!db) {
+    console.error("[Live Sync] Database not available");
+    return;
+  }
+
+  try {
+    isLiveSyncing = true;
+    console.log("[Live Sync] Syncing live matches...");
+
+    // Fetch all current matches from API
+    const apiMatches = await fetchCurrentMatchesFromApi();
+    
+    // Filter only live matches (matchStarted = true, matchEnded = false)
+    const liveApiMatches = apiMatches.filter(m => m.matchStarted && !m.matchEnded);
+    
+    console.log(`[Live Sync] Found ${liveApiMatches.length} live matches`);
+
+    // Update only live matches in database
+    for (const apiMatch of liveApiMatches) {
+      const matchData = formatMatchForDatabase(apiMatch);
+
+      // Check if match exists
+      const existingMatches = await db.select().from(matches)
+        .where(eq(matches.externalId, apiMatch.id))
+        .limit(1);
+      const existingMatch = existingMatches.length > 0 ? existingMatches[0] : null;
+
+      if (existingMatch) {
+        // Update existing live match
+        await db.update(matches)
+          .set(matchData)
+          .where(eq(matches.externalId, apiMatch.id));
+        console.log(`[Live Sync] Updated live match: ${apiMatch.name}`);
+      } else {
+        // Insert new live match
+        await db.insert(matches).values([matchData]);
+        console.log(`[Live Sync] Inserted new live match: ${apiMatch.name}`);
+      }
+    }
+
+    console.log("[Live Sync] Live matches sync completed");
+  } catch (error) {
+    console.error("[Live Sync] Error syncing live matches:", error);
+  } finally {
+    isLiveSyncing = false;
+  }
+}
+
+/**
+ * Start the background sync jobs
+ * - Full sync every 30 minutes for all matches
+ * - Live match sync every 2 minutes for real-time updates
  */
 export function startCricketDataSync(): void {
-  console.log("[Cricket Sync] Starting background sync job (every 30 minutes)...");
+  console.log("[Cricket Sync] Starting background sync jobs...");
+  console.log("[Cricket Sync] - Full sync: every 30 minutes");
+  console.log("[Cricket Sync] - Live sync: every 2 minutes");
 
-  // Run immediately on startup
+  // Run full sync immediately on startup
   syncCurrentMatches().catch(console.error);
 
-  // Then run every 30 minutes
+  // Full sync every 30 minutes for all matches
   const THIRTY_MINUTES_MS = 30 * 60 * 1000;
   setInterval(() => {
     syncCurrentMatches().catch(console.error);
   }, THIRTY_MINUTES_MS);
 
-  console.log("[Cricket Sync] Background sync job started");
+  // Live match sync every 2 minutes for real-time updates
+  const TWO_MINUTES_MS = 2 * 60 * 1000;
+  setTimeout(() => {
+    // Start live sync after 1 minute (offset from full sync)
+    syncLiveMatches().catch(console.error);
+    
+    setInterval(() => {
+      syncLiveMatches().catch(console.error);
+    }, TWO_MINUTES_MS);
+  }, 60 * 1000); // Wait 1 minute before starting live sync
+
+  console.log("[Cricket Sync] Background sync jobs started");
 }
 
 /**

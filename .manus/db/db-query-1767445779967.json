@@ -1,0 +1,46 @@
+{
+  "query": "SELECT id, team1, team2, status, score, matchDate, lastUpdated FROM matches WHERE status = 'live' LIMIT 5;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 2EKhjpwgmHfHvW4.77bd979a2294 --database 8xMuqhEENCZY8hGr8r4g4r --execute SELECT id, team1, team2, status, score, matchDate, lastUpdated FROM matches WHERE status = 'live' LIMIT 5;",
+  "rows": [
+    {
+      "id": "30001",
+      "team1": "South Western Districts",
+      "team2": "Border",
+      "status": "live",
+      "score": "[{\"r\":423,\"w\":10,\"o\":141.4,\"inning\":\"south western districts Inning 1\"},{\"r\":154,\"w\":10,\"o\":33.4,\"inning\":\"South Western Districts,Border Inning 1\"}]",
+      "matchDate": "2025-12-18 08:00:00",
+      "lastUpdated": "2025-12-20 18:43:56"
+    },
+    {
+      "id": "30005",
+      "team1": "New Zealand",
+      "team2": "West Indies",
+      "status": "live",
+      "score": "[{\"r\":575,\"w\":8,\"o\":155,\"inning\":\"new zealand Inning 1\"},{\"r\":381,\"w\":6,\"o\":113,\"inning\":\"New Zealand,West Indies Inning 1\"}]",
+      "matchDate": "2025-12-17 22:00:00",
+      "lastUpdated": "2025-12-20 18:43:56"
+    },
+    {
+      "id": "30006",
+      "team1": "Australia",
+      "team2": "England",
+      "status": "live",
+      "score": "[{\"r\":371,\"w\":10,\"o\":91.2,\"inning\":\"australia Inning 1\"},{\"r\":286,\"w\":10,\"o\":87.2,\"inning\":\"Australia,England Inning 1\"},{\"r\":349,\"w\":10,\"o\":84.4,\"inning\":\"australia Inning 2\"},{\"r\":207,\"w\":6,\"o\":63,\"inning\":\"Australia,England Inning 2\"}]",
+      "matchDate": "2025-12-17 00:00:00",
+      "lastUpdated": "2025-12-20 18:43:56"
+    },
+    {
+      "id": "180025",
+      "team1": "Australia",
+      "team2": "England",
+      "status": "live",
+      "score": "[{\"r\":152,\"w\":10,\"o\":45.2,\"inning\":\"Australia Inning 1\"},{\"r\":110,\"w\":10,\"o\":29.5,\"inning\":\"England Inning 1\"},{\"r\":94,\"w\":6,\"o\":24.3,\"inning\":\"Australia Inning 2\"}]",
+      "matchDate": "2025-12-26 05:00:00",
+      "lastUpdated": "2025-12-27 01:38:33"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\tteam1\tteam2\tstatus\tscore\tmatchDate\tlastUpdated\n30001\tSouth Western Districts\tBorder\tlive\t[{\"r\":423,\"w\":10,\"o\":141.4,\"inning\":\"south western districts Inning 1\"},{\"r\":154,\"w\":10,\"o\":33.4,\"inning\":\"South Western Districts,Border Inning 1\"}]\t2025-12-18 08:00:00\t2025-12-20 18:43:56\n30005\tNew Zealand\tWest Indies\tlive\t[{\"r\":575,\"w\":8,\"o\":155,\"inning\":\"new zealand Inning 1\"},{\"r\":381,\"w\":6,\"o\":113,\"inning\":\"New Zealand,West Indies Inning 1\"}]\t2025-12-17 22:00:00\t2025-12-20 18:43:56\n30006\tAustralia\tEngland\tlive\t[{\"r\":371,\"w\":10,\"o\":91.2,\"inning\":\"australia Inning 1\"},{\"r\":286,\"w\":10,\"o\":87.2,\"inning\":\"Australia,England Inning 1\"},{\"r\":349,\"w\":10,\"o\":84.4,\"inning\":\"australia Inning 2\"},{\"r\":207,\"w\":6,\"o\":63,\"inning\":\"Australia,England Inning 2\"}]\t2025-12-17 00:00:00\t2025-12-20 18:43:56\n180025\tAustralia\tEngland\tlive\t[{\"r\":152,\"w\":10,\"o\":45.2,\"inning\":\"Australia Inning 1\"},{\"r\":110,\"w\":10,\"o\":29.5,\"inning\":\"England Inning 1\"},{\"r\":94,\"w\":6,\"o\":24.3,\"inning\":\"Australia Inning 2\"}]\t2025-12-26 05:00:00\t2025-12-27 01:38:33\n",
+  "stderr": "",
+  "execution_time_ms": 1580
+}

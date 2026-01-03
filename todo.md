@@ -647,3 +647,11 @@
 - [x] Verify scroll-to-top behavior exists in App.tsx
 - [x] Test scroll-to-top works for all page navigation
 - [x] Ensure scroll happens immediately on route change
+
+## Live Match Real-Time Data Implementation
+- [x] Implement faster sync interval (2-3 minutes) specifically for live matches
+- [x] Keep 30-minute sync for upcoming/completed matches to save API calls
+- [x] Add separate syncLiveMatches function that only updates live match data
+- [x] Calculate API usage to ensure we stay within 100 calls/24hr limit
+- [x] Test real-time updates work correctly on frontend
+- [x] Verify live match scores update every 2-3 minutes

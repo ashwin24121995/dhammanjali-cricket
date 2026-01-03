@@ -578,5 +578,15 @@
 - [x] Integrate Cricket API to fetch live matches (API key updated)
 - [x] Display matches on /matches page (fixed getAllMatches query)
 - [ ] Test matches display on live domain
+- [x] Create checkpoint
+- [x] Push to GitHub
+
+## Fix Team Builder Page - Jan 3, 2026
+- [x] Check team builder page URL and route (404 - doesn't exist)
+- [x] Investigate what's not working (page not created yet)
+- [x] Create TeamBuilder.tsx page with player selection
+- [x] Add route to App.tsx
+- [x] Add getMatchById procedure to fantasyRouter
+- [ ] Test team builder on live domain
 - [ ] Create checkpoint
 - [ ] Push to GitHub

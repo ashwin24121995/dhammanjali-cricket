@@ -23,6 +23,7 @@ import Matches from "./pages/Matches";
 import MatchDetail from "./pages/MatchDetail";
 import Leaderboard from "./pages/Leaderboard";
 import Profile from "./pages/Profile";
+import TeamBuilder from "./pages/TeamBuilder";
 
 function Router() {
   const [location] = useLocation();
@@ -50,6 +51,7 @@ function Router() {
         <Route path="/responsible-gaming" component={ResponsibleGaming} />
         <Route path={"/matches"} component={Matches} />
         <Route path={"/matches/:id"} component={MatchDetail} />
+        <Route path={"/team-builder/:matchId"} component={TeamBuilder} />
         <Route path={"/leaderboard"} component={Leaderboard} />
         <Route path={"/profile"} component={Profile} />
         <Route path={"/404"} component={NotFound} />

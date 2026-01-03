@@ -2,6 +2,7 @@ import { z } from "zod";
 import { publicProcedure, protectedProcedure, router } from "./_core/trpc";
 import {
   getAllMatches,
+  getMatchById,
   getAllPlayers,
   getLeaderboard,
   getUserStats,
@@ -17,6 +18,14 @@ export const fantasyRouter = router({
     const matches = await getAllMatches();
     return matches;
   }),
+
+  // Get match by ID
+  getMatchById: publicProcedure
+    .input(z.object({ id: z.number() }))
+    .query(async ({ input }) => {
+      const match = await getMatchById(input.id);
+      return match;
+    }),
 
   // Get all players
   getPlayers: publicProcedure.query(async () => {

@@ -605,6 +605,10 @@
 - [x] Set up 3-second interval refresh
 - [x] Display live scores with team names and current status
 - [x] Add to homepage (placed above hero section)
+- [x] Reorganize to show: Live → Upcoming (IST) → Completed
+- [x] Create MatchesSection component with all three sections
+- [x] Add IST timezone formatting for upcoming matches
+- [x] Add "Create Team" buttons for matches
 - [ ] Test live updates
 - [ ] Create checkpoint
 - [ ] Push to GitHub

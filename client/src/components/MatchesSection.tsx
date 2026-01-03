@@ -10,6 +10,8 @@ type Match = {
   id: number;
   team1: string;
   team2: string;
+  team1Logo: string | null;
+  team2Logo: string | null;
   venue: string;
   matchDate: Date;
   matchTime: string;
@@ -58,7 +60,18 @@ export default function MatchesSection() {
   const parseScore = (scoreStr: string | null) => {
     if (!scoreStr) return null;
     try {
-      return JSON.parse(scoreStr);
+      const scoreArray = JSON.parse(scoreStr);
+      if (!Array.isArray(scoreArray) || scoreArray.length === 0) return null;
+      
+      // Format: [{r: 120, w: 8, o: 20, inning: "Team 1 Inning 1"}, ...]
+      const team1 = scoreArray[0];
+      const team2 = scoreArray[1];
+      
+      return {
+        team1Score: team1 ? `${team1.r}/${team1.w} (${team1.o})` : "N/A",
+        team2Score: team2 ? `${team2.r}/${team2.w} (${team2.o})` : "N/A",
+        status: null // Status is in match.status field from API
+      };
     } catch {
       return null;
     }
@@ -107,21 +120,41 @@ export default function MatchesSection() {
               <div className="text-center py-4">
                 <p className="text-lg font-semibold text-muted-foreground">Match Yet to Start</p>
                 <div className="flex items-center justify-between mt-4">
-                  <span className="font-semibold text-lg">{match.team1}</span>
+                  <div className="flex items-center gap-3">
+                    {match.team1Logo && (
+                      <img src={match.team1Logo} alt={match.team1} className="w-8 h-8 object-contain" />
+                    )}
+                    <span className="font-semibold text-lg">{match.team1}</span>
+                  </div>
                   <span className="text-muted-foreground">vs</span>
-                  <span className="font-semibold text-lg">{match.team2}</span>
+                  <div className="flex items-center gap-3">
+                    <span className="font-semibold text-lg">{match.team2}</span>
+                    {match.team2Logo && (
+                      <img src={match.team2Logo} alt={match.team2} className="w-8 h-8 object-contain" />
+                    )}
+                  </div>
                 </div>
               </div>
             ) : (
               <>
                 <div className="flex items-center justify-between">
-                  <span className="font-semibold text-lg">{match.team1}</span>
+                  <div className="flex items-center gap-3">
+                    {match.team1Logo && (
+                      <img src={match.team1Logo} alt={match.team1} className="w-8 h-8 object-contain" />
+                    )}
+                    <span className="font-semibold text-lg">{match.team1}</span>
+                  </div>
                   <span className="font-bold text-xl">
                     {scoreData?.team1Score || "N/A"}
                   </span>
                 </div>
                 <div className="flex items-center justify-between">
-                  <span className="font-semibold text-lg">{match.team2}</span>
+                  <div className="flex items-center gap-3">
+                    {match.team2Logo && (
+                      <img src={match.team2Logo} alt={match.team2} className="w-8 h-8 object-contain" />
+                    )}
+                    <span className="font-semibold text-lg">{match.team2}</span>
+                  </div>
                   <span className="font-bold text-xl">
                     {scoreData?.team2Score || "N/A"}
                   </span>
@@ -130,10 +163,10 @@ export default function MatchesSection() {
             )}
           </div>
 
-          {/* Match Status */}
-          {scoreData?.status && (
+          {/* Match Status - Show API status for completed matches */}
+          {match.status === "completed" && scoreData && (
             <div className="pt-3 border-t">
-              <p className="text-sm text-muted-foreground">{scoreData.status}</p>
+              <p className="text-sm font-medium text-green-600 dark:text-green-400">Match Completed</p>
             </div>
           )}
 

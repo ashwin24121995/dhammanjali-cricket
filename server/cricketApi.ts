@@ -177,10 +177,16 @@ export function formatMatchForDatabase(apiMatch: CurrentMatch) {
     ? "live" 
     : "upcoming";
 
+  // Extract team logos from teamInfo array
+  const team1Logo = apiMatch.teamInfo?.find(t => t.name === apiMatch.teams[0])?.img || null;
+  const team2Logo = apiMatch.teamInfo?.find(t => t.name === apiMatch.teams[1])?.img || null;
+
   return {
     externalId: apiMatch.id,
     team1: apiMatch.teams[0] || "TBD",
     team2: apiMatch.teams[1] || "TBD",
+    team1Logo,
+    team2Logo,
     venue: apiMatch.venue,
     matchDate: new Date(apiMatch.dateTimeGMT),
     matchTime: new Date(apiMatch.dateTimeGMT).toLocaleTimeString('en-IN', { 

@@ -62,6 +62,8 @@ export const matches = mysqlTable("matches", {
   externalId: varchar("externalId", { length: 255 }).unique(), // Cricket API match ID
   team1: varchar("team1", { length: 100 }).notNull(),
   team2: varchar("team2", { length: 100 }).notNull(),
+  team1Logo: varchar("team1Logo", { length: 500 }), // Team 1 logo URL from API
+  team2Logo: varchar("team2Logo", { length: 500 }), // Team 2 logo URL from API
   venue: varchar("venue", { length: 255 }).notNull(),
   matchDate: timestamp("matchDate").notNull(),
   matchTime: varchar("matchTime", { length: 50 }).notNull(),

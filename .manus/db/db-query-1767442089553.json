@@ -1,0 +1,22 @@
+{
+  "query": "SELECT team1, team1Logo, team2, team2Logo FROM matches WHERE team1Logo IS NOT NULL LIMIT 2;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 2EKhjpwgmHfHvW4.77bd979a2294 --database 8xMuqhEENCZY8hGr8r4g4r --execute SELECT team1, team1Logo, team2, team2Logo FROM matches WHERE team1Logo IS NOT NULL LIMIT 2;",
+  "rows": [
+    {
+      "team1": "Auckland",
+      "team1Logo": "https://g.cricapi.com/iapi/5-637993557414710285.webp?w=48",
+      "team2": "Wellington",
+      "team2Logo": "https://g.cricapi.com/iapi/99-637987556014883021.webp?w=48"
+    },
+    {
+      "team1": "Brisbane Heat",
+      "team1Logo": "https://g.cricapi.com/iapi/128-637957474274254899.webp?w=48",
+      "team2": "Melbourne Stars",
+      "team2Logo": "https://g.cricapi.com/iapi/222-637940201967897016.webp?w=48"
+    }
+  ],
+  "messages": [],
+  "stdout": "team1\tteam1Logo\tteam2\tteam2Logo\nAuckland\thttps://g.cricapi.com/iapi/5-637993557414710285.webp?w=48\tWellington\thttps://g.cricapi.com/iapi/99-637987556014883021.webp?w=48\nBrisbane Heat\thttps://g.cricapi.com/iapi/128-637957474274254899.webp?w=48\tMelbourne Stars\thttps://g.cricapi.com/iapi/222-637940201967897016.webp?w=48\n",
+  "stderr": "",
+  "execution_time_ms": 1564
+}

@@ -617,6 +617,20 @@
 - [x] Live matches: Show actual scores from API (or N/A if not available)
 - [x] Completed matches: Show final scores from API (or N/A if not available)
 - [x] Upcoming matches: Show "Match Yet to Start" with team names
-- [ ] Test score display for all match types
+- [x] Test score display for all match types (verified on dev server)
+- [x] Create checkpoint
+- [x] Push to GitHub (synced automatically)
+
+## Fix Completed Matches Score Display - Jan 3, 2026
+- [ ] Check Cricket API response format for scores
+- [ ] Verify score field in database schema
+- [ ] Update cricket sync job to properly store scores
+- [ ] Test completed matches showing real scores
 - [ ] Create checkpoint
 - [ ] Push to GitHub
+
+## Team Logos/Flags Feature
+- [x] Update database schema to add team1Logo and team2Logo fields to matches table
+- [x] Update Cricket API sync to store team logo URLs from teamInfo array
+- [x] Update MatchesSection component to display team logos next to team names
+- [x] Test team logos display correctly on all match cards (Live/Upcoming/Completed)

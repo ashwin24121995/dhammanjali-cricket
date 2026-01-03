@@ -6,6 +6,7 @@ import { trpc } from "@/lib/trpc";
 import { useEffect, useState } from "react";
 import { useQueryClient } from "@tanstack/react-query";
 import { PROMO_WIDGET_ENABLED } from "@/components/PromoWidget";
+import LiveScoreWidget from "@/components/LiveScoreWidget";
 
 export default function Home() {
   const { isAuthenticated } = useAuth();
@@ -17,6 +18,11 @@ export default function Home() {
 
   return (
     <div className="min-h-screen">
+
+      {/* Live Score Widget */}
+      <section className="container py-8">
+        <LiveScoreWidget />
+      </section>
 
       {/* Hero Section with Diagonal Cuts */}
       <section className="relative overflow-hidden bg-gradient-to-br from-red-600 via-red-500 to-orange-500">

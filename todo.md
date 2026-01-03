@@ -595,6 +595,16 @@
 - [x] Redirect to login page if user not authenticated
 - [x] Show loading state while checking auth
 - [x] Preserve matchId after login redirect (via ?redirect= query param)
-- [ ] Test login flow
+- [x] Test login flow (redirects to login when not authenticated)
+- [x] Create checkpoint
+- [x] Push to GitHub (synced automatically)
+
+## Add Live Score Widget to Homepage - Jan 3, 2026
+- [x] Create LiveScoreWidget component with auto-refresh
+- [x] Fetch live matches from Cricket API
+- [x] Set up 3-second interval refresh
+- [x] Display live scores with team names and current status
+- [x] Add to homepage (placed above hero section)
+- [ ] Test live updates
 - [ ] Create checkpoint
 - [ ] Push to GitHub

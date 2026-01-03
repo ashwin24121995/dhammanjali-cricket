@@ -642,3 +642,8 @@
 - [x] Implement load more functionality to increase visible matches
 - [x] Add smooth transition when loading more matches
 - [x] Test pagination works for Live, Upcoming, and Completed matches
+
+## Scroll-to-Top Verification
+- [x] Verify scroll-to-top behavior exists in App.tsx
+- [x] Test scroll-to-top works for all page navigation
+- [x] Ensure scroll happens immediately on route change
